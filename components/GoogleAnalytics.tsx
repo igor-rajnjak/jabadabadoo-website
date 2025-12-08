@@ -3,15 +3,10 @@
 import Script from "next/script";
 
 // Google Analytics 4 Measurement ID
-// TODO: Replace with your actual GA4 Measurement ID (e.g., G-XXXXXXXXXX)
-// Get it from: https://analytics.google.com/ → Admin → Data Streams → Web Stream
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "";
+// Can be overridden with NEXT_PUBLIC_GA_MEASUREMENT_ID environment variable
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-NC06CEC2EH";
 
 export default function GoogleAnalytics() {
-  if (!GA_MEASUREMENT_ID) {
-    return null; // Don't render if no GA ID is provided
-  }
-
   return (
     <>
       <Script
