@@ -171,27 +171,27 @@ export const FAQ = [
 export const GALLERY_IMAGES = [
   {
     src: "/images/rodjendan-animatori-novi-sad-rodjendaonica-za-decu-jabadabadoo-animatori-zabava.jpeg",
-    alt: "Animatori i zabava na rođendanu za decu u Novom Sadu",
+    alt: "All-inclusive dečiji rođendani u Novom Sadu - profesionalni animatori i zabava za decu",
   },
   {
     src: "/images/rodjendaonica-rodjendan-za-decu-novi-sad-jabadabadoo-unutrasnji-prostor-igraonica.jpeg",
-    alt: "Unutrašnji prostor rođendaonice sa igraonicom u Novom Sadu",
+    alt: "Tematski rođendani za decu u Novom Sadu - unutrašnji prostor rođendaonice sa igraonicom",
   },
   {
     src: "/images/rodjendaonica-torta-rodjendan-novi-sad-jabadabadoo.jpeg",
-    alt: "Torta i dekoracije za rođendan u Novom Sadu",
+    alt: "Rođendan za decu u Novom Sadu - personalizovana torta i tematske dekoracije",
   },
   {
     src: "/images/rodjendaonica-igraonica-cuvaonica-pinjata-animatori-igre-bezbedno-rodjendan-novi-sad-zabava.jpeg",
-    alt: "Pinjata i igre na rođendanu za decu u Novom Sadu",
+    alt: "All-inclusive dečiji rođendani u Novom Sadu - pinjata, igre i aktivnosti za decu",
   },
   {
     src: "/images/rodjendaonica-rodjendan-za-decu-novi-sad-jabadabadoo-filmovi-animatori-zabava-porodica.jpeg",
-    alt: "Filmovi i zabava na rođendanu za decu u Novom Sadu",
+    alt: "Tematski rođendani za decu u Novom Sadu - filmovi, animatori i porodična zabava",
   },
   {
     src: "/images/prostor-za-roditelje-rodjendan-rodjendaonica-novi-sad-jabadabadoo.jpeg",
-    alt: "Prostor za roditelje u rođendaonici u Novom Sadu",
+    alt: "Rođendan za decu u Novom Sadu - prostor za roditelje u rođendaonici Jabadabadoo",
   },
 ] as const;
 

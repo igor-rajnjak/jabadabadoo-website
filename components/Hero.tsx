@@ -65,7 +65,7 @@ export default function Hero() {
             <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
               <Image
                 src="/images/rodjendan-animatori-novi-sad-rodjendaonica-za-decu-jabadabadoo-animatori-zabava.jpeg"
-                alt="All-inclusive dečiji rođendani u Novom Sadu - rođendaonica za decu sa animatorima i zabavom"
+                alt="All-inclusive dečiji rođendani u Novom Sadu - tematski rođendani za decu sa profesionalnim animatorima i kompletnom zabavom"
                 fill
                 className="object-cover"
                 priority
@@ -77,7 +77,7 @@ export default function Hero() {
             <div className="absolute bottom-4 right-4 bg-white/20 backdrop-blur-sm p-3 rounded-xl hover:scale-105 transition-transform flex items-center justify-center w-fit">
               <Image
                 src="/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-transparent.png"
-                alt="Jabadabadoo Rođendaonica Logo"
+                alt="Jabadabadoo Rođendaonica Logo - all-inclusive dečiji rođendani u Novom Sadu"
                 width={140}
                 height={140}
                 className="drop-shadow-2xl"

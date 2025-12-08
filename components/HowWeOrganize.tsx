@@ -56,7 +56,7 @@ export default function HowWeOrganize() {
               <div className="relative h-64 md:h-80">
                 <Image
                   src={feature.image}
-                  alt={`${feature.title} - rođendan za decu u Novom Sadu, Jabadabadoo rođendaonica`}
+                  alt={`${feature.title} - all-inclusive dečiji rođendani u Novom Sadu, tematski rođendani za decu, Jabadabadoo rođendaonica`}
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 50vw"

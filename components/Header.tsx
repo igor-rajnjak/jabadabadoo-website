@@ -23,7 +23,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-transparent.png"
-            alt="Jabadabadoo Rođendaonica Logo - rođendan za decu novi sad"
+            alt="Jabadabadoo Rođendaonica Logo - all-inclusive dečiji rođendani u Novom Sadu, tematski rođendani za decu"
             width={70}
             height={70}
             className="hover:scale-105 transition-transform"

@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-6">
               <Image
                 src="/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-transparent.png"
-                alt="Jabadabadoo Rođendaonica Logo - rođendan za decu novi sad"
+                alt="Jabadabadoo Rođendaonica Logo - all-inclusive dečiji rođendani u Novom Sadu, tematski rođendani za decu"
                 width={50}
                 height={50}
               />

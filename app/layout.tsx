@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { CONTACT, SEO } from "@/lib/constants";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: SEO.title,
@@ -89,6 +90,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
+        <GoogleAnalytics />
         {children}
         <SpeedInsights />
       </body>
