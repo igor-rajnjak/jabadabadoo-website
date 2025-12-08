@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { CONTACT } from "@/lib/constants";
-import { trackPhoneCall, trackLinkClick } from "@/lib/analytics";
+import { trackPhoneCall, trackWhatsAppClick } from "@/lib/analytics";
 
 export default function Footer() {
   return (
@@ -42,7 +42,7 @@ export default function Footer() {
                   href={CONTACT.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => trackLinkClick("WhatsApp", CONTACT.whatsappUrl, "Footer")}
+                  onClick={() => trackWhatsAppClick("Footer")}
                   className="hover:text-accent transition-colors inline-flex items-center gap-2"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

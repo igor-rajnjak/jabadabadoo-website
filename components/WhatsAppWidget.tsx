@@ -1,11 +1,11 @@
 "use client";
 
 import { CONTACT } from "@/lib/constants";
-import { trackLinkClick } from "@/lib/analytics";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 export default function WhatsAppWidget() {
   const handleClick = () => {
-    trackLinkClick("WhatsApp Chat", CONTACT.whatsappUrl, "WhatsApp Widget");
+    trackWhatsAppClick("WhatsApp Widget");
   };
 
   return (

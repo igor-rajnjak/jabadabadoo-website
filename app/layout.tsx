@@ -74,10 +74,6 @@ export default function RootLayout({
               gtag('config', 'G-N2557RR5NG', {
                 debug_mode: isDebugMode
               });
-              
-              if (isDebugMode) {
-                console.log('[GA4] Debug mode enabled');
-              }
             `,
           }}
         />

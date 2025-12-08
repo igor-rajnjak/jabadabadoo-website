@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { CONTACT } from "@/lib/constants";
-import { trackPhoneCall, trackNavClick, trackLogoClick, trackLinkClick } from "@/lib/analytics";
+import { trackPhoneCall, trackNavClick, trackLogoClick, trackWhatsAppClick } from "@/lib/analytics";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -99,7 +99,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {
-              trackLinkClick("WhatsApp", CONTACT.whatsappUrl, "Header Mobile");
+              trackWhatsAppClick("Header Mobile");
               setIsMenuOpen(false);
             }}
             className="block bg-[#25D366] text-white px-6 py-2.5 mx-4 mt-2 rounded-full font-bold text-center hover:bg-[#20BA5A] transition-all shadow-md text-sm flex items-center justify-center gap-2"

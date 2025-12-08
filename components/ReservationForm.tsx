@@ -37,6 +37,9 @@ export default function ReservationForm() {
       const emailjsPublicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
       if (emailjsServiceId && emailjsTemplateId && emailjsPublicKey) {
+        // Initialize EmailJS with public key
+        emailjs.init(emailjsPublicKey);
+        
         // Use EmailJS to send email directly
         const templateParams = {
           to_email: CONTACT.email,
@@ -61,8 +64,7 @@ Komentar: ${formData.comment || "Nema komentara"}
         await emailjs.send(
           emailjsServiceId,
           emailjsTemplateId,
-          templateParams,
-          emailjsPublicKey
+          templateParams
         );
 
         setSubmitStatus("success");
@@ -98,8 +100,26 @@ Komentar: ${formData.comment || "Nema komentara"}
         });
       }
     } catch (error) {
-      console.error("Form submission error:", error);
-      setSubmitStatus("error");
+      // EmailJS error - fallback to mailto
+      const emailBody = `
+Nova rezervacija rođendana
+
+Datum: ${formData.date}
+Paket: ${formData.package}
+Email: ${formData.email}
+Telefon: ${formData.phone || "Nije unet"}
+Komentar: ${formData.comment || "Nema komentara"}
+      `.trim();
+
+      window.location.href = `mailto:${CONTACT.email}?subject=Nova rezervacija rođendana - ${formData.package}&body=${encodeURIComponent(emailBody)}`;
+      setSubmitStatus("success");
+      setFormData({
+        date: new Date().toISOString().split("T")[0],
+        package: "",
+        email: "",
+        phone: "",
+        comment: "",
+      });
     } finally {
       setIsSubmitting(false);
     }

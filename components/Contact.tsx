@@ -2,7 +2,7 @@
 
 import { CONTACT } from "@/lib/constants";
 import ReservationForm from "./ReservationForm";
-import { trackPhoneCall, trackLinkClick } from "@/lib/analytics";
+import { trackPhoneCall, trackWhatsAppClick } from "@/lib/analytics";
 
 export default function Contact() {
   return (
@@ -43,7 +43,7 @@ export default function Contact() {
                   href={CONTACT.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => trackLinkClick("WhatsApp", CONTACT.whatsappUrl, "Contact Section")}
+                    onClick={() => trackWhatsAppClick("Contact Section")}
                   className="flex items-center justify-center gap-3 bg-[#25D366] text-white px-6 py-4 md:px-8 md:py-5 rounded-full font-bold text-base md:text-lg hover:bg-[#20BA5A] transition-all hover:scale-105 hover:shadow-lg shadow-md w-full min-h-[56px]"
                   aria-label="Pošaljite poruku na WhatsApp"
                 >
