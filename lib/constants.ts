@@ -200,24 +200,28 @@ export const GALLERY_IMAGES = [
 // Hero Carousel Images (for Hero section)
 export const HERO_IMAGES = [
   {
-    src: "/images/rodjendan-animatori-novi-sad-rodjendaonica-za-decu-jabadabadoo-animatori-zabava.jpeg",
-    alt: "All-inclusive dečiji rođendani u Novom Sadu - profesionalni animatori i zabava za decu u rodjendaonici Jabadabadoo",
+    src: "/images/rodjendaonica-igraonica-klimatizovano-animatori-za-decu-bebe-novi-sad-jabadabadoo-animatori.jpeg",
+    alt: "Klimatizovana rodjendaonica i igraonica za decu u Novom Sadu - profesionalni animatori i bezbedan prostor za rodjendane",
   },
   {
-    src: "/images/rodjendaonica-igraonica-cuvaonica-jabadabadoo-novi-sad.jpeg",
-    alt: "Rođendaonica i igraonica za decu u Novom Sadu - bezbedan i klimatizovan prostor za rodjendane",
+    src: "/images/rodjendaonica-torta-rodjendan-novi-sad-jabadabadoo.jpeg",
+    alt: "Rodjendan za decu u Novom Sadu - personalizovana torta i tematske dekoracije u rodjendaonici Jabadabadoo",
   },
   {
     src: "/images/rodjendaonica-rodjendan-za-decu-novi-sad-jabadabadoo-unutrasnji-prostor-igraonica.jpeg",
     alt: "Tematski rodjendani za decu u Novom Sadu - unutrašnji prostor rodjendaonice sa igraonicom i poligonom",
   },
   {
-    src: "/images/rodjendaonica-igraonica-cuvaonica-klimatizovano-animatori-za-decu-bebe-novi-sad-jabadabadoo-animatori.jpeg",
-    alt: "Klimatizovana rodjendaonica i igraonica za decu u Novom Sadu - profesionalni animatori i bezbedan prostor",
+    src: "/images/rodjendan-animatori-novi-sad-rodjendaonica-za-decu-jabadabadoo-animatori-zabava.jpeg",
+    alt: "All-inclusive dečiji rođendani u Novom Sadu - profesionalni animatori i zabava za decu u rodjendaonici Jabadabadoo",
   },
   {
-    src: "/images/rodjendaonica-unutrasnji-prostor-klimatizovan-bezbedan-za-decu-poligon-jabadabadoo-novi-sad.jpeg",
-    alt: "Unutrašnji prostor rodjendaonice u Novom Sadu - klimatizovan, bezbedan prostor sa poligonom za decu",
+    src: "/images/prostor-za-roditelje-03-rodjendan-rodjendaonica-novi-sad-jabadabadoo.jpeg",
+    alt: "Rođendan za decu u Novom Sadu - prostor za roditelje u rodjendaonici Jabadabadoo, klimatizovan i udoban",
+  },
+  {
+    src: "/images/prostor-za-roditelje-i-najmladje-rodjendan-01-rodjendaonica-novi-sad-jabadabadoo.jpeg",
+    alt: "Rođendan za decu u Novom Sadu - prostor za roditelje i najmlađe u rodjendaonici Jabadabadoo, bezbedan i udoban",
   },
   {
     src: "/images/rodjendaonica-novi-sad-jabadabadoo-spolja.jpeg",
