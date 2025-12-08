@@ -28,12 +28,15 @@ export const trackPhoneCall = (phoneNumber: string, location: string) => {
 // Track form submission
 export const trackFormSubmission = (formType: string, packageName?: string) => {
   if (typeof window !== "undefined" && window.gtag) {
+    console.log("[GA4] Tracking form_submission", { formType, packageName });
     window.gtag("event", "form_submission", {
       event_category: "Conversion",
       event_label: formType,
       package: packageName || "N/A",
       value: 1,
     });
+  } else {
+    console.warn("[GA4] gtag not available for form submission");
   }
 };
 

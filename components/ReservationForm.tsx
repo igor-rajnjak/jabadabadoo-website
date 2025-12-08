@@ -15,12 +15,24 @@ export default function ReservationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(null);
 
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // Allow only digits, spaces, +, -, (, ) for phone formatting
+    const value = e.target.value.replace(/[^\d\s\+\-\(\)]/g, '');
+    setFormData({ ...formData, phone: value });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
 
     try {
+      // Track form submission FIRST (before any redirects)
+      trackFormSubmission("reservation_form", formData.package);
+      
+      // Small delay to ensure event is sent before mailto redirect
+      await new Promise(resolve => setTimeout(resolve, 100));
+
       // EmailJS configuration - user needs to set up their service
       // For now, we'll use a simple approach
       const emailBody = `
@@ -32,9 +44,6 @@ Email: ${formData.email}
 Telefon: ${formData.phone || "Nije unet"}
 Komentar: ${formData.comment || "Nema komentara"}
       `.trim();
-
-      // Track form submission
-      trackFormSubmission("reservation_form", formData.package);
 
       // Simple mailto fallback (user can configure EmailJS later)
       window.location.href = `mailto:${CONTACT.email}?subject=Nova rezervacija rođendana - ${formData.package}&body=${encodeURIComponent(emailBody)}`;
@@ -48,6 +57,7 @@ Komentar: ${formData.comment || "Nema komentara"}
         comment: "",
       });
     } catch (error) {
+      console.error("Form submission error:", error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -114,9 +124,11 @@ Komentar: ${formData.comment || "Nema komentara"}
           type="tel"
           id="phone"
           value={formData.phone}
-          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+          onChange={handlePhoneChange}
           className="w-full px-6 py-4 rounded-2xl border-4 border-secondary focus:border-primary outline-none text-text text-lg"
           placeholder="0661234567"
+          pattern="[\d\s\+\-\(\)]+"
+          title="Unesite samo cifre, razmake i znakove +, -, ( )"
         />
       </div>
 

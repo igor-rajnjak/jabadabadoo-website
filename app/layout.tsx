@@ -52,9 +52,20 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
+              
+              // Enable debug mode if ?debug=1 is in URL
+              var isDebugMode = false;
+              if (typeof window !== 'undefined' && window.location) {
+                isDebugMode = window.location.search.includes('debug=1') || window.location.hostname === 'localhost';
+              }
+              
               gtag('config', 'G-N2557RR5NG', {
-                debug_mode: typeof window !== 'undefined' && (window.location.search.includes('debug=1') || window.location.hostname === 'localhost')
+                debug_mode: isDebugMode
               });
+              
+              if (isDebugMode) {
+                console.log('[GA4] Debug mode enabled');
+              }
             `,
           }}
         />
