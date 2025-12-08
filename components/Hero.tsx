@@ -8,14 +8,14 @@ export default function Hero() {
   return (
     <section className="relative bg-gradient-to-r from-primary via-secondary to-accent text-white py-16 md:py-20 xl:py-24 px-6 md:px-8 overflow-hidden">
       {/* Subtle decorative emojis - positioned behind content */}
-      <div className="absolute top-10 left-4 md:left-10 text-4xl md:text-6xl opacity-20 pointer-events-none z-0">🎉</div>
-      <div className="absolute top-20 right-4 md:right-10 text-3xl md:text-5xl opacity-20 pointer-events-none z-0">🎈</div>
-      <div className="absolute bottom-10 left-1/4 text-3xl md:text-4xl opacity-15 pointer-events-none z-0">🎊</div>
-      <div className="absolute bottom-20 right-1/4 text-3xl md:text-4xl opacity-15 pointer-events-none z-0">🎁</div>
-      <div className="absolute top-1/3 left-1/3 text-2xl md:text-3xl opacity-8 pointer-events-none z-0">🎂</div>
-      <div className="absolute top-1/2 right-1/3 text-2xl md:text-3xl opacity-10 pointer-events-none z-0">🎪</div>
-      <div className="absolute bottom-1/3 left-1/2 text-2xl md:text-3xl opacity-5 pointer-events-none z-0">🎨</div>
-      <div className="absolute top-2/3 right-1/4 text-2xl md:text-3xl opacity-10 pointer-events-none z-0">🎭</div>
+      <div className="absolute top-10 left-4 md:left-10 text-4xl md:text-6xl opacity-[0.08] pointer-events-none z-0">🎉</div>
+      <div className="absolute top-20 right-4 md:right-10 text-3xl md:text-5xl opacity-[0.08] pointer-events-none z-0">🎈</div>
+      <div className="absolute bottom-10 left-1/4 text-3xl md:text-4xl opacity-[0.06] pointer-events-none z-0">🎊</div>
+      <div className="absolute bottom-20 right-1/4 text-3xl md:text-4xl opacity-[0.06] pointer-events-none z-0">🎁</div>
+      <div className="absolute top-1/3 left-1/3 text-2xl md:text-3xl opacity-[0.05] pointer-events-none z-0">🎂</div>
+      <div className="absolute top-1/2 right-1/3 text-2xl md:text-3xl opacity-[0.06] pointer-events-none z-0">🎪</div>
+      <div className="absolute bottom-1/3 left-1/2 text-2xl md:text-3xl opacity-[0.04] pointer-events-none z-0">🎨</div>
+      <div className="absolute top-2/3 right-1/4 text-2xl md:text-3xl opacity-[0.06] pointer-events-none z-0">🎭</div>
       
       <div className="container mx-auto relative z-10 max-w-7xl 2xl:max-w-[1600px]">
         {/* Split Layout for Full-Width (XL+) */}

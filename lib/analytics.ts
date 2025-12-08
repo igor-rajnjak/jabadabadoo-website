@@ -89,3 +89,42 @@ export const trackScrollDepth = (depth: number) => {
   }
 };
 
+// Track navigation link click
+export const trackNavClick = (linkText: string, linkHref: string) => {
+  if (typeof window !== "undefined" && window.gtag) {
+    console.log("[GA4] Tracking nav_click", { linkText, linkHref });
+    window.gtag("event", "nav_click", {
+      event_category: "Navigation",
+      event_label: linkText,
+      link_url: linkHref,
+      value: 1,
+    });
+  }
+};
+
+// Track generic link click (social media, external links, etc.)
+export const trackLinkClick = (linkText: string, linkUrl: string, location: string) => {
+  if (typeof window !== "undefined" && window.gtag) {
+    console.log("[GA4] Tracking link_click", { linkText, linkUrl, location });
+    window.gtag("event", "link_click", {
+      event_category: "Engagement",
+      event_label: linkText,
+      link_url: linkUrl,
+      location: location,
+      value: 1,
+    });
+  }
+};
+
+// Track logo click
+export const trackLogoClick = () => {
+  if (typeof window !== "undefined" && window.gtag) {
+    console.log("[GA4] Tracking logo_click");
+    window.gtag("event", "logo_click", {
+      event_category: "Navigation",
+      event_label: "Logo",
+      value: 1,
+    });
+  }
+};
+

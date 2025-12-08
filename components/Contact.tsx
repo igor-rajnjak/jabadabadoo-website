@@ -8,10 +8,10 @@ export default function Contact() {
   return (
     <section id="kontakt" className="relative py-24 md:py-32 px-6 md:px-8 bg-gradient-to-b from-white to-bg overflow-hidden">
       {/* Subtle decorative emojis */}
-      <div className="absolute top-20 left-4 md:left-10 text-3xl md:text-4xl opacity-10 pointer-events-none z-0">📞</div>
-      <div className="absolute top-1/3 right-4 md:right-10 text-2xl md:text-3xl opacity-10 pointer-events-none z-0">✉️</div>
-      <div className="absolute bottom-1/4 left-1/4 text-2xl md:text-3xl opacity-10 pointer-events-none z-0">📍</div>
-      <div className="absolute bottom-20 right-1/3 text-2xl md:text-3xl opacity-10 pointer-events-none z-0">📅</div>
+      <div className="absolute top-20 left-4 md:left-10 text-3xl md:text-4xl opacity-[0.06] pointer-events-none z-0">📞</div>
+      <div className="absolute top-1/3 right-4 md:right-10 text-2xl md:text-3xl opacity-[0.06] pointer-events-none z-0">✉️</div>
+      <div className="absolute bottom-1/4 left-1/4 text-2xl md:text-3xl opacity-[0.05] pointer-events-none z-0">📍</div>
+      <div className="absolute bottom-20 right-1/3 text-2xl md:text-3xl opacity-[0.06] pointer-events-none z-0">📅</div>
       
       <div className="container mx-auto max-w-6xl 2xl:max-w-[1200px] relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 md:mb-8 text-text flex items-center justify-center gap-2 md:gap-3">

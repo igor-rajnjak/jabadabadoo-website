@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { CONTACT } from "@/lib/constants";
+import { trackPhoneCall, trackLinkClick } from "@/lib/analytics";
 
 export default function Footer() {
   return (
@@ -26,12 +29,20 @@ export default function Footer() {
             <h4 className="font-bold text-lg md:text-xl mb-6">Kontakt</h4>
             <ul className="space-y-3 text-white/80 text-lg">
               <li>
-                <a href={`tel:${CONTACT.phoneFormatted}`} className="hover:text-accent transition-colors">
+                <a 
+                  href={`tel:${CONTACT.phoneFormatted}`} 
+                  onClick={() => trackPhoneCall(CONTACT.phone, "Footer")}
+                  className="hover:text-accent transition-colors"
+                >
                   📞 {CONTACT.phone}
                 </a>
               </li>
               <li>
-                <a href={`mailto:${CONTACT.email}`} className="hover:text-accent transition-colors">
+                <a 
+                  href={`mailto:${CONTACT.email}`} 
+                  onClick={() => trackLinkClick("Email", CONTACT.email, "Footer")}
+                  className="hover:text-accent transition-colors"
+                >
                   ✉️ {CONTACT.email}
                 </a>
               </li>
@@ -46,6 +57,7 @@ export default function Footer() {
                 href={CONTACT.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackLinkClick("Instagram", CONTACT.instagram, "Footer")}
                 className="text-3xl hover:scale-110 transition-transform"
                 aria-label="Instagram"
               >
@@ -55,6 +67,7 @@ export default function Footer() {
                 href={CONTACT.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackLinkClick("Facebook", CONTACT.facebook, "Footer")}
                 className="text-3xl hover:scale-110 transition-transform"
                 aria-label="Facebook"
               >

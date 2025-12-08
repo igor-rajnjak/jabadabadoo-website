@@ -34,10 +34,10 @@ export default function HowWeOrganize() {
   return (
     <section id="kako-organizujemo" className="relative py-24 md:py-32 px-6 md:px-8 bg-white overflow-hidden">
       {/* Subtle decorative emojis */}
-      <div className="absolute top-10 right-4 md:right-10 text-3xl md:text-4xl opacity-10 pointer-events-none z-0">🎪</div>
-      <div className="absolute top-1/2 left-4 md:left-10 text-2xl md:text-3xl opacity-10 pointer-events-none z-0">🎨</div>
-      <div className="absolute bottom-1/3 right-1/4 text-2xl md:text-3xl opacity-10 pointer-events-none z-0">🎭</div>
-      <div className="absolute bottom-10 left-1/3 text-2xl md:text-3xl opacity-10 pointer-events-none z-0">🎉</div>
+      <div className="absolute top-10 right-4 md:right-10 text-3xl md:text-4xl opacity-[0.06] pointer-events-none z-0">🎪</div>
+      <div className="absolute top-1/2 left-4 md:left-10 text-2xl md:text-3xl opacity-[0.05] pointer-events-none z-0">🎨</div>
+      <div className="absolute bottom-1/3 right-1/4 text-2xl md:text-3xl opacity-[0.06] pointer-events-none z-0">🎭</div>
+      <div className="absolute bottom-10 left-1/3 text-2xl md:text-3xl opacity-[0.06] pointer-events-none z-0">🎉</div>
       
       <div className="container mx-auto max-w-7xl 2xl:max-w-[1400px] relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 md:mb-8 text-text flex items-center justify-center gap-2 md:gap-3">

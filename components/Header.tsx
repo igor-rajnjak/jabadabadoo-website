@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { CONTACT } from "@/lib/constants";
-import { trackPhoneCall } from "@/lib/analytics";
+import { trackPhoneCall, trackNavClick, trackLogoClick } from "@/lib/analytics";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +21,11 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-gradient-to-r from-primary to-pink shadow-lg">
       <nav className="container mx-auto px-6 md:px-8 py-2 md:py-3 flex justify-between items-center max-w-7xl">
-        <Link href="/" className="flex items-center gap-2 md:gap-3">
+        <Link 
+          href="/" 
+          className="flex items-center gap-2 md:gap-3"
+          onClick={() => trackLogoClick()}
+        >
           <Image
             src="/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-transparent.png"
             alt="Jabadabadoo Rođendaonica Logo - all-inclusive dečiji rođendani u Novom Sadu, tematski rođendani za decu"
@@ -39,6 +43,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
+              onClick={() => trackNavClick(link.label, link.href)}
               className="text-white hover:text-accent transition-colors font-semibold text-sm lg:text-base whitespace-nowrap"
             >
               {link.label}
@@ -70,8 +75,11 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
+              onClick={() => {
+                trackNavClick(link.label, link.href);
+                setIsMenuOpen(false);
+              }}
               className="block text-white text-base font-semibold py-2.5 px-4 hover:bg-primary/80 transition-colors"
-              onClick={() => setIsMenuOpen(false)}
             >
               {link.label}
             </Link>

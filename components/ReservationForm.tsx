@@ -77,7 +77,8 @@ Komentar: ${formData.comment || "Nema komentara"}
           value={formData.date}
           onChange={(e) => setFormData({ ...formData, date: e.target.value })}
           min={new Date().toISOString().split("T")[0]}
-          className="w-full px-6 py-4 rounded-2xl border-4 border-secondary focus:border-primary outline-none text-text text-lg"
+          className="w-full max-w-full px-6 py-4 rounded-2xl border-4 border-secondary focus:border-primary outline-none text-text text-lg box-border"
+          style={{ width: '100%' }}
         />
       </div>
 
