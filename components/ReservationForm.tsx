@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { PACKAGES, CONTACT } from "@/lib/constants";
 import { trackFormSubmission } from "@/lib/analytics";
+import emailjs from "@emailjs/browser";
 
 export default function ReservationForm() {
   const [formData, setFormData] = useState({
@@ -27,15 +28,26 @@ export default function ReservationForm() {
     setSubmitStatus(null);
 
     try {
-      // Track form submission FIRST (before any redirects)
+      // Track form submission FIRST
       trackFormSubmission("reservation_form", formData.package);
       
-      // Small delay to ensure event is sent before mailto redirect
-      await new Promise(resolve => setTimeout(resolve, 100));
+      // Try EmailJS first (if configured)
+      const emailjsServiceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const emailjsTemplateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const emailjsPublicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-      // EmailJS configuration - user needs to set up their service
-      // For now, we'll use a simple approach
-      const emailBody = `
+      if (emailjsServiceId && emailjsTemplateId && emailjsPublicKey) {
+        // Use EmailJS to send email directly
+        const templateParams = {
+          to_email: CONTACT.email,
+          from_email: formData.email,
+          subject: `Nova rezervacija rođendana - ${formData.package}`,
+          date: formData.date,
+          package: formData.package,
+          email: formData.email,
+          phone: formData.phone || "Nije unet",
+          comment: formData.comment || "Nema komentara",
+          message: `
 Nova rezervacija rođendana
 
 Datum: ${formData.date}
@@ -43,19 +55,48 @@ Paket: ${formData.package}
 Email: ${formData.email}
 Telefon: ${formData.phone || "Nije unet"}
 Komentar: ${formData.comment || "Nema komentara"}
-      `.trim();
+          `.trim(),
+        };
 
-      // Simple mailto fallback (user can configure EmailJS later)
-      window.location.href = `mailto:${CONTACT.email}?subject=Nova rezervacija rođendana - ${formData.package}&body=${encodeURIComponent(emailBody)}`;
+        await emailjs.send(
+          emailjsServiceId,
+          emailjsTemplateId,
+          templateParams,
+          emailjsPublicKey
+        );
 
-      setSubmitStatus("success");
-      setFormData({
-        date: new Date().toISOString().split("T")[0],
-        package: "",
-        email: "",
-        phone: "",
-        comment: "",
-      });
+        setSubmitStatus("success");
+        setFormData({
+          date: new Date().toISOString().split("T")[0],
+          package: "",
+          email: "",
+          phone: "",
+          comment: "",
+        });
+      } else {
+        // Fallback to mailto if EmailJS is not configured
+        const emailBody = `
+Nova rezervacija rođendana
+
+Datum: ${formData.date}
+Paket: ${formData.package}
+Email: ${formData.email}
+Telefon: ${formData.phone || "Nije unet"}
+Komentar: ${formData.comment || "Nema komentara"}
+        `.trim();
+
+        window.location.href = `mailto:${CONTACT.email}?subject=Nova rezervacija rođendana - ${formData.package}&body=${encodeURIComponent(emailBody)}`;
+        
+        // Show success message even with mailto (user needs to send manually)
+        setSubmitStatus("success");
+        setFormData({
+          date: new Date().toISOString().split("T")[0],
+          package: "",
+          email: "",
+          phone: "",
+          comment: "",
+        });
+      }
     } catch (error) {
       console.error("Form submission error:", error);
       setSubmitStatus("error");
