@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { CONTACT } from "@/lib/constants";
-import { trackPhoneCall, trackWhatsAppClick } from "@/lib/analytics";
+import { trackPhoneCall, trackWhatsAppClick, trackLinkClick } from "@/lib/analytics";
 
 export default function Footer() {
   return (

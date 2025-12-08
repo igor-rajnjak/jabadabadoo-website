@@ -37,9 +37,6 @@ export default function ReservationForm() {
       const emailjsPublicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
       if (emailjsServiceId && emailjsTemplateId && emailjsPublicKey) {
-        // Initialize EmailJS with public key
-        emailjs.init(emailjsPublicKey);
-        
         // Use EmailJS to send email directly
         const templateParams = {
           to_email: CONTACT.email,
@@ -64,7 +61,8 @@ Komentar: ${formData.comment || "Nema komentara"}
         await emailjs.send(
           emailjsServiceId,
           emailjsTemplateId,
-          templateParams
+          templateParams,
+          emailjsPublicKey
         );
 
         setSubmitStatus("success");
