@@ -95,6 +95,23 @@ export default function RootLayout({
               "@id": "https://rodjendaonica-novi-sad.com",
               url: "https://rodjendaonica-novi-sad.com",
               telephone: CONTACT.phone,
+              contactPoint: [
+                {
+                  "@type": "ContactPoint",
+                  telephone: CONTACT.phoneFormatted,
+                  contactType: "customer service",
+                  areaServed: "RS",
+                  availableLanguage: ["sr", "sr-RS"],
+                },
+                {
+                  "@type": "ContactPoint",
+                  telephone: CONTACT.whatsapp,
+                  contactType: "customer service",
+                  areaServed: "RS",
+                  availableLanguage: ["sr", "sr-RS"],
+                  sameAs: CONTACT.whatsappUrl,
+                },
+              ],
               priceRange: "15.990 - 44.990 RSD",
               address: {
                 "@type": "PostalAddress",
@@ -160,6 +177,7 @@ export default function RootLayout({
               sameAs: [
                 CONTACT.instagram,
                 CONTACT.facebook,
+                CONTACT.whatsappUrl,
               ],
             }),
           }}

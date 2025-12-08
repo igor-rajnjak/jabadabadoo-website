@@ -2,6 +2,8 @@
 export const CONTACT = {
   phone: "066286555",
   phoneFormatted: "+38166286555",
+  whatsapp: "+38166286555",
+  whatsappUrl: "https://wa.me/38166286555",
   email: "jabadabadoo.ns@gmail.com",
   address: "Somborska 17, 21000 Novi Sad, Srbija",
   workingHours: "Svaki dan 10:00 - 21:00",
@@ -192,6 +194,34 @@ export const GALLERY_IMAGES = [
   {
     src: "/images/prostor-za-roditelje-rodjendan-rodjendaonica-novi-sad-jabadabadoo.jpeg",
     alt: "Rođendan za decu u Novom Sadu - prostor za roditelje u rodjendaonici Jabadabadoo",
+  },
+] as const;
+
+// Hero Carousel Images (for Hero section)
+export const HERO_IMAGES = [
+  {
+    src: "/images/rodjendan-animatori-novi-sad-rodjendaonica-za-decu-jabadabadoo-animatori-zabava.jpeg",
+    alt: "All-inclusive dečiji rođendani u Novom Sadu - profesionalni animatori i zabava za decu u rodjendaonici Jabadabadoo",
+  },
+  {
+    src: "/images/rodjendaonica-igraonica-cuvaonica-jabadabadoo-novi-sad.jpeg",
+    alt: "Rođendaonica i igraonica za decu u Novom Sadu - bezbedan i klimatizovan prostor za rodjendane",
+  },
+  {
+    src: "/images/rodjendaonica-rodjendan-za-decu-novi-sad-jabadabadoo-unutrasnji-prostor-igraonica.jpeg",
+    alt: "Tematski rodjendani za decu u Novom Sadu - unutrašnji prostor rodjendaonice sa igraonicom i poligonom",
+  },
+  {
+    src: "/images/rodjendaonica-igraonica-cuvaonica-klimatizovano-animatori-za-decu-bebe-novi-sad-jabadabadoo-animatori.jpeg",
+    alt: "Klimatizovana rodjendaonica i igraonica za decu u Novom Sadu - profesionalni animatori i bezbedan prostor",
+  },
+  {
+    src: "/images/rodjendaonica-unutrasnji-prostor-klimatizovan-bezbedan-za-decu-poligon-jabadabadoo-novi-sad.jpeg",
+    alt: "Unutrašnji prostor rodjendaonice u Novom Sadu - klimatizovan, bezbedan prostor sa poligonom za decu",
+  },
+  {
+    src: "/images/rodjendaonica-novi-sad-jabadabadoo-spolja.jpeg",
+    alt: "Jabadabadoo rodjendaonica u Novom Sadu - spoljašnji izgled rodjendaonice i igraonice za decu",
   },
 ] as const;
 
