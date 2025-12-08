@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { CONTACT, SEO, FAQ } from "@/lib/constants";
+import { CONTACT, SEO, FAQ, REVIEWS } from "@/lib/constants";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
@@ -12,17 +12,29 @@ export const metadata: Metadata = {
     icon: '/icon.png',
     apple: '/apple-icon.png',
   },
+  manifest: '/manifest.json',
   openGraph: {
     title: SEO.title,
     description: SEO.description,
     type: "website",
     locale: "sr_RS",
     siteName: "Jabadabadoo Rođendaonica",
+    images: [
+      {
+        url: "https://rodjendaonica-novi-sad.com/images/rodjendan-animatori-novi-sad-rodjendaonica-za-decu-jabadabadoo-animatori-zabava.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "All-inclusive dečiji rođendani u Novom Sadu - profesionalni animatori i zabava za decu",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: SEO.title,
     description: SEO.description,
+    images: [
+      "https://rodjendaonica-novi-sad.com/images/rodjendan-animatori-novi-sad-rodjendaonica-za-decu-jabadabadoo-animatori-zabava.jpeg",
+    ],
   },
   robots: {
     index: true,
@@ -96,25 +108,59 @@ export default function RootLayout({
                 latitude: 45.2671,
                 longitude: 19.8335,
               },
-              openingHoursSpecification: {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: [
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday",
-                  "Friday",
-                  "Saturday",
-                  "Sunday",
-                ],
-                opens: "10:00",
-                closes: "21:00",
-              },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Monday",
+                  opens: "10:00",
+                  closes: "21:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Tuesday",
+                  opens: "10:00",
+                  closes: "21:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Wednesday",
+                  opens: "10:00",
+                  closes: "21:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Thursday",
+                  opens: "10:00",
+                  closes: "21:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Friday",
+                  opens: "10:00",
+                  closes: "21:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Saturday",
+                  opens: "10:00",
+                  closes: "21:00",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Sunday",
+                  opens: "10:00",
+                  closes: "21:00",
+                },
+              ],
               aggregateRating: {
                 "@type": "AggregateRating",
                 ratingValue: "4.6",
                 reviewCount: "134",
               },
+              sameAs: [
+                CONTACT.instagram,
+                CONTACT.facebook,
+              ],
             }),
           }}
         />
@@ -131,6 +177,30 @@ export default function RootLayout({
                   "@type": "Answer",
                   text: item.answer,
                 },
+              })),
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Jabadabadoo Rođendaonica",
+              review: REVIEWS.map((review) => ({
+                "@type": "Review",
+                author: {
+                  "@type": "Person",
+                  name: review.name,
+                },
+                reviewRating: {
+                  "@type": "Rating",
+                  ratingValue: review.rating,
+                  bestRating: 5,
+                },
+                reviewBody: review.text,
+                datePublished: new Date(Date.now() - review.monthsAgo * 30 * 24 * 60 * 60 * 1000).toISOString().split("T")[0],
               })),
             }),
           }}

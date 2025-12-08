@@ -1,0 +1,28 @@
+{
+  "name": "Jabadabadoo Rođendaonica - Nezaboravni Rođendani za Decu u Novom Sadu",
+  "short_name": "Jabadabadoo",
+  "description": "Već 3. godinu organizujemo nezaboravne rođendane za decu u Novom Sadu. All-inclusive dečiji rođendani, tematski rođendani, profesionalni animatori.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff6b6b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["entertainment", "kids", "events"],
+  "lang": "sr",
+  "dir": "ltr"
+}
+
