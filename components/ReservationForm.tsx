@@ -38,24 +38,13 @@ export default function ReservationForm() {
 
       if (emailjsServiceId && emailjsTemplateId && emailjsPublicKey) {
         // Use EmailJS to send email directly
+        // Template parameters must match the template variables in EmailJS
         const templateParams = {
-          to_email: CONTACT.email,
-          from_email: formData.email,
-          subject: `Nova rezervacija rođendana - ${formData.package}`,
           date: formData.date,
           package: formData.package,
           email: formData.email,
           phone: formData.phone || "Nije unet",
           comment: formData.comment || "Nema komentara",
-          message: `
-Nova rezervacija rođendana
-
-Datum: ${formData.date}
-Paket: ${formData.package}
-Email: ${formData.email}
-Telefon: ${formData.phone || "Nije unet"}
-Komentar: ${formData.comment || "Nema komentara"}
-          `.trim(),
         };
 
         await emailjs.send(
