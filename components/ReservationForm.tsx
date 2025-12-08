@@ -66,7 +66,7 @@ Komentar: ${formData.comment || "Nema komentara"}
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8">
-      <div>
+      <div className="overflow-hidden">
         <label htmlFor="date" className="block font-bold mb-3 text-text text-lg">
           Datum rođendana <span className="text-primary">*</span>
         </label>
@@ -78,7 +78,12 @@ Komentar: ${formData.comment || "Nema komentara"}
           onChange={(e) => setFormData({ ...formData, date: e.target.value })}
           min={new Date().toISOString().split("T")[0]}
           className="w-full max-w-full px-6 py-4 rounded-2xl border-4 border-secondary focus:border-primary outline-none text-text text-lg box-border"
-          style={{ width: '100%' }}
+          style={{ 
+            width: '100%',
+            maxWidth: '100%',
+            WebkitAppearance: 'none',
+            appearance: 'none'
+          }}
         />
       </div>
 
