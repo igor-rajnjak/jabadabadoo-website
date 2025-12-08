@@ -1,0 +1,197 @@
+// Contact Information
+export const CONTACT = {
+  phone: "066286555",
+  phoneFormatted: "+38166286555",
+  email: "isidora.topolic@gmail.com",
+  address: "Somborska 17, 21000 Novi Sad, Srbija",
+  workingHours: "Svaki dan 10:00 - 21:00",
+  workingHoursNote: "Ne radimo na praznike - pozovite za proveru dostupnosti",
+  instagram: "https://www.instagram.com/jabadabadoo_rodjendaonica",
+  facebook: "https://www.facebook.com/p/Jabadabadoo-Rođendaonica-100090415525723/",
+  googleMaps: "https://www.google.com/maps/search/Jabadabadoo+Igraonica+i+Rođendaonica+Novi+Sad",
+} as const;
+
+// SEO Meta Tags
+export const SEO = {
+  title: "Rođendaonica Novi Sad | Nezaboravni Rođendani za Decu",
+  description: "Već 3. godinu organizujemo nezaboravne rođendane za decu u Novom Sadu. Profesionalni animatori, tematski rođendani, kompletan program. Rezervišite: 066286555",
+  keywords: "rođendaonica novi sad, rođendan za decu novi sad, organizacija rođendana novi sad, animatori rođendaonica, rođendani za decu 2-10 godina",
+} as const;
+
+// Trust Signals
+export const TRUST_SIGNALS = {
+  years: "3",
+  satisfiedParents: "100+",
+  rating: "4.6",
+  reviewCount: "134",
+  ageRange: "2-10 godina",
+} as const;
+
+// Pricing Packages (simplified for form dropdown)
+export const PACKAGES = [
+  {
+    id: "standard",
+    name: "Standard",
+    price: "15.990",
+    duration: "2h",
+    popular: false,
+  },
+  {
+    id: "premium",
+    name: "Premium",
+    price: "22.990",
+    duration: "2.5h",
+    popular: false,
+  },
+  {
+    id: "all-inclusive",
+    name: "All-Inclusive",
+    price: "33.990",
+    duration: "2.5h",
+    popular: true,
+  },
+  {
+    id: "ultra",
+    name: "Ultra",
+    price: "44.990",
+    duration: "3h",
+    popular: false,
+  },
+] as const;
+
+// Features (Why Us)
+export const FEATURES = [
+  {
+    icon: "⭐",
+    title: `${TRUST_SIGNALS.satisfiedParents} Zadovoljnih Roditelja`,
+    description: "Preko 100 porodica nam je verovalo za nezaboravne rođendane",
+  },
+  {
+    icon: "🎭",
+    title: "Profesionalni Animatori",
+    description: "Stručan tim animatora posvećen zabavi i deci",
+  },
+  {
+    icon: "🏠",
+    title: "Bezbedan i Klimatizovan Prostor",
+    description: "Prostran, klimatizovan prostor sa igraonicom i poligonom",
+  },
+  {
+    icon: "🎉",
+    title: "Kompletna Organizacija",
+    description: "Sve uključeno - animatori, torte, dekoracije, pinjata",
+  },
+] as const;
+
+// Reviews
+export const REVIEWS = [
+  {
+    name: "Marina Topalović",
+    rating: 5,
+    text: "Proslavili smo dva rodjendana u Jabadabadoo i sve je bilo fantastično! Animatori su odlični – posvećeni, veseli i konstantno uključeni u igru sa decom. Čak nude i predstave deo rodjendanske proslave, deca su bila oduševljena. Sve preporuke!",
+    monthsAgo: 6,
+  },
+  {
+    name: "Jelena Grubac",
+    rating: 5,
+    text: "Jabadabadoo igraonica u Novom Sadu je visoko preporučena! Usluga je bila fantastična, prostor čist, prijatan i lepo dekorisan. Devojke koje tamo rade su izuzetno ljubazne, uslužne i posvećene deci – odličan posao!",
+    monthsAgo: 3,
+  },
+  {
+    name: "Milana Milosevic",
+    rating: 5,
+    text: "Pre neki dan smo proslavili rodjendan moje ćerke u ovoj igraonici i stvarno sam oduševljena. Nemam ništa osim pohvala za kompletnu organizaciju, posebno animatori i konobari koji su bili veoma ljubazni. Nemam zamerki. Jasna 10 od nas! 😊🎉",
+    monthsAgo: 7,
+  },
+  {
+    name: "Natasa Medjesi",
+    rating: 5,
+    text: "Preporučeno kao mesto za rodjendanske proslave ❤️ Svo osoblje je bilo iskreno, podržavajuće i posvećeno. Moj sin, koji obično ne učestvuje u igrama, je trčao, vikao i uživao više nego ikad. Sva deca su bila iscrpljena i presrećna. Prostor je renoviran, estetski, čist. Jabadabadoo, hvala vam na ovom divnom iskustvu 🥺",
+    monthsAgo: 9,
+  },
+  {
+    name: "Tanja Neskovic",
+    rating: 5,
+    text: "Novi vlasnici su divni, animatori su još divniji, posvećeni i puni igara. Deca su otišla kući presrećna, preumorna i puna utisaka. Svaka preporuka ako želite savršen rodjendan. Hvala vam 🌸🎀",
+    monthsAgo: 11,
+  },
+  {
+    name: "Sara Bjedov",
+    rating: 5,
+    text: "Novi vlasnici, novo osoblje i animatori! Veoma smo zadovoljni uslugom, deca su imala divno vreme na proslavi 🥳🥳🥳🥳🥳 Svaka preporuka!",
+    monthsAgo: 11,
+  },
+] as const;
+
+// FAQ
+export const FAQ = [
+  {
+    question: "Koliko unapred treba rezervisati rođendan?",
+    answer: "Najbolje je makar mesec dana ranije, ali što ranije rezervišete, to je veći izgled da će moći da rezervišete željeni termin. Ne možemo garantovati slobodne termine - pozovite nas za proveru dostupnosti. Vikendi se obično popune 3-4 nedelje ranije, pa preporučujemo da rezervišete što pre.",
+  },
+  {
+    question: "Koliko dece je minimum za rođendan?",
+    answer: "Minimum koliko hoćete - ne plaća se manje ako ima manje dece. Cena je ista bez obzira na broj dece.",
+  },
+  {
+    question: "Mogu li da izaberem temu za rođendan?",
+    answer: "Da! Pozovite nas za teme ili pogledajte šta smo radili ranije na Instagramu. Možemo organizovati tematske rođendane prema želji vašeg deteta.",
+  },
+  {
+    question: "Mogu li da donesem sopstvenu tortu?",
+    answer: "Da, možete doneti sopstvenu tortu. Međutim, lakše je da preko nas uzmete tortu - mi sve rešimo i ne morate da mislite o tome.",
+  },
+  {
+    question: "Da li roditelji moraju da budu prisutni?",
+    answer: "Roditelji mogu biti prisutni, ali nisu obavezni. Imamo prostor za roditelje gde mogu da se opuste dok deca uživaju u proslavi.",
+  },
+  {
+    question: "Šta ako dete ima alergije?",
+    answer: "Obavezno nas obavestite o svim alergijama (hrana, boje za crtanje, itd.) kako bismo preduzeli potrebne mere. Možemo prilagoditi meni i aktivnosti prema potrebama vašeg deteta.",
+  },
+  {
+    question: "Šta ako treba da otkažem ili promenim termin?",
+    answer: "Može se dogovoriti pomeranje u slučaju bolesti deteta i slično, ali nema vraćanja depozita. Kontaktirajte nas što pre ako treba da promenite termin.",
+  },
+  {
+    question: "Kako funkcioniše plaćanje?",
+    answer: "50% od ukupne cene paketa je depozit za rezervaciju, a ostatak se plaća 7 dana pre rođendana. Plaćanje je moguće gotovinom, karticom ili bankovnim transferom.",
+  },
+  {
+    question: "Mogu li da promenim paket nakon rezervacije?",
+    answer: "Da, možete promeniti paket nakon rezervacije. Kontaktirajte nas da razgovaramo o detaljima i prilagodimo rezervaciju vašim potrebama.",
+  },
+  {
+    question: "Imate li dodatne usluge?",
+    answer: "Da, pored osnovnih paketa, možemo organizovati dodatne aktivnosti, fotografisanje, video snimanje i druge usluge. Pozovite nas da razgovaramo o vašim željama.",
+  },
+] as const;
+
+// Gallery Images
+export const GALLERY_IMAGES = [
+  {
+    src: "/images/rodjendan-animatori-novi-sad-rodjendaonica-za-decu-jabadabadoo-animatori-zabava.jpeg",
+    alt: "Animatori i zabava na rođendanu za decu u Novom Sadu",
+  },
+  {
+    src: "/images/rodjendaonica-rodjendan-za-decu-novi-sad-jabadabadoo-unutrasnji-prostor-igraonica.jpeg",
+    alt: "Unutrašnji prostor rođendaonice sa igraonicom u Novom Sadu",
+  },
+  {
+    src: "/images/rodjendaonica-torta-rodjendan-novi-sad-jabadabadoo.jpeg",
+    alt: "Torta i dekoracije za rođendan u Novom Sadu",
+  },
+  {
+    src: "/images/rodjendaonica-igraonica-cuvaonica-pinjata-animatori-igre-bezbedno-rodjendan-novi-sad-zabava.jpeg",
+    alt: "Pinjata i igre na rođendanu za decu u Novom Sadu",
+  },
+  {
+    src: "/images/rodjendaonica-rodjendan-za-decu-novi-sad-jabadabadoo-filmovi-animatori-zabava-porodica.jpeg",
+    alt: "Filmovi i zabava na rođendanu za decu u Novom Sadu",
+  },
+  {
+    src: "/images/prostor-za-roditelje-rodjendan-rodjendaonica-novi-sad-jabadabadoo.jpeg",
+    alt: "Prostor za roditelje u rođendaonici u Novom Sadu",
+  },
+] as const;
+
