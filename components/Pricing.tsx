@@ -5,6 +5,7 @@ import { PACKAGES_DATA, ADDONS } from "@/lib/pricingData";
 import { CONTACT } from "@/lib/constants";
 import PricingComparison from "./PricingComparison";
 import Link from "next/link";
+import { trackPackageClick, trackPhoneCall, trackCTAClick } from "@/lib/analytics";
 
 export default function Pricing() {
   const [tooltip, setTooltip] = useState<{ text: string; x: number; y: number } | null>(null);
@@ -160,12 +161,16 @@ export default function Pricing() {
                 </div>
               )}
               
-              <a
-                href={`tel:${CONTACT.phoneFormatted}`}
-                className="block w-full bg-primary text-white text-center py-3 md:py-4 lg:py-5 rounded-full font-bold text-base md:text-lg hover:bg-red-500 transition-all hover:-translate-y-1 shadow-lg mt-auto"
-              >
-                📞 Pozovi {CONTACT.phone}
-              </a>
+                      <a
+                        href={`tel:${CONTACT.phoneFormatted}`}
+                        onClick={() => {
+                          trackPackageClick(pkg.name, "Pricing Card");
+                          trackPhoneCall(CONTACT.phone, `Pricing-${pkg.name}`);
+                        }}
+                        className="block w-full bg-primary text-white text-center py-3 md:py-4 lg:py-5 rounded-full font-bold text-base md:text-lg hover:bg-red-500 transition-all hover:-translate-y-1 shadow-lg mt-auto"
+                      >
+                        📞 Pozovi {CONTACT.phone}
+                      </a>
             </div>
           ))}
         </div>
@@ -179,14 +184,15 @@ export default function Pricing() {
           </div>
         )}
         
-        <div className="text-center mb-12">
-          <Link
-            href="#kontakt"
-            className="inline-block bg-accent text-text px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all hover:-translate-y-1 shadow-lg"
-          >
-            Rezerviši Rođendan
-          </Link>
-        </div>
+                <div className="text-center mb-12">
+                  <a
+                    href="#kontakt"
+                    onClick={() => trackCTAClick("Rezerviši Rođendan", "Pricing Section")}
+                    className="inline-block bg-accent text-text px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all hover:-translate-y-1 shadow-lg"
+                  >
+                    Rezerviši Rođendan
+                  </a>
+                </div>
         
         <div className="bg-red-100 border-4 border-red-500 rounded-2xl p-6 mb-12 text-center">
           <h3 className="text-2xl font-bold mb-4 text-red-800">⏰ Ograničen broj termina - rezervišite na vreme!</h3>

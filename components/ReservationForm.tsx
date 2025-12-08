@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { PACKAGES, CONTACT } from "@/lib/constants";
+import { trackFormSubmission } from "@/lib/analytics";
 
 export default function ReservationForm() {
   const [formData, setFormData] = useState({
@@ -31,6 +32,9 @@ Email: ${formData.email}
 Telefon: ${formData.phone || "Nije unet"}
 Komentar: ${formData.comment || "Nema komentara"}
       `.trim();
+
+      // Track form submission
+      trackFormSubmission("reservation_form", formData.package);
 
       // Simple mailto fallback (user can configure EmailJS later)
       window.location.href = `mailto:${CONTACT.email}?subject=Nova rezervacija rođendana - ${formData.package}&body=${encodeURIComponent(emailBody)}`;

@@ -1,5 +1,8 @@
+"use client";
+
 import { CONTACT } from "@/lib/constants";
 import ReservationForm from "./ReservationForm";
+import { trackPhoneCall } from "@/lib/analytics";
 
 export default function Contact() {
   return (
@@ -27,12 +30,13 @@ export default function Contact() {
             <div className="space-y-6 md:space-y-8 mb-10 md:mb-12">
               <div className="bg-white p-8 md:p-10 rounded-3xl border-4 border-secondary shadow-lg">
                 <p className="font-bold text-lg md:text-xl mb-3">📞 Telefon</p>
-                <a
-                  href={`tel:${CONTACT.phoneFormatted}`}
-                  className="text-primary text-xl md:text-2xl font-bold hover:underline"
-                >
-                  {CONTACT.phone}
-                </a>
+                        <a
+                          href={`tel:${CONTACT.phoneFormatted}`}
+                          onClick={() => trackPhoneCall(CONTACT.phone, "Contact Section")}
+                          className="text-primary text-xl md:text-2xl font-bold hover:underline"
+                        >
+                          {CONTACT.phone}
+                        </a>
                 <p className="text-sm md:text-base text-text/60 mt-3">
                   Možete nas pozvati ili pisati na Viber/WhatsApp
                 </p>

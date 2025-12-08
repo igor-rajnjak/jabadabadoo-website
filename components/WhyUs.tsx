@@ -1,6 +1,8 @@
+"use client";
+
 import { FEATURES } from "@/lib/constants";
-import Link from "next/link";
 import { CONTACT } from "@/lib/constants";
+import { trackCTAClick, trackPhoneCall } from "@/lib/analytics";
 
 export default function WhyUs() {
   return (
@@ -39,14 +41,16 @@ export default function WhyUs() {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <Link
+          <a
             href="#kontakt"
+            onClick={() => trackCTAClick("Rezerviši Rođendan", "WhyUs")}
             className="bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-500 transition-all hover:-translate-y-1 shadow-lg text-center"
           >
             Rezerviši Rođendan
-          </Link>
+          </a>
           <a
             href={`tel:${CONTACT.phoneFormatted}`}
+            onClick={() => trackPhoneCall(CONTACT.phone, "WhyUs")}
             className="bg-secondary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-teal-500 transition-all hover:-translate-y-1 shadow-lg text-center"
           >
             📞 Pozovi {CONTACT.phone}

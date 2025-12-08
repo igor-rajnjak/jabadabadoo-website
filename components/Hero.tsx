@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { CONTACT, TRUST_SIGNALS } from "@/lib/constants";
+import { trackCTAClick, trackPhoneCall } from "@/lib/analytics";
 
 export default function Hero() {
   return (
@@ -39,14 +39,16 @@ export default function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center xl:justify-start items-center xl:items-stretch mb-4 md:mb-6">
-              <Link
+              <a
                 href="#kontakt"
+                onClick={() => trackCTAClick("Rezerviši Rođendan", "Hero")}
                 className="bg-accent text-text px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all hover:-translate-y-1 shadow-lg min-w-[200px] text-center"
               >
                 Rezerviši Rođendan
-              </Link>
+              </a>
               <a
                 href={`tel:${CONTACT.phoneFormatted}`}
+                onClick={() => trackPhoneCall(CONTACT.phone, "Hero")}
                 className="bg-white/20 backdrop-blur-md text-white px-8 py-4 rounded-full font-bold text-lg border-2 border-white hover:bg-white/30 transition-all hover:-translate-y-1 shadow-lg min-w-[200px] text-center"
               >
                 📞 Pozovi {CONTACT.phone}

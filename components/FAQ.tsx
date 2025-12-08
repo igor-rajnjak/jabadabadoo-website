@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { FAQ } from "@/lib/constants";
 import { CONTACT } from "@/lib/constants";
+import { trackPhoneCall } from "@/lib/analytics";
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -53,6 +54,7 @@ export default function FAQSection() {
           </p>
           <a
             href={`tel:${CONTACT.phoneFormatted}`}
+            onClick={() => trackPhoneCall(CONTACT.phone, "FAQ")}
             className="inline-block bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-500 transition-all hover:-translate-y-1 shadow-lg"
           >
             📞 Pozovi {CONTACT.phone} za više informacija

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { CONTACT } from "@/lib/constants";
+import { trackPhoneCall } from "@/lib/analytics";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,12 +44,13 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <a
-            href={`tel:${CONTACT.phoneFormatted}`}
-            className="bg-accent text-text px-6 py-2 rounded-full font-bold hover:bg-yellow-400 transition-colors min-w-[120px] text-center"
-          >
-            📞 {CONTACT.phone}
-          </a>
+                  <a
+                    href={`tel:${CONTACT.phoneFormatted}`}
+                    onClick={() => trackPhoneCall(CONTACT.phone, "Header")}
+                    className="bg-accent text-text px-6 py-2 rounded-full font-bold hover:bg-yellow-400 transition-colors min-w-[120px] text-center"
+                  >
+                    📞 {CONTACT.phone}
+                  </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -74,13 +76,16 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-          <a
-            href={`tel:${CONTACT.phoneFormatted}`}
-            className="block bg-accent text-text px-6 py-3 mx-4 mt-2 rounded-full font-bold text-center hover:bg-yellow-400 transition-all shadow-md"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            📞 Pozovi {CONTACT.phone}
-          </a>
+                  <a
+                    href={`tel:${CONTACT.phoneFormatted}`}
+                    onClick={() => {
+                      trackPhoneCall(CONTACT.phone, "Header Mobile");
+                      setIsMenuOpen(false);
+                    }}
+                    className="block bg-accent text-text px-6 py-3 mx-4 mt-2 rounded-full font-bold text-center hover:bg-yellow-400 transition-all shadow-md"
+                  >
+                    📞 Pozovi {CONTACT.phone}
+                  </a>
         </div>
       )}
     </header>

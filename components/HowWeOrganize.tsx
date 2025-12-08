@@ -1,5 +1,7 @@
-import Link from "next/link";
+"use client";
+
 import Image from "next/image";
+import { trackCTAClick } from "@/lib/analytics";
 
 const ORGANIZATION_FEATURES = [
   {
@@ -75,14 +77,15 @@ export default function HowWeOrganize() {
           ))}
         </div>
         
-        <div className="text-center">
-          <Link
-            href="#kontakt"
-            className="inline-block bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-500 transition-all hover:-translate-y-1 shadow-lg"
-          >
-            Rezerviši Rođendan
-          </Link>
-        </div>
+                <div className="text-center">
+                  <a
+                    href="#kontakt"
+                    onClick={() => trackCTAClick("Rezerviši Rođendan", "HowWeOrganize")}
+                    className="inline-block bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-500 transition-all hover:-translate-y-1 shadow-lg"
+                  >
+                    Rezerviši Rođendan
+                  </a>
+                </div>
       </div>
     </section>
   );
