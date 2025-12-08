@@ -4,7 +4,7 @@ import Script from "next/script";
 
 // Google Analytics 4 Measurement ID
 // Can be overridden with NEXT_PUBLIC_GA_MEASUREMENT_ID environment variable
-const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-NC06CEC2EH";
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-N2557RR5NG";
 
 export default function GoogleAnalytics() {
   return (
