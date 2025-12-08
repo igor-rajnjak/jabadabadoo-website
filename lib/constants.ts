@@ -13,9 +13,9 @@ export const CONTACT = {
 
 // SEO Meta Tags
 export const SEO = {
-  title: "Rođendaonica Novi Sad | Nezaboravni Rođendani za Decu",
-  description: "Već 3. godinu organizujemo nezaboravne rođendane za decu u Novom Sadu. Profesionalni animatori, tematski rođendani, kompletan program. Rezervišite: 066286555",
-  keywords: "rođendaonica novi sad, rođendan za decu novi sad, organizacija rođendana novi sad, animatori rođendaonica, rođendani za decu 2-10 godina",
+  title: "Rođendaonica Novi Sad | Rodjendan za Decu | All-inclusive",
+  description: "Već 3. godinu organizujemo nezaboravne rođendane za decu u Novom Sadu - preko 100 zadovoljnih roditelja. All-inclusive rodjendani, tematski rođendani, profesionalni animatori. Rezervišite: 066286555",
+  keywords: "rođendaonica novi sad, rodjendaonica novi sad, rođendan za decu novi sad, rodjendan za decu novi sad, all-inclusive dečiji rođendani novi sad, all-inclusive deciji rodjendani novi sad, tematski rođendani za decu, tematski rodjendani za decu, organizacija rođendana novi sad, organizacija rodjendana novi sad, animatori rođendaonica novi sad, animatori rodjendaonica novi sad, rođendani za decu 2-10 godina, rodjendani za decu 2-10 godina, čuvaonica novi sad, cuvaonica novi sad",
 } as const;
 
 // Trust Signals
@@ -127,7 +127,7 @@ export const REVIEWS = [
 export const FAQ = [
   {
     question: "Koliko unapred treba rezervisati rođendan?",
-    answer: "Najbolje je makar mesec dana ranije, ali što ranije rezervišete, to je veći izgled da će moći da rezervišete željeni termin. Ne možemo garantovati slobodne termine - pozovite nas za proveru dostupnosti. Vikendi se obično popune 3-4 nedelje ranije, pa preporučujemo da rezervišete što pre.",
+    answer: "Najbolje je makar mesec dana ranije, ali što ranije rezervišete, to je veći izgled da će moći da rezervišete željeni termin. Ne možemo garantovati slobodne termine - pozovite nas za proveru dostupnosti. Vikendi se obično popune 3-4 nedelje ranije, pa preporučujemo da rezervišete rodjendan što pre.",
   },
   {
     question: "Koliko dece je minimum za rođendan?",
@@ -155,7 +155,7 @@ export const FAQ = [
   },
   {
     question: "Kako funkcioniše plaćanje?",
-    answer: "50% od ukupne cene paketa je depozit za rezervaciju, a ostatak se plaća 7 dana pre rođendana. Plaćanje je moguće gotovinom, karticom ili bankovnim transferom.",
+    answer: "50% od ukupne cene paketa je depozit za rezervaciju, a ostatak se plaća 7 dana pre rodjendana. Plaćanje je moguće gotovinom, karticom ili bankovnim transferom.",
   },
   {
     question: "Mogu li da promenim paket nakon rezervacije?",
@@ -175,11 +175,11 @@ export const GALLERY_IMAGES = [
   },
   {
     src: "/images/rodjendaonica-rodjendan-za-decu-novi-sad-jabadabadoo-unutrasnji-prostor-igraonica.jpeg",
-    alt: "Tematski rođendani za decu u Novom Sadu - unutrašnji prostor rođendaonice sa igraonicom",
+    alt: "Tematski rodjendani za decu u Novom Sadu - unutrašnji prostor rodjendaonice sa igraonicom",
   },
   {
     src: "/images/rodjendaonica-torta-rodjendan-novi-sad-jabadabadoo.jpeg",
-    alt: "Rođendan za decu u Novom Sadu - personalizovana torta i tematske dekoracije",
+    alt: "Rodjendan za decu u Novom Sadu - personalizovana torta i tematske dekoracije",
   },
   {
     src: "/images/rodjendaonica-igraonica-cuvaonica-pinjata-animatori-igre-bezbedno-rodjendan-novi-sad-zabava.jpeg",
@@ -187,11 +187,11 @@ export const GALLERY_IMAGES = [
   },
   {
     src: "/images/rodjendaonica-rodjendan-za-decu-novi-sad-jabadabadoo-filmovi-animatori-zabava-porodica.jpeg",
-    alt: "Tematski rođendani za decu u Novom Sadu - filmovi, animatori i porodična zabava",
+    alt: "Tematski rodjendani za decu u Novom Sadu - filmovi, animatori i porodična zabava",
   },
   {
     src: "/images/prostor-za-roditelje-rodjendan-rodjendaonica-novi-sad-jabadabadoo.jpeg",
-    alt: "Rođendan za decu u Novom Sadu - prostor za roditelje u rođendaonici Jabadabadoo",
+    alt: "Rođendan za decu u Novom Sadu - prostor za roditelje u rodjendaonici Jabadabadoo",
   },
 ] as const;
 

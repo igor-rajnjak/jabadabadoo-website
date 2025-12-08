@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { CONTACT, SEO } from "@/lib/constants";
+import { CONTACT, SEO, FAQ } from "@/lib/constants";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
@@ -76,6 +76,9 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "Jabadabadoo Rođendaonica",
+              alternateName: "Jabadabadoo Rodjendaonica",
+              serviceType: "Rođendaonica",
+              description: "Organizacija rođendana i rodjendana za decu u Novom Sadu. All-inclusive dečiji rođendani, tematski rođendani, profesionalni animatori.",
               image: "https://rodjendaonica-novi-sad.com/logo.png",
               "@id": "https://rodjendaonica-novi-sad.com",
               url: "https://rodjendaonica-novi-sad.com",
@@ -112,6 +115,23 @@ export default function RootLayout({
                 ratingValue: "4.6",
                 reviewCount: "134",
               },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: FAQ.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: item.answer,
+                },
+              })),
             }),
           }}
         />

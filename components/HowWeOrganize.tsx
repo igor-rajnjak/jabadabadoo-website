@@ -42,7 +42,7 @@ export default function HowWeOrganize() {
       <div className="container mx-auto max-w-7xl 2xl:max-w-[1400px] relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 md:mb-8 text-text flex items-center justify-center gap-2 md:gap-3">
           <span className="text-2xl md:text-3xl align-middle">🎉</span>
-          <span>Kako Organizujemo Rođendane</span>
+          <span>Kako Organizujemo Rodjendane u Novom Sadu</span>
           <span className="text-2xl md:text-3xl align-middle">🎉</span>
         </h2>
         <p className="text-center text-xl md:text-2xl mb-16 md:mb-20 text-text/80 max-w-3xl mx-auto">
@@ -58,7 +58,7 @@ export default function HowWeOrganize() {
               <div className="relative h-64 md:h-80">
                 <Image
                   src={feature.image}
-                  alt={`${feature.title} - all-inclusive dečiji rođendani u Novom Sadu, tematski rođendani za decu, Jabadabadoo rođendaonica`}
+                  alt={`${feature.title} - all-inclusive dečiji rođendani i rodjendani u Novom Sadu, tematski rođendani za decu, Jabadabadoo rođendaonica`}
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 50vw"

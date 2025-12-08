@@ -91,7 +91,7 @@ export default function Contact() {
           </div>
           
           <div>
-            <h3 className="text-2xl md:text-3xl font-bold mb-8 md:mb-10 text-primary">Rezervacija Rođendana</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-8 md:mb-10 text-primary">Rezervacija Rodjendana u Novom Sadu</h3>
             <div className="bg-white p-8 md:p-10 rounded-3xl border-4 border-secondary shadow-lg mb-8 overflow-hidden">
               <ReservationForm />
             </div>
