@@ -2,7 +2,7 @@
 export const CONTACT = {
   phone: "066286555",
   phoneFormatted: "+38166286555",
-  email: "isidora.topolic@gmail.com",
+  email: "jabadabadoo.ns@gmail.com",
   address: "Somborska 17, 21000 Novi Sad, Srbija",
   workingHours: "Svaki dan 10:00 - 21:00",
   workingHoursNote: "Ne radimo na praznike - pozovite za proveru dostupnosti",

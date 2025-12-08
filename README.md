@@ -130,7 +130,7 @@ All content is managed in `lib/constants.ts`:
 ## 📞 Contact
 
 - **Phone:** 066286555
-- **Email:** isidora.topolic@gmail.com
+- **Email:** jabadabadoo.ns@gmail.com
 - **Address:** Somborska 17, 21000 Novi Sad, Serbia
 - **Hours:** Svaki dan 10:00 - 21:00
 

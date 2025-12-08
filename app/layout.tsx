@@ -52,7 +52,9 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-N2557RR5NG');
+              gtag('config', 'G-N2557RR5NG', {
+                debug_mode: typeof window !== 'undefined' && (window.location.search.includes('debug=1') || window.location.hostname === 'localhost')
+              });
             `,
           }}
         />

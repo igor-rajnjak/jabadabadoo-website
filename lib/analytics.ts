@@ -13,12 +13,15 @@ declare global {
 // Track phone call clicks
 export const trackPhoneCall = (phoneNumber: string, location: string) => {
   if (typeof window !== "undefined" && window.gtag) {
+    console.log("[GA4] Tracking phone_call_click", { phoneNumber, location });
     window.gtag("event", "phone_call_click", {
       event_category: "Contact",
       event_label: phoneNumber,
       location: location,
       value: 1,
     });
+  } else {
+    console.warn("[GA4] gtag not available");
   }
 };
 
@@ -37,12 +40,15 @@ export const trackFormSubmission = (formType: string, packageName?: string) => {
 // Track CTA button click
 export const trackCTAClick = (ctaText: string, location: string) => {
   if (typeof window !== "undefined" && window.gtag) {
+    console.log("[GA4] Tracking cta_click", { ctaText, location });
     window.gtag("event", "cta_click", {
       event_category: "Engagement",
       event_label: ctaText,
       location: location,
       value: 1,
     });
+  } else {
+    console.warn("[GA4] gtag not available");
   }
 };
 
