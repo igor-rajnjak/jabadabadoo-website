@@ -216,12 +216,12 @@ export const HERO_IMAGES = [
     alt: "All-inclusive dečiji rođendani u Novom Sadu - profesionalni animatori i zabava za decu u rodjendaonici Jabadabadoo",
   },
   {
-    src: "/images/prostor-za-roditelje-03-rodjendan-rodjendaonica-novi-sad-jabadabadoo.jpeg",
+    src: "/images/prostor-za-roditelje-rodjendan-rodjendaonica-novi-sad-jabadabadoo.jpeg",
     alt: "Rođendan za decu u Novom Sadu - prostor za roditelje u rodjendaonici Jabadabadoo, klimatizovan i udoban",
   },
   {
-    src: "/images/prostor-za-roditelje-i-najmladje-rodjendan-01-rodjendaonica-novi-sad-jabadabadoo.jpeg",
-    alt: "Rođendan za decu u Novom Sadu - prostor za roditelje i najmlađe u rodjendaonici Jabadabadoo, bezbedan i udoban",
+    src: "/images/rodjendaonica-igraonica-cuvaonica-pinjata-animatori-igre-bezbedno-rodjendan-novi-sad-zabava.jpeg",
+    alt: "All-inclusive dečiji rođendani u Novom Sadu - pinjata, igre i aktivnosti za decu u rodjendaonici Jabadabadoo",
   },
   {
     src: "/images/rodjendaonica-novi-sad-jabadabadoo-spolja.jpeg",
