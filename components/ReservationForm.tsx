@@ -37,8 +37,10 @@ export default function ReservationForm() {
       const emailjsPublicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
       if (emailjsServiceId && emailjsTemplateId && emailjsPublicKey) {
-        // Initialize EmailJS with public key (only once, but safe to call multiple times)
-        emailjs.init(emailjsPublicKey);
+        // Initialize EmailJS with public key
+        emailjs.init({
+          publicKey: emailjsPublicKey,
+        });
         
         // Use EmailJS to send email directly
         // Template parameters must match the template variables in EmailJS
@@ -50,11 +52,15 @@ export default function ReservationForm() {
           comment: formData.comment || "Nema komentara",
         };
 
-        await emailjs.send(
+        const response = await emailjs.send(
           emailjsServiceId,
           emailjsTemplateId,
           templateParams
         );
+        
+        if (response.status !== 200) {
+          throw new Error(`EmailJS error: ${response.text}`);
+        }
 
         setSubmitStatus("success");
         setFormData({
