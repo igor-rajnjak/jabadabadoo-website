@@ -206,7 +206,7 @@ export const HERO_IMAGES = [
     alt: "Jabadabadoo rodjendaonica za decu u Novom Sadu - organizacija dečijih rodjendana sa animatorima i tematskim dekoracijama",
   },
   {
-    src: "/images/prostor-za-roditelje-06-rodjendan-rodjendaonica-novi-sad-jabadabadoo.jpg",
+    src: "/images/prostor-za-roditelje-06-rodjendan-rodjendaonica-novi-sad-jabadabadoo.png",
     alt: "Prostor za roditelje u rodjendaonici Jabadabadoo Novi Sad - klimatizovan i udoban prostor za roditelje tokom dečijih rodjendana",
   },
   {
