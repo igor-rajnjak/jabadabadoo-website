@@ -186,16 +186,16 @@ export const GALLERY_IMAGES = [
     alt: "Rodjendan za decu u Novom Sadu - personalizovana torta i tematske dekoracije u rodjendaonici Jabadabadoo",
   },
   {
-    src: "/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-02.png",
-    alt: "All-inclusive dečiji rodjendani u Novom Sadu - rodjendaonica Jabadabadoo sa kompletnom organizacijom rođendana za decu",
+    src: "/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-01.png",
+    alt: "Tematski rodjendani za decu u Novom Sadu - rodjendaonica Jabadabadoo sa igraonicom i poligonom za organizaciju rođendana",
   },
   {
     src: "/images/prostor-za-roditelje-06-rodjendan-rodjendaonica-novi-sad-jabadabadoo-square.png",
     alt: "Prostor za roditelje u rodjendaonici Jabadabadoo Novi Sad - klimatizovan i udoban prostor za roditelje tokom dečijih rodjendana",
   },
   {
-    src: "/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-01.png",
-    alt: "Tematski rodjendani za decu u Novom Sadu - rodjendaonica Jabadabadoo sa igraonicom i poligonom za organizaciju rođendana",
+    src: "/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-02.png",
+    alt: "All-inclusive dečiji rodjendani u Novom Sadu - rodjendaonica Jabadabadoo sa kompletnom organizacijom rođendana za decu",
   },
 ] as const;
 
