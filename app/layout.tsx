@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     siteName: "Jabadabadoo Rođendaonica",
     images: [
       {
-        url: "https://rodjendaonica-novi-sad.com/images/rodjendan-animatori-novi-sad-rodjendaonica-za-decu-jabadabadoo-animatori-zabava.jpeg",
+        url: "https://rodjendaonica-novi-sad.com/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-og-photo.png",
         width: 1200,
         height: 630,
-        alt: "All-inclusive dečiji rođendani u Novom Sadu - profesionalni animatori i zabava za decu",
+        alt: "Jabadabadoo rodjendaonica za decu u Novom Sadu - all-inclusive dečiji rođendani, tematski rođendani, profesionalni animatori",
       },
     ],
   },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: SEO.title,
     description: SEO.description,
     images: [
-      "https://rodjendaonica-novi-sad.com/images/rodjendan-animatori-novi-sad-rodjendaonica-za-decu-jabadabadoo-animatori-zabava.jpeg",
+      "https://rodjendaonica-novi-sad.com/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-og-photo.png",
     ],
   },
   robots: {
