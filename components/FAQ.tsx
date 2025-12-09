@@ -34,7 +34,9 @@ export default function FAQSection() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full text-left p-6 md:p-8 font-bold text-lg md:text-xl text-primary hover:bg-secondary/10 transition-colors flex justify-between items-center"
+                className={`w-full text-left p-6 md:p-8 font-bold text-lg md:text-xl text-primary transition-colors flex justify-between items-center ${
+                  openIndex === index ? "bg-secondary/10" : "hover:bg-secondary/10"
+                }`}
               >
                 <span className="pr-4">{item.question}</span>
                 <span className="text-2xl md:text-3xl flex-shrink-0">{openIndex === index ? "−" : "+"}</span>
