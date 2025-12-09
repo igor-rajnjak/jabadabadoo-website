@@ -174,28 +174,28 @@ export const FAQ = [
 // Gallery Images
 export const GALLERY_IMAGES = [
   {
-    src: "/images/rodjendan-animatori-novi-sad-rodjendaonica-za-decu-jabadabadoo-animatori-zabava.jpeg",
-    alt: "All-inclusive dečiji rođendani u Novom Sadu - profesionalni animatori i zabava za decu",
+    src: "/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-03.png",
+    alt: "Jabadabadoo rodjendaonica za decu u Novom Sadu - organizacija dečijih rodjendana sa animatorima i tematskim dekoracijama",
   },
   {
-    src: "/images/rodjendaonica-rodjendan-za-decu-novi-sad-jabadabadoo-unutrasnji-prostor-igraonica.jpeg",
-    alt: "Tematski rodjendani za decu u Novom Sadu - unutrašnji prostor rodjendaonice sa igraonicom",
+    src: "/images/prostor-za-roditelje-06-rodjendan-rodjendaonica-novi-sad-jabadabadoo.jpg",
+    alt: "Prostor za roditelje u rodjendaonici Jabadabadoo Novi Sad - klimatizovan i udoban prostor za roditelje tokom dečijih rodjendana",
+  },
+  {
+    src: "/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-01.png",
+    alt: "Tematski rodjendani za decu u Novom Sadu - rodjendaonica Jabadabadoo sa igraonicom i poligonom za organizaciju rođendana",
+  },
+  {
+    src: "/images/rodjendaonica-igraonica-klimatizovano-animatori-za-decu-bebe-novi-sad-jabadabadoo-animatori.png",
+    alt: "Klimatizovana rodjendaonica i igraonica za decu u Novom Sadu - profesionalni animatori i bezbedan prostor za rodjendane",
   },
   {
     src: "/images/rodjendaonica-torta-rodjendan-novi-sad-jabadabadoo.jpeg",
-    alt: "Rodjendan za decu u Novom Sadu - personalizovana torta i tematske dekoracije",
+    alt: "Rodjendan za decu u Novom Sadu - personalizovana torta i tematske dekoracije u rodjendaonici Jabadabadoo",
   },
   {
-    src: "/images/rodjendaonica-igraonica-cuvaonica-pinjata-animatori-igre-bezbedno-rodjendan-novi-sad-zabava.jpeg",
-    alt: "All-inclusive dečiji rođendani u Novom Sadu - pinjata, igre i aktivnosti za decu",
-  },
-  {
-    src: "/images/rodjendaonica-rodjendan-za-decu-novi-sad-jabadabadoo-filmovi-animatori-zabava-porodica.jpeg",
-    alt: "Tematski rodjendani za decu u Novom Sadu - filmovi, animatori i porodična zabava",
-  },
-  {
-    src: "/images/prostor-za-roditelje-rodjendan-rodjendaonica-novi-sad-jabadabadoo.jpeg",
-    alt: "Rođendan za decu u Novom Sadu - prostor za roditelje u rodjendaonici Jabadabadoo",
+    src: "/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-02.png",
+    alt: "All-inclusive dečiji rodjendani u Novom Sadu - rodjendaonica Jabadabadoo sa kompletnom organizacijom rođendana za decu",
   },
 ] as const;
 
@@ -218,7 +218,7 @@ export const HERO_IMAGES = [
     alt: "Rodjendan za decu u Novom Sadu - personalizovana torta i tematske dekoracije u rodjendaonici Jabadabadoo",
   },
   {
-    src: "/images/rodjendaonica-igraonica-klimatizovano-animatori-za-decu-bebe-novi-sad-jabadabadoo-animatori.jpeg",
+    src: "/images/rodjendaonica-igraonica-klimatizovano-animatori-za-decu-bebe-novi-sad-jabadabadoo-animatori.png",
     alt: "Klimatizovana rodjendaonica i igraonica za decu u Novom Sadu - profesionalni animatori i bezbedan prostor za rodjendane",
   },
   {
