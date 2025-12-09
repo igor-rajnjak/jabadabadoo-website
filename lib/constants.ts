@@ -226,7 +226,7 @@ export const HERO_IMAGES = [
     alt: "Tematski rodjendani za decu u Novom Sadu - rodjendaonica Jabadabadoo sa igraonicom i poligonom za organizaciju rođendana",
   },
   {
-    src: "/images/rodjendaonica-novi-sad-jabadabadoo-spolja.jpeg",
+    src: "/images/rodjendaonica-novi-sad-jabadabadoo-spolja.png",
     alt: "Jabadabadoo rodjendaonica u Novom Sadu - spoljašnji izgled rodjendaonice i igraonice za decu, Somborska 17",
   },
 ] as const;
