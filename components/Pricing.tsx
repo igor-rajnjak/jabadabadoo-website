@@ -66,9 +66,9 @@ export default function Pricing() {
                   ? "bg-gradient-to-br from-accent via-accent/90 to-accent/80 shadow-lg" 
                   : "bg-gradient-to-r from-primary to-pink"
               }`}>
-                <div className="text-xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-3xl font-bold mb-2 md:mb-3 break-words leading-tight px-2 whitespace-nowrap">{pkg.price}</div>
-                <div className="text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-base mb-2 md:mb-3">dinara</div>
-                <div className="text-xs md:text-xs lg:text-sm xl:text-sm 2xl:text-sm opacity-90 break-words px-2 leading-snug">{pkg.pricePerChild}</div>
+                <div className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl font-bold mb-2 md:mb-3 break-words leading-tight px-2 whitespace-nowrap">{pkg.price}</div>
+                <div className="text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-lg mb-2 md:mb-3">dinara</div>
+                <div className="text-xs md:text-sm lg:text-base xl:text-base 2xl:text-base opacity-90 break-words px-2 leading-snug">{pkg.pricePerChild}</div>
               </div>
               
               {pkg.allIncluded && (
