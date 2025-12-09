@@ -35,11 +35,11 @@ export default function Pricing() {
           <p className="text-green-700">📞 Besplatna konsultacija - pozovite nas za savet koji paket je najbolji za vaše dete!</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12 xl:gap-14 2xl:gap-12 mb-16 md:mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8 lg:gap-10 xl:gap-12 mb-16 md:mb-20">
           {PACKAGES_DATA.map((pkg) => (
             <div
               key={pkg.id}
-              className={`bg-white p-6 md:p-8 lg:p-10 xl:p-12 2xl:p-10 rounded-3xl shadow-lg border-4 ${
+              className={`bg-white p-5 md:p-6 lg:p-8 xl:p-10 2xl:p-8 rounded-3xl shadow-lg border-4 ${
                 pkg.popular 
                   ? "border-accent bg-gradient-to-br from-white to-accent/5 shadow-xl scale-[1.02]" 
                   : "border-secondary"
@@ -55,31 +55,31 @@ export default function Pricing() {
                   {pkg.badge}
                 </div>
               )}
-              <div className="text-center mb-6 md:mb-8 pt-4">
-                <h3 className="text-2xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-bold mb-2 md:mb-3 text-primary">{pkg.name}</h3>
-                <p className="text-text/70 mb-2 md:mb-3 text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl">{pkg.duration}</p>
-                <p className="text-xs md:text-sm lg:text-base xl:text-base 2xl:text-lg italic text-text/60">{pkg.subtitle}</p>
+              <div className="text-center mb-4 md:mb-6 pt-3">
+                <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-3xl font-bold mb-2 text-primary">{pkg.name}</h3>
+                <p className="text-text/70 mb-2 text-xs md:text-sm lg:text-base xl:text-base 2xl:text-base">{pkg.duration}</p>
+                <p className="text-xs md:text-sm lg:text-sm xl:text-sm 2xl:text-sm italic text-text/60">{pkg.subtitle}</p>
               </div>
               
-              <div className={`text-white p-4 md:p-6 lg:p-8 xl:p-8 2xl:p-6 rounded-2xl mb-6 text-center min-h-[140px] md:min-h-[160px] lg:min-h-[180px] xl:min-h-[180px] 2xl:min-h-[160px] flex flex-col justify-center ${
+              <div className={`text-white p-3 md:p-4 lg:p-6 xl:p-6 2xl:p-5 rounded-2xl mb-6 text-center min-h-[120px] md:min-h-[140px] lg:min-h-[160px] xl:min-h-[160px] 2xl:min-h-[150px] flex flex-col justify-center ${
                 pkg.popular 
                   ? "bg-gradient-to-br from-accent via-accent/90 to-accent/80 shadow-lg" 
                   : "bg-gradient-to-r from-primary to-pink"
               }`}>
-                <div className="text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl font-bold mb-2 md:mb-3 break-words leading-tight px-2 whitespace-nowrap">{pkg.price}</div>
-                <div className="text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-lg mb-2 md:mb-3">dinara</div>
-                <div className="text-xs md:text-sm lg:text-base xl:text-base 2xl:text-base opacity-90 break-words px-2 leading-snug">{pkg.pricePerChild}</div>
+                <div className="text-2xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-bold mb-1 md:mb-2 break-words leading-tight px-2 overflow-hidden">{pkg.price}</div>
+                <div className="text-xs md:text-sm lg:text-base xl:text-base 2xl:text-base mb-1 md:mb-2">dinara</div>
+                <div className="text-xs md:text-sm lg:text-sm xl:text-sm 2xl:text-sm opacity-90 break-words px-2 leading-snug">{pkg.pricePerChild}</div>
               </div>
               
               {pkg.allIncluded && (
-                <div className="bg-green-100 border-2 border-green-500 text-green-800 p-3 md:p-4 lg:p-5 rounded-xl mb-6 text-center text-xs md:text-sm lg:text-base font-semibold">
+                <div className="bg-green-100 border-2 border-green-500 text-green-800 p-2 md:p-3 lg:p-4 rounded-xl mb-4 text-center text-xs md:text-sm lg:text-sm font-semibold">
                   ⚠️ Bez dodatnih troškova - sve uključeno u cenu
                 </div>
               )}
               
-              <div className="mb-6 md:mb-8 flex-grow">
-                <h4 className="font-bold text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-2xl mb-4 md:mb-6 text-center text-text">✨ Uključeno u cenu:</h4>
-                <ul className="space-y-2 md:space-y-3 text-xs md:text-sm lg:text-base xl:text-base">
+              <div className="mb-4 md:mb-6 flex-grow">
+                <h4 className="font-bold text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl mb-3 md:mb-4 text-center text-text">✨ Uključeno u cenu:</h4>
+                <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm lg:text-sm xl:text-sm">
                   {pkg.id === "standard" && pkg.standardFeatures.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2">
                       <span className="text-green-600 font-bold mt-1">✓</span>
@@ -157,7 +157,7 @@ export default function Pricing() {
                 </ul>
               </div>
               
-              <div className="bg-blue-50 border-2 border-blue-300 p-4 md:p-5 lg:p-6 rounded-xl mb-6 text-xs md:text-sm lg:text-base">
+              <div className="bg-blue-50 border-2 border-blue-300 p-3 md:p-4 lg:p-5 rounded-xl mb-4 text-xs md:text-sm lg:text-sm">
                 <p className="text-text/80 leading-relaxed">{pkg.strategyNote}</p>
               </div>
               
@@ -173,7 +173,7 @@ export default function Pricing() {
                           trackPackageClick(pkg.name, "Pricing Card");
                           trackPhoneCall(CONTACT.phone, `Pricing-${pkg.name}`);
                         }}
-                        className="block w-full bg-primary text-white text-center py-3 md:py-4 lg:py-5 rounded-full font-bold text-base md:text-lg hover:bg-red-500 transition-all hover:-translate-y-1 shadow-lg mt-auto"
+                        className="block w-full bg-primary text-white text-center py-2.5 md:py-3 lg:py-4 rounded-full font-bold text-sm md:text-base lg:text-base hover:bg-red-500 transition-all hover:-translate-y-1 shadow-lg mt-auto"
                       >
                         📞 Pozovi {CONTACT.phone}
                       </a>
