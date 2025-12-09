@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { CONTACT, SEO, FAQ, REVIEWS } from "@/lib/constants";
+import { CONTACT, SEO, FAQ, REVIEWS, TRUST_SIGNALS } from "@/lib/constants";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
@@ -228,8 +228,8 @@ export default function RootLayout({
               name: "Jabadabadoo Rođendaonica",
               alternateName: "Jabadabadoo Rodjendaonica",
               url: "https://rodjendaonica-novi-sad.com",
-              foundingDate: "2022-09-15",
-              description: "Organizacija rođendana i rodjendana za decu u Novom Sadu. Osnovana 15. septembra 2022. All-inclusive dečiji rođendani, tematski rođendani, profesionalni animatori.",
+              foundingDate: TRUST_SIGNALS.foundingDate,
+              description: `Organizacija rođendana i rodjendana za decu u Novom Sadu. Osnovana ${TRUST_SIGNALS.foundingDateDisplay}. All-inclusive dečiji rođendani, tematski rođendani, profesionalni animatori.`,
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Somborska 17",
