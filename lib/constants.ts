@@ -178,20 +178,20 @@ export const GALLERY_IMAGES = [
     alt: "Jabadabadoo rodjendaonica za decu u Novom Sadu - organizacija dečijih rodjendana sa animatorima i tematskim dekoracijama",
   },
   {
-    src: "/images/prostor-za-roditelje-06-rodjendan-rodjendaonica-novi-sad-jabadabadoo.jpg",
-    alt: "Prostor za roditelje u rodjendaonici Jabadabadoo Novi Sad - klimatizovan i udoban prostor za roditelje tokom dečijih rodjendana",
-  },
-  {
-    src: "/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-01.png",
-    alt: "Tematski rodjendani za decu u Novom Sadu - rodjendaonica Jabadabadoo sa igraonicom i poligonom za organizaciju rođendana",
-  },
-  {
     src: "/images/rodjendaonica-igraonica-klimatizovano-animatori-za-decu-bebe-novi-sad-jabadabadoo-animatori.png",
     alt: "Klimatizovana rodjendaonica i igraonica za decu u Novom Sadu - profesionalni animatori i bezbedan prostor za rodjendane",
   },
   {
     src: "/images/rodjendaonica-torta-rodjendan-novi-sad-jabadabadoo.jpeg",
     alt: "Rodjendan za decu u Novom Sadu - personalizovana torta i tematske dekoracije u rodjendaonici Jabadabadoo",
+  },
+  {
+    src: "/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-01.png",
+    alt: "Tematski rodjendani za decu u Novom Sadu - rodjendaonica Jabadabadoo sa igraonicom i poligonom za organizaciju rođendana",
+  },
+  {
+    src: "/images/prostor-za-roditelje-06-rodjendan-rodjendaonica-novi-sad-jabadabadoo.jpg",
+    alt: "Prostor za roditelje u rodjendaonici Jabadabadoo Novi Sad - klimatizovan i udoban prostor za roditelje tokom dečijih rodjendana",
   },
   {
     src: "/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-02.png",
