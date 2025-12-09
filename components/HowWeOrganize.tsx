@@ -49,13 +49,13 @@ export default function HowWeOrganize() {
           Sve što vam treba za nezaboravan rođendan vašeg deteta
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 mb-16 md:mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-16 md:mb-20">
           {ORGANIZATION_FEATURES.map((feature, index) => (
             <div
               key={index}
               className="bg-bg rounded-3xl overflow-hidden shadow-lg border-4 border-secondary hover:-translate-y-2 transition-all duration-300"
             >
-              <div className="relative h-64 md:h-80">
+              <div className="relative h-72 md:h-96 lg:h-[420px]">
                 <Image
                   src={feature.image}
                   alt={`${feature.title} - all-inclusive dečiji rođendani i rodjendani u Novom Sadu, tematski rođendani za decu, Jabadabadoo rođendaonica`}
