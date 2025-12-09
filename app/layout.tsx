@@ -219,6 +219,32 @@ export default function RootLayout({
             }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Jabadabadoo Rođendaonica",
+              alternateName: "Jabadabadoo Rodjendaonica",
+              url: "https://rodjendaonica-novi-sad.com",
+              foundingDate: "2022-09-15",
+              description: "Organizacija rođendana i rodjendana za decu u Novom Sadu. Osnovana 15. septembra 2022. All-inclusive dečiji rođendani, tematski rođendani, profesionalni animatori.",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Somborska 17",
+                addressLocality: "Novi Sad",
+                postalCode: "21000",
+                addressCountry: "RS",
+              },
+              sameAs: [
+                CONTACT.instagram,
+                CONTACT.facebook,
+                CONTACT.whatsappUrl,
+              ],
+            }),
+          }}
+        />
       </head>
       <body className="antialiased">
         {children}

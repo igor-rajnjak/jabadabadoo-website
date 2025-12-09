@@ -16,13 +16,15 @@ export const CONTACT = {
 // SEO Meta Tags
 export const SEO = {
   title: "Rođendaonica Novi Sad | Rodjendan za Decu | All-inclusive",
-  description: "Već 3. godinu organizujemo nezaboravne rođendane za decu u Novom Sadu - preko 100 zadovoljnih roditelja. All-inclusive rodjendani, tematski rođendani, profesionalni animatori. Rezervišite: 066286555",
+  description: "Već 3. godinu (od 2022) organizujemo nezaboravne rođendane za decu u Novom Sadu - preko 100 zadovoljnih roditelja. All-inclusive rodjendani, tematski rođendani, profesionalni animatori. Rezervišite: 066286555",
   keywords: "rođendaonica novi sad, rodjendaonica novi sad, rođendan za decu novi sad, rodjendan za decu novi sad, all-inclusive dečiji rođendani novi sad, all-inclusive deciji rodjendani novi sad, tematski rođendani za decu, tematski rodjendani za decu, organizacija rođendana novi sad, organizacija rodjendana novi sad, animatori rođendaonica novi sad, animatori rodjendaonica novi sad, rođendani za decu 2-10 godina, rodjendani za decu 2-10 godina, čuvaonica novi sad, cuvaonica novi sad",
 } as const;
 
 // Trust Signals
 export const TRUST_SIGNALS = {
   years: "3",
+  foundingDate: "2022-09-15",
+  foundingDateDisplay: "15. septembar 2022",
   satisfiedParents: "100+",
   rating: "4.6",
   reviewCount: "134",

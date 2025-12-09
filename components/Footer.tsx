@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { CONTACT } from "@/lib/constants";
+import { CONTACT, TRUST_SIGNALS } from "@/lib/constants";
 import { trackPhoneCall, trackWhatsAppClick, trackLinkClick } from "@/lib/analytics";
 
 export default function Footer() {
@@ -21,7 +21,7 @@ export default function Footer() {
               <span className="text-xl md:text-2xl font-bold">Jabadabadoo</span>
             </div>
             <p className="text-white/80 text-lg leading-relaxed">
-              Već 3. godinu organizujemo nezaboravne rođendane za decu u Novom Sadu.
+              Već {TRUST_SIGNALS.years}. godinu organizujemo nezaboravne rođendane za decu u Novom Sadu. Osnovani {TRUST_SIGNALS.foundingDateDisplay}, posvećeni smo stvaranju nezaboravnih trenutaka za decu.
             </p>
           </div>
           
