@@ -35,12 +35,14 @@ export default function Pricing() {
           <p className="text-green-700">📞 Besplatna konsultacija - pozovite nas za savet koji paket je najbolji za vaše dete!</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-10 xl:gap-10 2xl:gap-8 mb-16 md:mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-12 xl:gap-14 2xl:gap-12 mb-16 md:mb-20">
           {PACKAGES_DATA.map((pkg) => (
             <div
               key={pkg.id}
-              className={`bg-white p-6 md:p-8 lg:p-10 xl:p-10 2xl:p-8 rounded-3xl shadow-lg border-4 ${
-                pkg.popular ? "border-accent" : "border-secondary"
+              className={`bg-white p-6 md:p-8 lg:p-10 xl:p-12 2xl:p-10 rounded-3xl shadow-lg border-4 ${
+                pkg.popular 
+                  ? "border-accent bg-gradient-to-br from-white to-accent/5 shadow-xl scale-[1.02]" 
+                  : "border-secondary"
               } hover:-translate-y-2 transition-all duration-300 relative flex flex-col`}
             >
               {pkg.popular && (
@@ -59,10 +61,14 @@ export default function Pricing() {
                 <p className="text-xs md:text-sm lg:text-base xl:text-base 2xl:text-lg italic text-text/60">{pkg.subtitle}</p>
               </div>
               
-              <div className="bg-gradient-to-r from-primary to-pink text-white p-4 md:p-6 lg:p-8 xl:p-8 2xl:p-6 rounded-2xl mb-6 text-center min-h-[140px] md:min-h-[160px] lg:min-h-[180px] xl:min-h-[180px] 2xl:min-h-[160px] flex flex-col justify-center">
-                <div className="text-2xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-4xl font-bold mb-2 md:mb-3 break-words leading-tight px-2">{pkg.price}</div>
-                <div className="text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-lg mb-2 md:mb-3">dinara</div>
-                <div className="text-xs md:text-sm lg:text-base xl:text-base 2xl:text-lg opacity-90 break-words px-2">{pkg.pricePerChild}</div>
+              <div className={`text-white p-4 md:p-6 lg:p-8 xl:p-8 2xl:p-6 rounded-2xl mb-6 text-center min-h-[140px] md:min-h-[160px] lg:min-h-[180px] xl:min-h-[180px] 2xl:min-h-[160px] flex flex-col justify-center ${
+                pkg.popular 
+                  ? "bg-gradient-to-br from-accent via-accent/90 to-accent/80 shadow-lg" 
+                  : "bg-gradient-to-r from-primary to-pink"
+              }`}>
+                <div className="text-xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-3xl font-bold mb-2 md:mb-3 break-words leading-tight px-2 whitespace-nowrap">{pkg.price}</div>
+                <div className="text-xs md:text-sm lg:text-sm xl:text-base 2xl:text-base mb-2 md:mb-3">dinara</div>
+                <div className="text-xs md:text-xs lg:text-sm xl:text-sm 2xl:text-sm opacity-90 break-words px-2 leading-snug">{pkg.pricePerChild}</div>
               </div>
               
               {pkg.allIncluded && (

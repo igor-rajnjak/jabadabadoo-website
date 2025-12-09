@@ -95,7 +95,7 @@ export const PACKAGES_DATA: Package[] = [
     price: "44.990",
     pricePerChild: "ili ~1.500 din/dete (za 30 dece)",
     popular: false,
-    badge: "PREMIUM 💎",
+    badge: "ULTRA 💎",
     limited: "🔥 Samo 3 Ultra paketa mesečno",
     allIncluded: true,
     standardFeatures: [], // All from All-Inclusive
