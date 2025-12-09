@@ -8,25 +8,25 @@ const ORGANIZATION_FEATURES = [
     icon: "🎭",
     title: "Profesionalni Animatori",
     description: "Stručan tim animatora vodi program tokom cele proslave - organizuju igre, zabavljaju decu i vode brigu o toku rođendana.",
-    image: "/images/rodjendan-animatori-novi-sad-rodjendaonica-za-decu-jabadabadoo-animatori-zabava.jpeg",
+    image: "/images/rodjendan-animatori-novi-sad-rodjendaonica-za-decu-jabadabadoo-animatori-zabava-square.png",
   },
   {
     icon: "🎮",
     title: "Aktivnosti i Igre",
     description: "Raznovrsne aktivnosti i igre prilagođene uzrastu gostiju - od 2 do 10 godina. Timske igre, takmičenja i zabavne aktivnosti.",
-    image: "/images/rodjendaonica-igraonica-cuvaonica-pinjata-animatori-igre-bezbedno-rodjendan-novi-sad-zabava.jpeg",
+    image: "/images/rodjendaonica-rodjendan-za-decu-novi-sad-jabadabadoo-unutrasnji-prostor-igraonica.jpeg",
   },
   {
     icon: "🎂",
     title: "Torte i Dekoracije",
     description: "Torta po vašoj želji i temi rođendana, personalizovana sa imenom slavljenika. Tematske dekoracije koje stvaraju nezaboravnu atmosferu.",
-    image: "/images/rodjendaonica-torta-rodjendan-novi-sad-jabadabadoo.jpeg",
+    image: "/images/rodjendaonica-torta-deokracije-rodjendan-novi-sad-jabadabadoo-square.png",
   },
   {
     icon: "🎁",
     title: "Pinjata i Nagrade",
     description: "Tradicionalna pinjata punjena slatkišima i sitnim igračkama. Diplome i medalje za pobednike takmičenja.",
-    image: "/images/rodjendaonica-rodjendan-za-decu-novi-sad-jabadabadoo-filmovi-animatori-zabava-porodica.jpeg",
+    image: "/images/rodjendaonica-igraonica-cuvaonica-pinjata-animatori-igre-bezbedno-rodjendan-novi-sad-zabava-square.png",
   },
 ];
 

@@ -30,11 +30,10 @@ export default function Gallery() {
                 src={image.src}
                 alt={image.alt}
                 fill
-                className="object-cover object-center"
+                className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 loading={index < 3 ? "eager" : "lazy"}
-                quality={90}
-                unoptimized={false}
+                quality={85}
               />
             </div>
           ))}
@@ -52,8 +51,6 @@ export default function Gallery() {
                 width={1200}
                 height={800}
                 className="object-contain rounded-lg"
-                quality={95}
-                unoptimized={false}
               />
               <button
                 onClick={() => setSelectedImage(null)}
