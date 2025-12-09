@@ -14,7 +14,7 @@ const ORGANIZATION_FEATURES = [
     icon: "🎮",
     title: "Aktivnosti i Igre",
     description: "Raznovrsne aktivnosti i igre prilagođene uzrastu gostiju - od 2 do 10 godina. Timske igre, takmičenja i zabavne aktivnosti.",
-    image: "/images/rodjendaonica-rodjendan-za-decu-novi-sad-jabadabadoo-unutrasnji-prostor-igraonica.jpeg",
+    image: "/images/rodjendaonica-rodjendan-za-decu-novi-sad-jabadabadoo-unutrasnji-prostor-igraonica-madjionicar.png",
   },
   {
     icon: "🎂",
@@ -58,7 +58,9 @@ export default function HowWeOrganize() {
               <div className="relative h-72 md:h-96 lg:h-[420px]">
                 <Image
                   src={feature.image}
-                  alt={`${feature.title} - all-inclusive dečiji rođendani i rodjendani u Novom Sadu, tematski rođendani za decu, Jabadabadoo rođendaonica`}
+                  alt={feature.title === "Aktivnosti i Igre" 
+                    ? "Aktivnosti i igre za decu u rodjendaonici Jabadabadoo Novi Sad - unutrašnji prostor sa igraonicom, mađioničarska predstava i show program za dečije rodjendane"
+                    : `${feature.title} - all-inclusive dečiji rođendani i rodjendani u Novom Sadu, tematski rođendani za decu, Jabadabadoo rođendaonica`}
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 768px) 100vw, 50vw"
