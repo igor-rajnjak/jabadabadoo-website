@@ -12,9 +12,6 @@ export const metadata: Metadata = {
       noimageindex: true,
     },
   },
-  openGraph: {
-    robots: "noindex, nofollow",
-  },
 };
 
 export default function PricingNewLayout({
