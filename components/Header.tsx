@@ -14,6 +14,7 @@ export default function Header() {
     { href: "#galerija", label: "Galerija" },
     { href: "#cenovnik", label: "Cenovnik" },
     { href: "#recenzije", label: "Recenzije" },
+    { href: "/blog", label: "Blog" },
     { href: "#faq", label: "Pitanja" },
     { href: "#kontakt", label: "Kontakt" },
   ];

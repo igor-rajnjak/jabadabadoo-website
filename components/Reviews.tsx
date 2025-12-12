@@ -1,4 +1,4 @@
-import { REVIEWS, TRUST_SIGNALS } from "@/lib/constants";
+import { REVIEWS, TRUST_SIGNALS, CONTACT } from "@/lib/constants";
 import Link from "next/link";
 
 export default function Reviews() {
@@ -43,7 +43,23 @@ export default function Reviews() {
           ))}
         </div>
         
-        <div className="text-center">
+        <div className="text-center space-y-6">
+          <div>
+            <a
+              href={CONTACT.googleMaps}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:text-red-500 font-bold text-lg transition-colors"
+            >
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              <span>Pogledajte sve {TRUST_SIGNALS.reviewCount} recenzija na Google Maps</span>
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
           <Link
             href="#kontakt"
             className="inline-block bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-500 transition-all hover:-translate-y-1 shadow-lg"
