@@ -120,10 +120,14 @@ export default function PricingNewPage() {
                         return (
                           <>
                             {durationFeature && (
-                              <li className={`flex items-start gap-2 mb-3 ${durationFeature.isNew ? "bg-blue-50 p-2 rounded" : durationFeature.isExclusive ? "bg-yellow-50 p-2 rounded" : ""}`}>
-                                <span className="text-green-600 font-bold mt-1">✓</span>
+                              <li className={`flex items-start gap-2 mb-3 ${durationFeature.isNew && pkg.id === "all-inclusive" ? "bg-yellow-50 p-2 rounded" : durationFeature.isNew ? "bg-blue-50 p-2 rounded" : durationFeature.isExclusive ? "" : ""}`}>
+                                {pkg.id === "premium" ? (
+                                  <span className="text-2xl mt-0">{durationFeature.text.match(/^[^\s]+/)?.[0] || "➕"}</span>
+                                ) : (
+                                  <span className="text-green-600 font-bold mt-1">✓</span>
+                                )}
                                 <span className={`flex-1 font-semibold ${durationFeature.isExclusive ? "text-red-600" : "text-text/80"}`}>
-                                  {durationFeature.text} <span className="text-text/60 font-normal">({totalDuration})</span>
+                                  {pkg.id === "premium" ? durationFeature.text.replace(/^[^\s]+\s/, "") : durationFeature.text} <span className="text-text/60 font-normal">({totalDuration})</span>
                                 </span>
                                 {durationFeature.tooltip && (
                                   <button
@@ -137,10 +141,20 @@ export default function PricingNewPage() {
                                 )}
                               </li>
                             )}
-                            {otherFeatures.map((feature, idx) => (
-                              <li key={idx} className={`flex items-start gap-2 ${feature.isNew ? "bg-blue-50 p-2 rounded" : feature.isExclusive ? "bg-yellow-50 p-2 rounded" : ""}`}>
-                                <span className="text-green-600 font-bold mt-1">✓</span>
-                                <span className={`flex-1 font-semibold ${feature.isExclusive ? "text-red-600" : "text-text/80"}`}>{feature.text}</span>
+                            {otherFeatures.map((feature, idx) => {
+                              // Extract emoji from text if it exists
+                              const emojiMatch = feature.text.match(/^([^\s]+)\s/);
+                              const emoji = emojiMatch ? emojiMatch[1] : null;
+                              const textWithoutEmoji = emoji ? feature.text.replace(/^[^\s]+\s/, "") : feature.text;
+                              
+                              return (
+                              <li key={idx} className={`flex items-start gap-2 ${feature.isNew && pkg.id === "all-inclusive" ? "bg-yellow-50 p-2 rounded" : feature.isNew ? "bg-blue-50 p-2 rounded" : feature.isExclusive ? "" : ""}`}>
+                                {pkg.id === "premium" ? (
+                                  <span className="text-2xl mt-0">{emoji || "✨"}</span>
+                                ) : (
+                                  <span className="text-green-600 font-bold mt-1">✓</span>
+                                )}
+                                <span className={`flex-1 font-semibold ${feature.isExclusive ? "text-red-600" : "text-text/80"}`}>{pkg.id === "premium" ? textWithoutEmoji : feature.text}</span>
                                 {feature.tooltip && (
                                   <button
                                     onMouseEnter={(e) => handleTooltip(e, feature.tooltip)}
@@ -152,7 +166,8 @@ export default function PricingNewPage() {
                                   </button>
                                 )}
                               </li>
-                            ))}
+                            );
+                            })}
                           </>
                         );
                       })()}
