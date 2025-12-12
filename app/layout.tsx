@@ -458,38 +458,96 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "HowTo",
-              name: "Kako organizujemo rođendane za decu u Novom Sadu",
-              description: "Korak po korak vodič kako organizujemo nezaboravne rođendane za decu",
+              name: "Kako organizovati nezaboravan rođendan za decu u Novom Sadu",
+              description: "Zabavan vodič kako napraviti savršen dečiji rođendan sa profesionalnim animatorima, tematskim dekoracijama, tortom i zabavnim aktivnostima",
+              image: "https://rodjendaonica-novi-sad.com/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-01.png",
+              totalTime: "PT2H30M",
               step: [
                 {
                   "@type": "HowToStep",
                   position: 1,
-                  name: "Rezervacija",
-                  text: "Pozovite nas na 066286555 za proveru dostupnosti i rezervaciju. Preporučujemo rezervaciju najmanje mesec dana unapred.",
+                  name: "📞 Rezervišite termin",
+                  text: "Pozovite nas na 066286555 za proveru dostupnosti i rezervaciju. Preporučujemo rezervaciju najmanje mesec dana unapred - vikendi se popune brzo!",
+                  image: "https://rodjendaonica-novi-sad.com/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-02.png",
                 },
                 {
                   "@type": "HowToStep",
                   position: 2,
-                  name: "Izbor paketa",
-                  text: "Izaberite paket koji najbolje odgovara vašim potrebama - Standard, Premium, All-Inclusive ili Ultra paket.",
+                  name: "🎁 Izaberite paket",
+                  text: "Izaberite paket koji najbolje odgovara vašem detetu - Standard (2h), Premium (2.5h), All-Inclusive (2.5h sa hranom) ili Ultra (3h sa show programom).",
+                  image: "https://rodjendaonica-novi-sad.com/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-03.png",
                 },
                 {
                   "@type": "HowToStep",
                   position: 3,
-                  name: "Priprema",
-                  text: "Naš tim priprema prostor, dekoracije, tortu i sve potrebno prema izabranoj temi rođendana.",
+                  name: "🎨 Odaberite temu",
+                  text: "Izaberite temu rođendana - superheroji, princeze, životinje, ili bilo koju drugu temu koju vaše dete voli. Naš tim priprema dekoracije, tortu i sve potrebno!",
+                  image: "https://rodjendaonica-novi-sad.com/images/rodjendaonica-torta-deokracije-rodjendan-novi-sad-jabadabadoo-square.png",
                 },
                 {
                   "@type": "HowToStep",
                   position: 4,
-                  name: "Proslava",
-                  text: "Profesionalni animatori vode program sa igrama, aktivnostima, maskenbalom ili crtanjem po licu, pinjatom i zabavom prilagođenom uzrastu dece.",
+                  name: "🎭 Zabava počinje!",
+                  text: "Profesionalni animatori vode program sa igrama, maskenbalom ili crtanjem po licu, interaktivnim zidom, pinjatom sa slatkišima i disko žurkom uz balončiće - sve prilagođeno uzrastu dece!",
+                  image: "https://rodjendaonica-novi-sad.com/images/rodjendan-animatori-novi-sad-rodjendaonica-za-decu-jabadabadoo-animatori-zabava-square.png",
                 },
                 {
                   "@type": "HowToStep",
                   position: 5,
-                  name: "Završetak",
-                  text: "Deca dobijaju diplome, poklone i nezaboravne uspomene. Roditelji dobijaju fotografije i video materijal.",
+                  name: "🎂 Torta i slavljenje",
+                  text: "Deca uživaju u torti po izboru, slatkom stolu (popsi, krofnice), mini pizzama i neograničenim sokovima. Sve je uključeno u All-Inclusive paketu!",
+                  image: "https://rodjendaonica-novi-sad.com/images/rodjendaonica-torta-rodjendan-novi-sad-jabadabadoo.jpeg",
+                },
+                {
+                  "@type": "HowToStep",
+                  position: 6,
+                  name: "🏆 Nagrade i uspomene",
+                  text: "Deca dobijaju diplome, medalje, poklon kartice i nezaboravne uspomene. Roditelji dobijaju fotografije i video materijal sa proslave!",
+                  image: "https://rodjendaonica-novi-sad.com/images/rodjendaonica-igraonica-cuvaonica-pinjata-animatori-igre-bezbedno-rodjendan-novi-sad-zabava-square.png",
+                },
+              ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ImageGallery",
+              name: "Galerija rođendana u Novom Sadu - Jabadabadoo Rođendaonica",
+              description: "Fotografije nezaboravnih rođendana za decu sa profesionalnim animatorima, tematskim dekoracijama, tortama i zabavnim aktivnostima",
+              url: "https://rodjendaonica-novi-sad.com#galerija",
+              image: [
+                {
+                  "@type": "ImageObject",
+                  contentUrl: "https://rodjendaonica-novi-sad.com/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-03.png",
+                  description: "Jabadabadoo rodjendaonica za decu u Novom Sadu - organizacija dečijih rodjendana sa animatorima i tematskim dekoracijama",
+                },
+                {
+                  "@type": "ImageObject",
+                  contentUrl: "https://rodjendaonica-novi-sad.com/images/rodjendaonica-igraonica-klimatizovano-animatori-za-decu-bebe-novi-sad-jabadabadoo-animatori.png",
+                  description: "Klimatizovana rodjendaonica i igraonica za decu u Novom Sadu - profesionalni animatori i bezbedan prostor za rodjendane",
+                },
+                {
+                  "@type": "ImageObject",
+                  contentUrl: "https://rodjendaonica-novi-sad.com/images/rodjendaonica-torta-rodjendan-novi-sad-jabadabadoo.jpeg",
+                  description: "Rodjendan za decu u Novom Sadu - personalizovana torta i tematske dekoracije u rodjendaonici Jabadabadoo",
+                },
+                {
+                  "@type": "ImageObject",
+                  contentUrl: "https://rodjendaonica-novi-sad.com/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-01.png",
+                  description: "Tematski rodjendani za decu u Novom Sadu - rodjendaonica Jabadabadoo sa igraonicom i poligonom za organizaciju rođendana",
+                },
+                {
+                  "@type": "ImageObject",
+                  contentUrl: "https://rodjendaonica-novi-sad.com/images/prostor-za-roditelje-06-rodjendan-rodjendaonica-novi-sad-jabadabadoo-square.png",
+                  description: "Prostor za roditelje u rodjendaonici Jabadabadoo Novi Sad - udoban prostor za odmor dok deca uživaju u rođendanu",
+                },
+                {
+                  "@type": "ImageObject",
+                  contentUrl: "https://rodjendaonica-novi-sad.com/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-02.png",
+                  description: "Dečiji rođendani u Novom Sadu - rodjendaonica Jabadabadoo sa animatorima, igrama i zabavnim aktivnostima",
                 },
               ],
             }),
