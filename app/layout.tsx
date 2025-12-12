@@ -53,20 +53,12 @@ export default function RootLayout({
   return (
     <html lang="sr">
       <head>
-        {/* Preload critical Hero image for LCP optimization */}
-        <link
-          rel="preload"
-          as="image"
-          href="/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-03.png"
-          fetchPriority="high"
-        />
-        {/* Google tag (gtag.js) - Deferred for better performance */}
+        {/* Google tag (gtag.js) */}
         <script
-          defer
+          async
           src="https://www.googletagmanager.com/gtag/js?id=G-N2557RR5NG"
         />
         <script
-          defer
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
