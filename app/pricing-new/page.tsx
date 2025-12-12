@@ -74,9 +74,7 @@ export default function PricingNewPage() {
               )}
               
               <div className="mb-4 md:mb-6 flex-grow">
-                <h4 className="font-bold text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl mb-3 md:mb-4 text-center text-text">
-                  {pkg.id === "standard" ? "✨ Uključeno u cenu:" : "✨ Dodatno u odnosu na " + (pkg.id === "premium" ? "Standard" : pkg.id === "all-inclusive" ? "Premium" : "All-Inclusive") + ":"}
-                </h4>
+                <h4 className="font-bold text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl mb-3 md:mb-4 text-center text-text">✨ Uključeno u cenu:</h4>
                 <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm lg:text-sm xl:text-sm">
                   {pkg.id === "standard" && pkg.standardFeatures?.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-2">
@@ -94,29 +92,64 @@ export default function PricingNewPage() {
                       )}
                     </li>
                   ))}
-                  {pkg.id !== "standard" && pkg.additionalFeatures?.map((feature, idx) => (
-                    <li 
-                      key={idx} 
-                      className={`flex items-start gap-2 ${
-                        feature.isNew ? "text-primary" : feature.isExclusive ? "text-red-600" : ""
-                      }`}
-                    >
-                      <span className="text-green-600 font-bold mt-1">✓</span>
-                      <span className={`flex-1 ${feature.isNew ? "font-semibold" : feature.isExclusive ? "font-semibold" : ""}`}>
-                        {feature.text}
-                      </span>
-                      {feature.tooltip && (
-                        <button
-                          onMouseEnter={(e) => handleTooltip(e, feature.tooltip)}
-                          onMouseLeave={() => setTooltip(null)}
-                          className="w-5 h-5 bg-white/80 border border-gray-300 text-gray-600 rounded-full text-xs font-normal flex-shrink-0 hover:bg-white hover:border-gray-400 transition-colors"
-                          aria-label="Više informacija"
-                        >
-                          i
-                        </button>
-                      )}
-                    </li>
-                  ))}
+                  {pkg.id !== "standard" && (
+                    <>
+                      <li className="text-text/60 italic text-xs mb-3">Sve iz {pkg.id === "premium" ? "Standard" : pkg.id === "all-inclusive" ? "Premium" : "All-Inclusive"} +</li>
+                      {(() => {
+                        // Find duration extension feature and show it first
+                        const durationFeature = pkg.additionalFeatures?.find(f => 
+                          f.text.includes("30 minuta") || f.text.includes("produžene zabave")
+                        );
+                        const otherFeatures = pkg.additionalFeatures?.filter(f => 
+                          !f.text.includes("30 minuta") && !f.text.includes("produžene zabave")
+                        ) || [];
+                        
+                        // Get total duration
+                        const totalDuration = pkg.id === "premium" ? "2.5h ukupno" : 
+                                             pkg.id === "ultra" ? "3h ukupno" : 
+                                             pkg.id === "all-inclusive" ? "2.5h ukupno" : "";
+                        
+                        return (
+                          <>
+                            {durationFeature && (
+                              <li className={`flex items-start gap-2 mb-3 ${durationFeature.isNew ? "bg-blue-50 p-2 rounded" : durationFeature.isExclusive ? "bg-yellow-50 p-2 rounded" : ""}`}>
+                                <span className="text-green-600 font-bold mt-1">✓</span>
+                                <span className={`flex-1 font-semibold ${durationFeature.isExclusive ? "text-red-600" : "text-text/80"}`}>
+                                  {durationFeature.text} <span className="text-text/60 font-normal">({totalDuration})</span>
+                                </span>
+                                {durationFeature.tooltip && (
+                                  <button
+                                    onMouseEnter={(e) => handleTooltip(e, durationFeature.tooltip)}
+                                    onMouseLeave={() => setTooltip(null)}
+                                    className="w-5 h-5 bg-white/80 border border-gray-300 text-gray-600 rounded-full text-xs font-normal flex-shrink-0 hover:bg-white hover:border-gray-400 transition-colors"
+                                    aria-label="Više informacija"
+                                  >
+                                    i
+                                  </button>
+                                )}
+                              </li>
+                            )}
+                            {otherFeatures.map((feature, idx) => (
+                              <li key={idx} className={`flex items-start gap-2 ${feature.isNew ? "bg-blue-50 p-2 rounded" : feature.isExclusive ? "bg-yellow-50 p-2 rounded" : ""}`}>
+                                <span className="text-green-600 font-bold mt-1">✓</span>
+                                <span className={`flex-1 font-semibold ${feature.isExclusive ? "text-red-600" : "text-text/80"}`}>{feature.text}</span>
+                                {feature.tooltip && (
+                                  <button
+                                    onMouseEnter={(e) => handleTooltip(e, feature.tooltip)}
+                                    onMouseLeave={() => setTooltip(null)}
+                                    className="w-5 h-5 bg-white/80 border border-gray-300 text-gray-600 rounded-full text-xs font-normal flex-shrink-0 hover:bg-white hover:border-gray-400 transition-colors"
+                                    aria-label="Više informacija"
+                                  >
+                                    i
+                                  </button>
+                                )}
+                              </li>
+                            ))}
+                          </>
+                        );
+                      })()}
+                    </>
+                  )}
                 </ul>
               </div>
               
