@@ -1,13 +1,19 @@
-// Complete pricing data from original pricing_plan.html
+// Complete pricing data - now using new pricing structure
+// Export types and interfaces from new pricing data
+export type { PackageFeature, Package } from "./pricingDataNew";
 
-export interface PackageFeature {
+// Export new pricing data as main PACKAGES_DATA
+export { PACKAGES_DATA_NEW as PACKAGES_DATA } from "./pricingDataNew";
+
+// Legacy data kept for reference (old pricing structure)
+export interface PackageFeatureOld {
   text: string;
   tooltip?: string;
   isNew?: boolean;
   isExclusive?: boolean;
 }
 
-export interface Package {
+export interface PackageOld {
   id: string;
   name: string;
   duration: string;
@@ -18,12 +24,12 @@ export interface Package {
   badge?: string;
   limited?: string;
   allIncluded: boolean;
-  standardFeatures: PackageFeature[];
-  additionalFeatures?: PackageFeature[];
+  standardFeatures: PackageFeatureOld[];
+  additionalFeatures?: PackageFeatureOld[];
   strategyNote: string;
 }
 
-export const PACKAGES_DATA: Package[] = [
+export const PACKAGES_DATA_OLD: PackageOld[] = [
   {
     id: "standard",
     name: "Standard",
@@ -128,7 +134,7 @@ export const ADDONS: Addon[] = [
   {
     name: "🧁 Slatki sto",
     price: "5.990",
-    description: "Popsi, krofnice i sitni kolači. Vizuelno atraktivno posluženo. Uključeno u All-Inclusive i Ultra paketima.",
+    description: "Bogat slatki sto sa popsima, krofnicama, mafinima ili mix (po dogovoru). Vizuelno atraktivno posluženo na tematskom stolu. Uključeno u All-Inclusive i Ultra paketima.",
   },
   {
     name: "🍕 Mini pizza",

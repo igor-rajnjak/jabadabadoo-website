@@ -1,15 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { PACKAGES_DATA, ADDONS } from "@/lib/pricingData";
+import { PACKAGES_DATA_NEW } from "@/lib/pricingDataNew";
+import { ADDONS } from "@/lib/pricingData";
 import { CONTACT } from "@/lib/constants";
 import PricingComparison from "./PricingComparison";
-import Link from "next/link";
 import { trackPackageClick, trackPhoneCall, trackCTAClick } from "@/lib/analytics";
 
 export default function Pricing() {
   const [tooltip, setTooltip] = useState<{ text: string; x: number; y: number } | null>(null);
-  const [showAddons, setShowAddons] = useState(false);
 
   const handleTooltip = (e: React.MouseEvent, text?: string) => {
     if (text) {
@@ -44,7 +43,7 @@ export default function Pricing() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8 lg:gap-10 xl:gap-12 mb-16 md:mb-20">
-          {PACKAGES_DATA.map((pkg) => (
+          {PACKAGES_DATA_NEW.map((pkg) => (
             <div
               key={pkg.id}
               className={`bg-white p-5 md:p-6 lg:p-8 xl:p-10 2xl:p-8 rounded-3xl shadow-lg border-4 ${
@@ -88,10 +87,15 @@ export default function Pricing() {
               <div className="mb-4 md:mb-6 flex-grow">
                 <h4 className="font-bold text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl mb-3 md:mb-4 text-center text-text">✨ Uključeno u cenu:</h4>
                 <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm lg:text-sm xl:text-sm">
-                  {pkg.id === "standard" && pkg.standardFeatures.map((feature, idx) => (
+                  {pkg.id === "standard" && pkg.standardFeatures?.map((feature, idx) => {
+                    const emojiMatch = feature.text.match(/^([^\s]+)\s/);
+                    const emoji = emojiMatch ? emojiMatch[1] : "✨";
+                    const textWithoutEmoji = emojiMatch ? feature.text.replace(/^[^\s]+\s/, "") : feature.text;
+                    
+                    return (
                     <li key={idx} className="flex items-start gap-2">
-                      <span className="text-green-600 font-bold mt-1">✓</span>
-                      <span className="text-text/80 flex-1">{feature.text}</span>
+                      <span className="text-2xl mt-0">{emoji}</span>
+                      <span className="text-text/80 flex-1">{textWithoutEmoji}</span>
                       {feature.tooltip && (
                         <button
                           onMouseEnter={(e) => handleTooltip(e, feature.tooltip)}
@@ -103,10 +107,13 @@ export default function Pricing() {
                         </button>
                       )}
                     </li>
-                  ))}
+                    );
+                  })}
                   {pkg.id !== "standard" && (
                     <>
-                      <li className="text-text/60 italic text-xs mb-3">Sve iz {pkg.id === "premium" ? "Standard" : pkg.id === "all-inclusive" ? "Premium" : "All-Inclusive"} +</li>
+                      <li className="bg-gray-100 border-l-4 border-primary text-text font-semibold text-sm py-2 px-3 mb-4 rounded-r">
+                        ✨ Sve iz <span className="text-primary">{pkg.id === "premium" ? "Standard" : pkg.id === "all-inclusive" ? "Premium" : "All-Inclusive"}</span> +
+                      </li>
                       {(() => {
                         // Find duration extension feature and show it first
                         const durationFeature = pkg.additionalFeatures?.find(f => 
@@ -123,11 +130,16 @@ export default function Pricing() {
                         
                         return (
                           <>
-                            {durationFeature && (
-                              <li className={`flex items-start gap-2 mb-3 ${durationFeature.isNew ? "bg-blue-50 p-2 rounded" : durationFeature.isExclusive ? "bg-yellow-50 p-2 rounded" : ""}`}>
-                                <span className="text-green-600 font-bold mt-1">✓</span>
-                                <span className="text-text/80 flex-1 font-semibold">
-                                  {durationFeature.text} <span className="text-text/60 font-normal">({totalDuration})</span>
+                            {durationFeature && (() => {
+                              const emojiMatch = durationFeature.text.match(/^([^\s]+)\s/);
+                              const emoji = emojiMatch ? emojiMatch[1] : "➕";
+                              const textWithoutEmoji = emojiMatch ? durationFeature.text.replace(/^[^\s]+\s/, "") : durationFeature.text;
+                              
+                              return (
+                              <li className={`flex items-start gap-2 mb-3 ${durationFeature.isNew && pkg.id === "all-inclusive" ? "bg-yellow-50 p-2 rounded" : durationFeature.isNew ? "bg-blue-50 p-2 rounded" : durationFeature.isExclusive ? "" : ""}`}>
+                                <span className="text-2xl mt-0">{emoji}</span>
+                                <span className={`flex-1 font-semibold ${durationFeature.isExclusive ? "text-red-600" : "text-text/80"}`}>
+                                  {textWithoutEmoji} <span className="text-text/60 font-normal">({totalDuration})</span>
                                 </span>
                                 {durationFeature.tooltip && (
                                   <button
@@ -140,11 +152,18 @@ export default function Pricing() {
                                   </button>
                                 )}
                               </li>
-                            )}
-                            {otherFeatures.map((feature, idx) => (
-                              <li key={idx} className={`flex items-start gap-2 ${feature.isNew ? "bg-blue-50 p-2 rounded" : feature.isExclusive ? "bg-yellow-50 p-2 rounded" : ""}`}>
-                                <span className="text-green-600 font-bold mt-1">✓</span>
-                                <span className="text-text/80 flex-1 font-semibold">{feature.text}</span>
+                              );
+                            })()}
+                            {otherFeatures.map((feature, idx) => {
+                              // Extract emoji from text if it exists
+                              const emojiMatch = feature.text.match(/^([^\s]+)\s/);
+                              const emoji = emojiMatch ? emojiMatch[1] : "✨";
+                              const textWithoutEmoji = emojiMatch ? feature.text.replace(/^[^\s]+\s/, "") : feature.text;
+                              
+                              return (
+                              <li key={idx} className={`flex items-start gap-2 ${feature.isNew && pkg.id === "all-inclusive" ? "bg-yellow-50 p-2 rounded" : feature.isNew ? "bg-blue-50 p-2 rounded" : feature.isExclusive ? "" : ""}`}>
+                                <span className="text-2xl mt-0">{emoji}</span>
+                                <span className={`flex-1 font-semibold ${feature.isExclusive ? "text-red-600" : "text-text/80"}`}>{textWithoutEmoji}</span>
                                 {feature.tooltip && (
                                   <button
                                     onMouseEnter={(e) => handleTooltip(e, feature.tooltip)}
@@ -156,7 +175,8 @@ export default function Pricing() {
                                   </button>
                                 )}
                               </li>
-                            ))}
+                            );
+                            })}
                           </>
                         );
                       })()}
@@ -166,7 +186,7 @@ export default function Pricing() {
               </div>
               
               <div className="bg-blue-50 border-2 border-blue-300 p-3 md:p-4 lg:p-5 rounded-xl mb-4 text-xs md:text-sm lg:text-sm">
-                <p className="text-text/80 leading-relaxed">{pkg.strategyNote}</p>
+                <p className="text-text/80 leading-relaxed" dangerouslySetInnerHTML={{ __html: pkg.strategyNote }} />
               </div>
               
               {pkg.limited && (
@@ -175,16 +195,16 @@ export default function Pricing() {
                 </div>
               )}
               
-                      <a
-                        href={`tel:${CONTACT.phoneFormatted}`}
-                        onClick={() => {
-                          trackPackageClick(pkg.name, "Pricing Card");
-                          trackPhoneCall(CONTACT.phone, `Pricing-${pkg.name}`);
-                        }}
-                        className="block w-full bg-primary text-white text-center py-2.5 md:py-3 lg:py-4 rounded-full font-bold text-sm md:text-base lg:text-base hover:bg-red-500 transition-all hover:-translate-y-1 shadow-lg mt-auto"
-                      >
-                        📞 Pozovi {CONTACT.phone}
-                      </a>
+              <a
+                href={`tel:${CONTACT.phoneFormatted}`}
+                onClick={() => {
+                  trackPackageClick(pkg.name, "Pricing Card");
+                  trackPhoneCall(CONTACT.phone, `Pricing-${pkg.name}`);
+                }}
+                className="block w-full bg-primary text-white text-center py-2.5 md:py-3 lg:py-4 rounded-full font-bold text-sm md:text-base lg:text-base hover:bg-red-500 transition-all hover:-translate-y-1 shadow-lg mt-auto"
+              >
+                📞 Pozovi {CONTACT.phone}
+              </a>
             </div>
           ))}
         </div>
@@ -198,15 +218,15 @@ export default function Pricing() {
           </div>
         )}
         
-                <div className="text-center mb-12">
-                  <a
-                    href="#kontakt"
-                    onClick={() => trackCTAClick("Rezerviši Rođendan", "Pricing Section")}
-                    className="inline-block bg-accent text-text px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all hover:-translate-y-1 shadow-lg"
-                  >
-                    Rezerviši Rođendan
-                  </a>
-                </div>
+        <div className="text-center mb-12">
+          <a
+            href="#kontakt"
+            onClick={() => trackCTAClick("Rezerviši Rođendan", "Pricing Section")}
+            className="inline-block bg-accent text-text px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition-all hover:-translate-y-1 shadow-lg"
+          >
+            Rezerviši Rođendan
+          </a>
+        </div>
         
         <div className="bg-red-100 border-4 border-red-500 rounded-2xl p-6 mb-12 text-center">
           <h3 className="text-2xl font-bold mb-4 text-red-800">⏰ Ograničen broj termina - rezervišite na vreme!</h3>

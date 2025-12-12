@@ -6,7 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/pricing-new"],
       },
     ],
     sitemap: "https://rodjendaonica-novi-sad.com/sitemap.xml",
