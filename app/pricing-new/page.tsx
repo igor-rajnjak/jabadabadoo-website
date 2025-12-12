@@ -151,7 +151,6 @@ export default function PricingNewPage() {
                               </li>
                               );
                             })()}
-                            )}
                             {otherFeatures.map((feature, idx) => {
                               // Extract emoji from text if it exists
                               const emojiMatch = feature.text.match(/^([^\s]+)\s/);
