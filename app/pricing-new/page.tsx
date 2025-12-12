@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import { PACKAGES_DATA_NEW } from "@/lib/pricingDataNew";
+import { ADDONS } from "@/lib/pricingData";
 import { CONTACT } from "@/lib/constants";
+import PricingComparison from "@/components/PricingComparison";
 
 export default function PricingNewPage() {
   const [tooltip, setTooltip] = useState<{ text: string; x: number; y: number } | null>(null);
@@ -234,6 +236,32 @@ export default function PricingNewPage() {
           </p>
         </div>
         
+        <div className="bg-white rounded-3xl shadow-lg border-4 border-secondary p-8 mb-12">
+          <h3 className="text-3xl font-bold text-center mb-4 text-primary">🎁 Dodatne Opcije</h3>
+          <p className="text-center text-text/80 mb-6">Proširite svoj paket sa dodatnim sadržajima</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {ADDONS.map((addon, idx) => (
+              <div
+                key={idx}
+                className={`bg-gray-50 p-4 rounded-2xl border-l-4 border-secondary ${addon.comingSoon ? "opacity-70" : ""}`}
+              >
+                <div className="flex justify-between items-center mb-3">
+                  <h4 className="font-bold text-text">{addon.name}</h4>
+                  {addon.comingSoon ? (
+                    <span className="bg-gray-500 text-white px-2 py-1 rounded-full text-xs font-bold">Uskoro</span>
+                  ) : (
+                    <span className="text-primary font-bold text-lg">{addon.price}</span>
+                  )}
+                </div>
+                <p className="text-sm text-text/70">{addon.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <PricingComparison />
+        
         <div className="bg-white rounded-3xl shadow-lg border-4 border-secondary p-8">
           <h3 className="text-3xl font-bold text-center mb-4 text-primary">💳 Plaćanje i Rezervacija</h3>
           <div className="bg-gray-50 p-6 rounded-2xl border-l-4 border-primary max-w-2xl mx-auto">
@@ -244,12 +272,6 @@ export default function PricingNewPage() {
               <li><strong>Rezervacija:</strong> Pozovite nas na <strong>{CONTACT.phone}</strong> za proveru dostupnosti i rezervaciju</li>
             </ul>
           </div>
-        </div>
-        
-        <div className="bg-green-100 border-2 border-green-500 rounded-xl p-6 mt-8 text-center">
-          <h3 className="text-xl font-bold mb-2 text-green-800">📞 Besplatna konsultacija</h3>
-          <p className="text-green-700 text-lg mb-2">Pozovite nas za savet koji paket je najbolji za vaše dete!</p>
-          <p className="text-green-700 font-bold">💳 Depozit 50%, ostatak na dan rođendana</p>
         </div>
       </div>
     </section>
