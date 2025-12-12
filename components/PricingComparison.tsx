@@ -39,9 +39,9 @@ export default function PricingComparison() {
               <tr className="bg-blue-50">
                 <td className="p-3 font-bold">Cena</td>
                 <td className="p-3 text-center font-bold">15.990 RSD</td>
-                <td className="p-3 text-center font-bold">22.990 RSD</td>
-                <td className="p-3 text-center font-bold">33.990 RSD</td>
-                <td className="p-3 text-center font-bold">44.990 RSD</td>
+                <td className="p-3 text-center font-bold">21.990 RSD</td>
+                <td className="p-3 text-center font-bold">33.490 RSD</td>
+                <td className="p-3 text-center font-bold">45.990 RSD</td>
               </tr>
               <tr>
                 <td className="p-3">Trajanje</td>
@@ -62,14 +62,42 @@ export default function PricingComparison() {
                 <td className="p-3 text-center">✅</td>
               </tr>
               <tr>
-                <td className="p-3">Pinjata</td>
+                <td className="p-3">Igre prilagođene uzrastu</td>
                 <td className="p-3 text-center">✅</td>
                 <td className="p-3 text-center">✅</td>
                 <td className="p-3 text-center">✅</td>
                 <td className="p-3 text-center">✅</td>
               </tr>
               <tr>
-                <td className="p-3">Disko žurka</td>
+                <td className="p-3">Interaktivni zid</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+              </tr>
+              <tr>
+                <td className="p-3">Pinjata sa slatkišima</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+              </tr>
+              <tr>
+                <td className="p-3">Disko žurka uz balončiće</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+              </tr>
+              <tr>
+                <td className="p-3">Svetleće tetovaze</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+              </tr>
+              <tr>
+                <td className="p-3">Diplome</td>
                 <td className="p-3 text-center">✅</td>
                 <td className="p-3 text-center">✅</td>
                 <td className="p-3 text-center">✅</td>
@@ -93,26 +121,61 @@ export default function PricingComparison() {
                 <td className="p-3 text-center">✅</td>
                 <td className="p-3 text-center">✅</td>
               </tr>
+              <tr>
+                <td className="p-3">Premium tematske dekoracije</td>
+                <td className="p-3 text-center">❌</td>
+                <td className="p-3 text-center">❌</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+              </tr>
+              <tr>
+                <td className="p-3">Premium dizajn pozivnica</td>
+                <td className="p-3 text-center">❌</td>
+                <td className="p-3 text-center">❌</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+              </tr>
               
               <tr className="bg-gray-100">
-                <td colSpan={5} className="p-3 font-bold text-text">🥤 HRANA</td>
+                <td colSpan={5} className="p-3 font-bold text-text">🥤 HRANA I PIĆE</td>
+              </tr>
+              <tr>
+                <td className="p-3">Neograničeni sokovi</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+              </tr>
+              <tr>
+                <td className="p-3">🥨 Grickalice</td>
+                <td className="p-3 text-center">❌</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+              </tr>
+              <tr>
+                <td className="p-3">🥂 Deciji sampanjac</td>
+                <td className="p-3 text-center">❌</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
               </tr>
               <tr className="bg-yellow-50">
                 <td className="p-3">🍕 Mini pizza</td>
                 <td className="p-3 text-center">❌</td>
-                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">❌</td>
                 <td className="p-3 text-center">✅</td>
                 <td className="p-3 text-center">✅</td>
               </tr>
               <tr className="bg-yellow-50">
-                <td className="p-3">🧁 Slatki sto</td>
+                <td className="p-3">🧁 Slatki sto (popsi i krofnice)</td>
                 <td className="p-3 text-center">❌</td>
                 <td className="p-3 text-center">❌</td>
                 <td className="p-3 text-center">✅</td>
                 <td className="p-3 text-center">✅</td>
               </tr>
               <tr className="bg-yellow-50">
-                <td className="p-3">🍰 Torta</td>
+                <td className="p-3">🍰 Torta po izboru</td>
                 <td className="p-3 text-center">❌</td>
                 <td className="p-3 text-center">❌</td>
                 <td className="p-3 text-center">✅</td>
@@ -120,32 +183,53 @@ export default function PricingComparison() {
               </tr>
               
               <tr className="bg-gray-100">
-                <td colSpan={5} className="p-3 font-bold text-text">🎁 POKLONI</td>
+                <td colSpan={5} className="p-3 font-bold text-text">🎁 POKLONI I KARTICE</td>
               </tr>
               <tr>
-                <td className="p-3">Unikatan poklon</td>
+                <td className="p-3">Unikatan poklon za slavljenika</td>
                 <td className="p-3 text-center">❌</td>
                 <td className="p-3 text-center">✅</td>
                 <td className="p-3 text-center">✅</td>
                 <td className="p-3 text-center">✅</td>
               </tr>
               <tr>
-                <td className="p-3">Poklon kartica</td>
+                <td className="p-3">Ekskluzivni premium poklon</td>
+                <td className="p-3 text-center">❌</td>
+                <td className="p-3 text-center">❌</td>
+                <td className="p-3 text-center">❌</td>
+                <td className="p-3 text-center">✅</td>
+              </tr>
+              <tr>
+                <td className="p-3">Poklon kartica za slavljenika</td>
                 <td className="p-3 text-center">2h</td>
                 <td className="p-3 text-center">4h</td>
                 <td className="p-3 text-center">4h</td>
                 <td className="p-3 text-center">4h</td>
+              </tr>
+              <tr>
+                <td className="p-3">Dodatne poklon kartice (za poklanjanje)</td>
+                <td className="p-3 text-center">❌</td>
+                <td className="p-3 text-center">❌</td>
+                <td className="p-3 text-center">2x 1h</td>
+                <td className="p-3 text-center">4x 1h</td>
               </tr>
               
               <tr className="bg-gray-100">
                 <td colSpan={5} className="p-3 font-bold text-text">💎 PREMIUM EKSKLUZIVA</td>
               </tr>
               <tr className="bg-green-50">
-                <td className="p-3">🎭 Show program</td>
+                <td className="p-3">🎭 Mađioničar / Maskota</td>
                 <td className="p-3 text-center">❌</td>
                 <td className="p-3 text-center">❌</td>
                 <td className="p-3 text-center">❌</td>
                 <td className="p-3 text-center">⭐</td>
+              </tr>
+              <tr className="bg-green-50">
+                <td className="p-3">➕ Produženo trajanje (+30 min)</td>
+                <td className="p-3 text-center">❌</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">✅</td>
               </tr>
             </tbody>
           </table>
@@ -154,4 +238,3 @@ export default function PricingComparison() {
     </div>
   );
 }
-
