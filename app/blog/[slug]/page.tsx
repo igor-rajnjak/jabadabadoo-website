@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Metadata } from "next";
 import { BLOG_POSTS } from "@/lib/blogPosts";
+import { CONTACT, TRUST_SIGNALS } from "@/lib/constants";
 
 interface BlogPostPageProps {
   params: {
@@ -24,15 +25,37 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     };
   }
 
+  const baseUrl = "https://rodjendaonica-novi-sad.com";
+  const postUrl = `${baseUrl}/blog/${post.slug}`;
+
   return {
     title: `${post.title} | Jabadabadoo Rođendaonica Blog`,
     description: post.excerpt,
     keywords: post.keywords.join(", "),
+    alternates: {
+      canonical: postUrl,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
       publishedTime: post.date,
+      url: postUrl,
+      siteName: "Jabadabadoo Rođendaonica",
+      images: [
+        {
+          url: `${baseUrl}/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-og-photo.png`,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [`${baseUrl}/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-og-photo.png`],
     },
   };
 }
@@ -44,10 +67,99 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
+  const baseUrl = "https://rodjendaonica-novi-sad.com";
+  const postUrl = `${baseUrl}/blog/${post.slug}`;
+
+  // Article Schema for SEO
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    image: `${baseUrl}/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-og-photo.png`,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Organization",
+      name: "Jabadabadoo Rođendaonica",
+      url: baseUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Jabadabadoo Rođendaonica",
+      logo: {
+        "@type": "ImageObject",
+        url: `${baseUrl}/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-transparent.png`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": postUrl,
+    },
+    articleSection: "Blog - Saveti za Rođendane",
+    keywords: post.keywords.join(", "),
+    timeRequired: `PT${post.readTime}M`,
+  };
+
+  // Breadcrumb Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Početna",
+        item: baseUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${baseUrl}/blog`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: postUrl,
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-bg">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       <article className="py-24 md:py-32 px-6 md:px-8">
         <div className="container mx-auto max-w-4xl">
+          <nav aria-label="Breadcrumb" className="mb-8">
+            <ol className="flex items-center gap-2 text-sm text-text/60">
+              <li>
+                <Link href="/" className="hover:text-primary transition-colors">
+                  Početna
+                </Link>
+              </li>
+              <li>/</li>
+              <li>
+                <Link href="/blog" className="hover:text-primary transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>/</li>
+              <li className="text-text/80">{post.title}</li>
+            </ol>
+          </nav>
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-primary hover:text-red-500 font-bold mb-8 transition-colors"

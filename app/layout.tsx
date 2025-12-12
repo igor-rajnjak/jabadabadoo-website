@@ -310,12 +310,18 @@ export default function RootLayout({
                 {
                   "@type": "ListItem",
                   position: 6,
+                  name: "Blog",
+                  item: "https://rodjendaonica-novi-sad.com/blog",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 7,
                   name: "FAQ",
                   item: "https://rodjendaonica-novi-sad.com#faq",
                 },
                 {
                   "@type": "ListItem",
-                  position: 7,
+                  position: 8,
                   name: "Kontakt",
                   item: "https://rodjendaonica-novi-sad.com#kontakt",
                 },
