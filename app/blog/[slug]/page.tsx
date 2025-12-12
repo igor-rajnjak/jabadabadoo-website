@@ -3,6 +3,10 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { BLOG_POSTS } from "@/lib/blogPosts";
 import { CONTACT, TRUST_SIGNALS } from "@/lib/constants";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import StickyCall from "@/components/StickyCall";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 interface BlogPostPageProps {
   params: {

@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import { BLOG_POSTS } from "@/lib/blogPosts";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import StickyCall from "@/components/StickyCall";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 const baseUrl = "https://rodjendaonica-novi-sad.com";
 
@@ -61,6 +65,7 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-bg">
+      <Header />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -101,6 +106,9 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
+      <Footer />
+      <StickyCall />
+      <WhatsAppWidget />
     </div>
   );
 }
