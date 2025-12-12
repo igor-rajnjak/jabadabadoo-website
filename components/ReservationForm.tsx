@@ -147,20 +147,28 @@ Komentar: ${formData.comment || "Nema komentara"}
         <label htmlFor="package" className="block font-bold mb-3 text-text text-lg">
           Paket <span className="text-primary">*</span>
         </label>
-        <select
-          id="package"
-          required
-          value={formData.package}
-          onChange={(e) => setFormData({ ...formData, package: e.target.value })}
-          className="w-full px-6 py-4 rounded-2xl border-4 border-secondary focus:border-primary outline-none text-text text-lg"
-        >
-          <option value="">Izaberite paket</option>
-          {PACKAGES.map((pkg) => (
-            <option key={pkg.id} value={pkg.name}>
-              {pkg.name} - {pkg.price} RSD ({pkg.duration})
-            </option>
-          ))}
-        </select>
+        <div className="relative">
+          <select
+            id="package"
+            required
+            value={formData.package}
+            onChange={(e) => setFormData({ ...formData, package: e.target.value })}
+            className="w-full px-6 py-4 pr-12 rounded-2xl border-4 border-secondary focus:border-primary outline-none text-text text-lg appearance-none bg-white cursor-pointer"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E")`,
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'right 1.5rem center',
+              backgroundSize: '12px',
+            }}
+          >
+            <option value="">Izaberite paket</option>
+            {PACKAGES.map((pkg) => (
+              <option key={pkg.id} value={pkg.name}>
+                {pkg.name} - {pkg.price} RSD ({pkg.duration})
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       <div>
