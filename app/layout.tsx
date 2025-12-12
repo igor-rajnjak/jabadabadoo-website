@@ -170,6 +170,20 @@ export default function RootLayout({
                 ratingValue: "4.6",
                 reviewCount: "134",
               },
+              review: REVIEWS.map((review) => ({
+                "@type": "Review",
+                author: {
+                  "@type": "Person",
+                  name: review.name,
+                },
+                reviewRating: {
+                  "@type": "Rating",
+                  ratingValue: review.rating,
+                  bestRating: 5,
+                },
+                reviewBody: review.text,
+                datePublished: new Date(Date.now() - review.monthsAgo * 30 * 24 * 60 * 60 * 1000).toISOString().split("T")[0],
+              })),
               sameAs: [
                 CONTACT.instagram,
                 CONTACT.facebook,
@@ -191,30 +205,6 @@ export default function RootLayout({
                   "@type": "Answer",
                   text: item.answer,
                 },
-              })),
-            }),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              name: "Jabadabadoo Rođendaonica",
-              review: REVIEWS.map((review) => ({
-                "@type": "Review",
-                author: {
-                  "@type": "Person",
-                  name: review.name,
-                },
-                reviewRating: {
-                  "@type": "Rating",
-                  ratingValue: review.rating,
-                  bestRating: 5,
-                },
-                reviewBody: review.text,
-                datePublished: new Date(Date.now() - review.monthsAgo * 30 * 24 * 60 * 60 * 1000).toISOString().split("T")[0],
               })),
             }),
           }}
@@ -390,6 +380,13 @@ export default function RootLayout({
                 "@type": "LocalBusiness",
                 name: "Jabadabadoo Rođendaonica",
                 "@id": "https://rodjendaonica-novi-sad.com",
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: "Somborska 17",
+                  addressLocality: "Novi Sad",
+                  postalCode: "21000",
+                  addressCountry: "RS",
+                },
               },
               areaServed: {
                 "@type": "City",
