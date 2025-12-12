@@ -108,7 +108,9 @@ export default function PricingNewPage() {
                   })}
                   {pkg.id !== "standard" && (
                     <>
-                      <li className="text-text/60 italic text-xs mb-3">Sve iz {pkg.id === "premium" ? "Standard" : pkg.id === "all-inclusive" ? "Premium" : "All-Inclusive"} +</li>
+                      <li className="bg-gray-100 border-l-4 border-primary text-text font-semibold text-sm py-2 px-3 mb-4 rounded-r">
+                        ✨ Sve iz <span className="text-primary">{pkg.id === "premium" ? "Standard" : pkg.id === "all-inclusive" ? "Premium" : "All-Inclusive"}</span> +
+                      </li>
                       {(() => {
                         // Find duration extension feature and show it first
                         const durationFeature = pkg.additionalFeatures?.find(f => 
