@@ -41,7 +41,7 @@ export default function Hero() {
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-5xl 2xl:text-6xl font-bold mb-8 md:mb-10 animate-fade-in-up leading-tight text-shadow-lg">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-5xl 2xl:text-6xl font-bold mb-8 md:mb-10 leading-tight text-shadow-lg">
               All-inclusive Dečiji Rođendani<br className="hidden sm:block" /> u Novom Sadu
             </h1>
             
