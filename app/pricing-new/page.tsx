@@ -9,7 +9,15 @@ export default function PricingNewPage() {
 
   const handleTooltip = (e: React.MouseEvent, text?: string) => {
     if (text) {
-      setTooltip({ text, x: e.clientX, y: e.clientY });
+      const x = e.clientX;
+      const y = e.clientY;
+      const windowWidth = window.innerWidth;
+      const tooltipWidth = 320; // max-w-xs = 320px
+      
+      // If tooltip would go off right edge, show on left side
+      const left = x + 10 + tooltipWidth > windowWidth ? x - tooltipWidth - 10 : x + 10;
+      
+      setTooltip({ text, x: left, y });
     } else {
       setTooltip(null);
     }
@@ -176,7 +184,7 @@ export default function PricingNewPage() {
         {tooltip && (
           <div
             className="fixed bg-gray-900 text-white p-3 rounded-lg text-sm max-w-xs z-50 pointer-events-none"
-            style={{ left: tooltip.x + 10, top: tooltip.y - 10 }}
+            style={{ left: tooltip.x, top: tooltip.y - 10 }}
           >
             {tooltip.text}
           </div>
@@ -210,7 +218,7 @@ export default function PricingNewPage() {
           <div className="bg-gray-50 p-6 rounded-2xl border-l-4 border-primary max-w-2xl mx-auto">
             <ul className="space-y-3 text-text">
               <li><strong>Depozit za rezervaciju:</strong> 50% od ukupne cene paketa</li>
-              <li><strong>Ostatak:</strong> Plaća se na dan rođendana</li>
+              <li><strong>Ostatak:</strong> Plaća se po završetku rođendana</li>
               <li><strong>Način plaćanja:</strong> Gotovina, kartica, bankovni transfer</li>
               <li><strong>Rezervacija:</strong> Pozovite nas na <strong>{CONTACT.phone}</strong> za proveru dostupnosti i rezervaciju</li>
             </ul>

@@ -35,13 +35,13 @@ export const PACKAGES_DATA: Package[] = [
     allIncluded: true,
     standardFeatures: [
       { text: "Prostor za decu i roditelje", tooltip: "Veliki salon sa kapacitetom do 30 dece i 36 roditelja. Udoban prostor za sedenje i odmor roditelja dok deca uživaju." },
-      { text: "Escajg i pribor za posluživanje", tooltip: "Kompletan escajg sa tanjirima, čašama, salvetetama i priborom za sve učesnike." },
+      { text: "Escajg i pribor za posluživanje", tooltip: "Kompletan escajg sa tanjirima, čašama, salvetama i priborom za sve učesnike." },
       { text: "Pozivnice (štampane ili elektronske)", tooltip: "Dizajnirane pozivnice prema temi rođendana. Možete birati između štampanih pozivnica ili elektronskih koje šaljete preko aplikacija." },
       { text: "Interaktivni zid", tooltip: "Digitalni interaktivni ekran sa igricama i zabavnim sadržajem prilagođenim uzrastu dece." },
       { text: "Aktivni profesionalni animatori", tooltip: "Profesionalni animatori koji vode program tokom cele proslave - organizuju igre, zabavljaju decu i vode brigu o toku rođendana." },
       { text: "Igre prilagođene uzrastu", tooltip: "Raznovrsne aktivnosti i igre prilagođene uzrastu gostiju - od 2 do 10 godina. Uključuje timske igre, takmičenja i zabavne aktivnosti." },
       { text: "Maskenbal ILI Crtanje po licu", tooltip: "Birate jednu opciju: Maskenbal sa kostimima i rekvizitima, ili profesionalno šminkanje/crtanje po licu sa sigurnim bojama." },
-      { text: "Pinjata sa slatkišima", tooltip: "Tradicionalna pinjata punjena slatkišima i sitnim igračkama. Sva deca učestvuju u razbijanju pinjate." },
+      { text: "Pinjata sa slatkišima", tooltip: "Tradicionalna pinjata punjena slatkišima. Sva deca učestvuju u razbijanju pinjate." },
       { text: "Svetleće tetovaze", tooltip: "Privremene svetleće tetovaze koje se vide u mraku. Bezopasne, lake za nanošenje i uklanjanje." },
       { text: "Diplome", tooltip: "Diplome za pobednike u igricama i takmičenjima tokom proslave." },
       { text: "Disko žurka uz balončiće", tooltip: "Disko atmosfera sa svetlima, muzikom i balonima. Deca plešu i zabavljaju se uz omiljene pesme." },
@@ -63,8 +63,8 @@ export const PACKAGES_DATA: Package[] = [
     additionalFeatures: [
       { text: "Maskenbal I Crtanje (oba!)", tooltip: "Dobijate OBE opcije umesto jedne - i maskenbal sa kostimima i profesionalno šminkanje za svu decu.", isNew: true },
       { text: "Medalje", tooltip: "Medalje za pobednike takmičenja i igara. Deca vole da dobiju nagrade!", isNew: true },
-      { text: "🍕 Mini pizza", tooltip: "Mini pizze za svu decu, različiti ukusi. Toplo serviranje tokom proslave - deca dobijaju hranu bez dodatnih troškova.", isNew: true },
-      { text: "Unikatan poklon za slavljenika", tooltip: "Specijalan poklon za slavljenika od nas - igračka ili zabavni set prema uzrastu.", isNew: true },
+      { text: "🍕 Mini pizza", tooltip: "Mini pizze za svu decu. Toplo serviranje tokom proslave - deca dobijaju hranu bez dodatnih troškova.", isNew: true },
+      { text: "Unikatan poklon za slavljenika", tooltip: "Unikatan poklon koji nas čini autentičnim a slavljeniku ostavlja nezaboravne uspomene.", isNew: true },
       { text: "Poklon kartica 4h (umesto 2h)", tooltip: "Duplo vreme u igraonici - 4 sata besplatnog korišćenja za slavljenika u narednih 30 dana.", isNew: true },
       { text: "➕ 30 minuta dodatne zabave", tooltip: "Proslava traje 2,5 sata umesto 2h - više vremena za igru i zabavu!", isNew: true },
     ],
@@ -82,8 +82,8 @@ export const PACKAGES_DATA: Package[] = [
     allIncluded: true,
     standardFeatures: [], // All from Premium
     additionalFeatures: [
-      { text: "🧁 Slatki sto (popsi i krofnice)", tooltip: "Bogat slatki sto sa popsima, krofnicama i sitnim kolačima. Vizuelno atraktivno posluženo na tematskom stolu.", isNew: true },
-      { text: "🍰 Torta po izboru", tooltip: "Torta 2-3 kg po vašoj želji i temi rođendana. Personalizovana sa imenom slavljenika.", isNew: true },
+      { text: "🧁 Slatki sto (popsi i krofnice)", tooltip: "Bogat slatki sto sa popsima, krofnicama, mafinima ili mix (po dogovoru). Vizuelno atraktivno posluženo na tematskom stolu.", isNew: true },
+      { text: "🍰 Torta po izboru", tooltip: "Torta po izboru slavljenika, birate ukus kao i izgled torte. Personalizovana sa imenom slavljenika.", isNew: true },
     ],
     strategyNote: "🎯 NAJBOLJI IZBOR! Za samo 11.000 više od Premium dobijate KOMPLETNU HRANU - pizza, slatki sto i tortu! Roditelji ne moraju ništa dodatno da kupuju.",
   },
@@ -123,7 +123,7 @@ export const ADDONS: Addon[] = [
   {
     name: "🍰 Torta po izboru",
     price: "6.990",
-    description: "Torta po želji, 2-3 kg, služi 25-30 dece. Personalizacija po temi rođendana. Uključeno u All-Inclusive i Ultra paketima.",
+    description: "Torta po izboru slavljenika, birate ukus kao i izgled torte. Personalizovana sa imenom slavljenika. Uključeno u All-Inclusive i Ultra paketima.",
   },
   {
     name: "🧁 Slatki sto",
@@ -133,7 +133,7 @@ export const ADDONS: Addon[] = [
   {
     name: "🍕 Mini pizza",
     price: "4.990",
-    description: "Mini pizze za svu decu, različiti ukusi. Toplo serviranje. Uključeno u Premium, All-Inclusive i Ultra paketima.",
+    description: "Mini pizze za svu decu. Toplo serviranje. Uključeno u Premium, All-Inclusive i Ultra paketima.",
   },
   {
     name: "📸 Profesionalni fotograf",
