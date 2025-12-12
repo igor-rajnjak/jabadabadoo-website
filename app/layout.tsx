@@ -228,6 +228,7 @@ export default function RootLayout({
               name: "Jabadabadoo Rođendaonica",
               alternateName: "Jabadabadoo Rodjendaonica",
               url: "https://rodjendaonica-novi-sad.com",
+              logo: "https://rodjendaonica-novi-sad.com/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-transparent.png",
               foundingDate: TRUST_SIGNALS.foundingDate,
               description: `Organizacija rođendana i rodjendana za decu u Novom Sadu. Osnovana ${TRUST_SIGNALS.foundingDateDisplay}. All-inclusive dečiji rođendani, tematski rođendani, profesionalni animatori.`,
               address: {
@@ -241,6 +242,78 @@ export default function RootLayout({
                 CONTACT.instagram,
                 CONTACT.facebook,
                 CONTACT.whatsappUrl,
+              ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Jabadabadoo Rođendaonica",
+              url: "https://rodjendaonica-novi-sad.com",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: {
+                  "@type": "EntryPoint",
+                  urlTemplate: "https://rodjendaonica-novi-sad.com/?q={search_term_string}",
+                },
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Početna",
+                  item: "https://rodjendaonica-novi-sad.com",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Zašto mi?",
+                  item: "https://rodjendaonica-novi-sad.com#zasto-mi",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Galerija",
+                  item: "https://rodjendaonica-novi-sad.com#galerija",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 4,
+                  name: "Cenovnik",
+                  item: "https://rodjendaonica-novi-sad.com#cenovnik",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 5,
+                  name: "Recenzije",
+                  item: "https://rodjendaonica-novi-sad.com#recenzije",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 6,
+                  name: "FAQ",
+                  item: "https://rodjendaonica-novi-sad.com#faq",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 7,
+                  name: "Kontakt",
+                  item: "https://rodjendaonica-novi-sad.com#kontakt",
+                },
               ],
             }),
           }}
