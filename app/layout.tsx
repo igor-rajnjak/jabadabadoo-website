@@ -333,7 +333,7 @@ export default function RootLayout({
                   "@type": "ListItem",
                   position: 3,
                   name: "Interaktivni zid",
-                  description: "Digitalni interaktivni ekran sa igricama i zabavnim sadržajem",
+                  description: "Projekcija slike na zid sa igricama i zabavnim sadržajem",
                 },
                 {
                   "@type": "ListItem",
@@ -485,7 +485,7 @@ export default function RootLayout({
                   "@type": "HowToStep",
                   position: 4,
                   name: "🎭 Zabava počinje!",
-                  text: "Profesionalni animatori vode program sa igrama, maskenbalom ili crtanjem po licu, interaktivnim zidom, pinjatom sa slatkišima i disko žurkom uz balončiće - sve prilagođeno uzrastu dece!",
+                  text: "Profesionalni animatori vode program sa igrama, maskenbalom ili crtanjem po licu, interaktivnim zidom (projekcija), pinjatom sa slatkišima i disko žurkom uz balončiće od sapunice i prave balone - sve prilagođeno uzrastu dece!",
                   image: "https://rodjendaonica-novi-sad.com/images/rodjendan-animatori-novi-sad-rodjendaonica-za-decu-jabadabadoo-animatori-zabava-square.png",
                 },
                 {
