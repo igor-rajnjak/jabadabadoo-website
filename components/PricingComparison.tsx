@@ -229,7 +229,14 @@ export default function PricingComparison() {
                 <td className="p-3 text-center">❌</td>
                 <td className="p-3 text-center">✅</td>
                 <td className="p-3 text-center">✅</td>
-                <td className="p-3 text-center">✅</td>
+                <td className="p-3 text-center">❌</td>
+              </tr>
+              <tr className="bg-green-50">
+                <td className="p-3">➕ Produženo trajanje (+60 min)</td>
+                <td className="p-3 text-center">❌</td>
+                <td className="p-3 text-center">❌</td>
+                <td className="p-3 text-center">❌</td>
+                <td className="p-3 text-center">⭐</td>
               </tr>
             </tbody>
           </table>
