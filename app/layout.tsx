@@ -108,7 +108,7 @@ export default function RootLayout({
                   sameAs: CONTACT.whatsappUrl,
                 },
               ],
-              priceRange: "15.990 - 44.990 RSD",
+              priceRange: "15.990 - 45.990 RSD",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "Somborska 17",
