@@ -84,10 +84,15 @@ export default function PricingNewPage() {
               <div className="mb-4 md:mb-6 flex-grow">
                 <h4 className="font-bold text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl mb-3 md:mb-4 text-center text-text">✨ Uključeno u cenu:</h4>
                 <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm lg:text-sm xl:text-sm">
-                  {pkg.id === "standard" && pkg.standardFeatures?.map((feature, idx) => (
+                  {pkg.id === "standard" && pkg.standardFeatures?.map((feature, idx) => {
+                    const emojiMatch = feature.text.match(/^([^\s]+)\s/);
+                    const emoji = emojiMatch ? emojiMatch[1] : "✨";
+                    const textWithoutEmoji = emojiMatch ? feature.text.replace(/^[^\s]+\s/, "") : feature.text;
+                    
+                    return (
                     <li key={idx} className="flex items-start gap-2">
-                      <span className="text-green-600 font-bold mt-1">✓</span>
-                      <span className="text-text/80 flex-1">{feature.text}</span>
+                      <span className="text-2xl mt-0">{emoji}</span>
+                      <span className="text-text/80 flex-1">{textWithoutEmoji}</span>
                       {feature.tooltip && (
                         <button
                           onMouseEnter={(e) => handleTooltip(e, feature.tooltip)}
@@ -99,7 +104,8 @@ export default function PricingNewPage() {
                         </button>
                       )}
                     </li>
-                  ))}
+                    );
+                  })}
                   {pkg.id !== "standard" && (
                     <>
                       <li className="text-text/60 italic text-xs mb-3">Sve iz {pkg.id === "premium" ? "Standard" : pkg.id === "all-inclusive" ? "Premium" : "All-Inclusive"} +</li>
@@ -119,15 +125,16 @@ export default function PricingNewPage() {
                         
                         return (
                           <>
-                            {durationFeature && (
+                            {durationFeature && (() => {
+                              const emojiMatch = durationFeature.text.match(/^([^\s]+)\s/);
+                              const emoji = emojiMatch ? emojiMatch[1] : "➕";
+                              const textWithoutEmoji = emojiMatch ? durationFeature.text.replace(/^[^\s]+\s/, "") : durationFeature.text;
+                              
+                              return (
                               <li className={`flex items-start gap-2 mb-3 ${durationFeature.isNew && pkg.id === "all-inclusive" ? "bg-yellow-50 p-2 rounded" : durationFeature.isNew ? "bg-blue-50 p-2 rounded" : durationFeature.isExclusive ? "" : ""}`}>
-                                {pkg.id === "premium" ? (
-                                  <span className="text-2xl mt-0">{durationFeature.text.match(/^[^\s]+/)?.[0] || "➕"}</span>
-                                ) : (
-                                  <span className="text-green-600 font-bold mt-1">✓</span>
-                                )}
+                                <span className="text-2xl mt-0">{emoji}</span>
                                 <span className={`flex-1 font-semibold ${durationFeature.isExclusive ? "text-red-600" : "text-text/80"}`}>
-                                  {pkg.id === "premium" ? durationFeature.text.replace(/^[^\s]+\s/, "") : durationFeature.text} <span className="text-text/60 font-normal">({totalDuration})</span>
+                                  {textWithoutEmoji} <span className="text-text/60 font-normal">({totalDuration})</span>
                                 </span>
                                 {durationFeature.tooltip && (
                                   <button
@@ -140,21 +147,19 @@ export default function PricingNewPage() {
                                   </button>
                                 )}
                               </li>
+                              );
+                            })()}
                             )}
                             {otherFeatures.map((feature, idx) => {
                               // Extract emoji from text if it exists
                               const emojiMatch = feature.text.match(/^([^\s]+)\s/);
-                              const emoji = emojiMatch ? emojiMatch[1] : null;
-                              const textWithoutEmoji = emoji ? feature.text.replace(/^[^\s]+\s/, "") : feature.text;
+                              const emoji = emojiMatch ? emojiMatch[1] : "✨";
+                              const textWithoutEmoji = emojiMatch ? feature.text.replace(/^[^\s]+\s/, "") : feature.text;
                               
                               return (
                               <li key={idx} className={`flex items-start gap-2 ${feature.isNew && pkg.id === "all-inclusive" ? "bg-yellow-50 p-2 rounded" : feature.isNew ? "bg-blue-50 p-2 rounded" : feature.isExclusive ? "" : ""}`}>
-                                {pkg.id === "premium" ? (
-                                  <span className="text-2xl mt-0">{emoji || "✨"}</span>
-                                ) : (
-                                  <span className="text-green-600 font-bold mt-1">✓</span>
-                                )}
-                                <span className={`flex-1 font-semibold ${feature.isExclusive ? "text-red-600" : "text-text/80"}`}>{pkg.id === "premium" ? textWithoutEmoji : feature.text}</span>
+                                <span className="text-2xl mt-0">{emoji}</span>
+                                <span className={`flex-1 font-semibold ${feature.isExclusive ? "text-red-600" : "text-text/80"}`}>{textWithoutEmoji}</span>
                                 {feature.tooltip && (
                                   <button
                                     onMouseEnter={(e) => handleTooltip(e, feature.tooltip)}
