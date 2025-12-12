@@ -107,7 +107,7 @@ export const PACKAGES_DATA_NEW: Package[] = [
     allIncluded: true,
     additionalFeatures: [
       { text: "🎭 Mađioničarska predstava ILI Maskota", tooltip: "Profesionalni show program: mađioničarska predstava (30-45min) sa interaktivnim trikovima ILI maskota omiljenog lika (fotografisanje, igre, interakcija).", isExclusive: true },
-      { text: "➕ 30 minuta produžene zabave (ukupno 3h)", tooltip: "Proslava traje punih 3 sata - maksimalna zabava za decu, opuštenost za roditelje!", isExclusive: true },
+      { text: "➕ 30 minuta produžene zabave", tooltip: "Proslava traje punih 3 sata - maksimalna zabava za decu, opuštenost za roditelje!", isExclusive: true },
       { text: "🎟️ Poklon kartica 4h za slavljenika (vrednost: 1.400 RSD)", tooltip: "Duplo vreme u igraonici - 4 sata besplatnog korišćenja za slavljenika u narednih 30 dana.", isExclusive: true },
       { text: "🎁 4x Poklon kartica 1h za slavljenika (može da podeli drugima, vrednost: 1.400 RSD)", tooltip: "4 poklon kartice od 1h za slavljenika koje može da podeli drugima.", isExclusive: true },
       { text: "💰 Ukupna vrednost kartica: 2.800 RSD", tooltip: "Ukupna vrednost svih poklon kartica uključenih u paket.", isExclusive: true },
