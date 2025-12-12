@@ -254,6 +254,9 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         </div>
       </article>
+      <Footer />
+      <StickyCall />
+      <WhatsAppWidget />
     </div>
   );
 }
