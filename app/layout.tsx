@@ -318,6 +318,183 @@ export default function RootLayout({
             }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              name: "Usluge Jabadabadoo Rođendaonica",
+              description: "Kompletna lista usluga za organizaciju rođendana za decu",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Profesionalni animatori",
+                  description: "Aktivni profesionalni animatori koji vode program tokom cele proslave",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Igre prilagođene uzrastu",
+                  description: "Raznovrsne aktivnosti i igre prilagođene uzrastu gostiju - od 2 do 10 godina",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Interaktivni zid",
+                  description: "Digitalni interaktivni ekran sa igricama i zabavnim sadržajem",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 4,
+                  name: "Maskenbal i crtanje po licu",
+                  description: "Maskenbal sa kostimima i profesionalno šminkanje/crtanje po licu",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 5,
+                  name: "Pinjata sa slatkišima",
+                  description: "Tradicionalna pinjata punjena slatkišima",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 6,
+                  name: "Torte i dekoracije",
+                  description: "Torte po izboru i premium tematske dekoracije",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 7,
+                  name: "Hrana i piće",
+                  description: "Mini pizza, slatki sto, neograničeni sokovi",
+                },
+                {
+                  "@type": "ListItem",
+                  position: 8,
+                  name: "Show program",
+                  description: "Mađioničarska predstava ili maskota omiljenog lika",
+                },
+              ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Service",
+              serviceType: "Organizacija rođendana za decu",
+              provider: {
+                "@type": "LocalBusiness",
+                name: "Jabadabadoo Rođendaonica",
+                "@id": "https://rodjendaonica-novi-sad.com",
+              },
+              areaServed: {
+                "@type": "City",
+                name: "Novi Sad",
+              },
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Paketi za rođendane",
+                itemListElement: [
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Standard paket - Rođendan za decu",
+                      description: "Osnovna zabava sa svim potrebnim - 2 sata, do 30 dece",
+                    },
+                    price: "15990",
+                    priceCurrency: "RSD",
+                    availability: "https://schema.org/InStock",
+                    url: "https://rodjendaonica-novi-sad.com#cenovnik",
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Premium paket - Rođendan za decu",
+                      description: "Standard + Grickalice i dodatni sadržaji - 2.5 sata, do 30 dece",
+                    },
+                    price: "21990",
+                    priceCurrency: "RSD",
+                    availability: "https://schema.org/InStock",
+                    url: "https://rodjendaonica-novi-sad.com#cenovnik",
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "All-Inclusive paket - Rođendan za decu",
+                      description: "Kompletna hrana - bez dodatnih troškova! - 2.5 sata, do 30 dece",
+                    },
+                    price: "33490",
+                    priceCurrency: "RSD",
+                    availability: "https://schema.org/InStock",
+                    url: "https://rodjendaonica-novi-sad.com#cenovnik",
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Ultra All-Inclusive paket - Rođendan za decu",
+                      description: "Luksuz: Kompletna hrana + Show program - 3 sata, do 30 dece",
+                    },
+                    price: "45990",
+                    priceCurrency: "RSD",
+                    availability: "https://schema.org/InStock",
+                    url: "https://rodjendaonica-novi-sad.com#cenovnik",
+                  },
+                ],
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "HowTo",
+              name: "Kako organizujemo rođendane za decu u Novom Sadu",
+              description: "Korak po korak vodič kako organizujemo nezaboravne rođendane za decu",
+              step: [
+                {
+                  "@type": "HowToStep",
+                  position: 1,
+                  name: "Rezervacija",
+                  text: "Pozovite nas na 066286555 za proveru dostupnosti i rezervaciju. Preporučujemo rezervaciju najmanje mesec dana unapred.",
+                },
+                {
+                  "@type": "HowToStep",
+                  position: 2,
+                  name: "Izbor paketa",
+                  text: "Izaberite paket koji najbolje odgovara vašim potrebama - Standard, Premium, All-Inclusive ili Ultra paket.",
+                },
+                {
+                  "@type": "HowToStep",
+                  position: 3,
+                  name: "Priprema",
+                  text: "Naš tim priprema prostor, dekoracije, tortu i sve potrebno prema izabranoj temi rođendana.",
+                },
+                {
+                  "@type": "HowToStep",
+                  position: 4,
+                  name: "Proslava",
+                  text: "Profesionalni animatori vode program sa igrama, aktivnostima, maskenbalom ili crtanjem po licu, pinjatom i zabavom prilagođenom uzrastu dece.",
+                },
+                {
+                  "@type": "HowToStep",
+                  position: 5,
+                  name: "Završetak",
+                  text: "Deca dobijaju diplome, poklone i nezaboravne uspomene. Roditelji dobijaju fotografije i video materijal.",
+                },
+              ],
+            }),
+          }}
+        />
       </head>
       <body className="antialiased">
         {children}
