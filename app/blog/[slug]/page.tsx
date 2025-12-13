@@ -245,29 +245,136 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   return processed;
                 };
 
-                // Split content into paragraphs
-                const paragraphs = post.content.split(/\n\s*\n/);
+                // Process line by line to handle headings and lists properly
+                const lines = post.content.split('\n');
+                const result: string[] = [];
+                let i = 0;
                 
-                return paragraphs
-                  .map((paragraph) => {
-                    const trimmed = paragraph.trim();
-                    if (!trimmed) return '';
-
-                    // Headings (# ## ###)
-                    if (trimmed.startsWith('#')) {
-                      const match = trimmed.match(/^(#{1,6})\s+(.+)$/);
-                      if (match) {
-                        const level = match[1].length;
-                        const text = match[2];
-                        const sizeClass = 
-                          level === 1 ? 'text-4xl' : 
-                          level === 2 ? 'text-3xl' : 
-                          level === 3 ? 'text-2xl' : 
-                          level === 4 ? 'text-xl' : 
-                          'text-lg';
-                        return `<h${level} class="font-bold text-text mb-4 mt-8 ${sizeClass}">${processInline(text)}</h${level}>`;
-                      }
+                while (i < lines.length) {
+                  const line = lines[i].trim();
+                  
+                  // Skip empty lines
+                  if (!line) {
+                    i++;
+                    continue;
+                  }
+                  
+                  // Check for heading
+                  const headingMatch = line.match(/^(#{1,6})\s+(.+)$/);
+                  if (headingMatch) {
+                    const level = headingMatch[1].length;
+                    const text = headingMatch[2];
+                    const sizeClass = 
+                      level === 1 ? 'text-4xl' : 
+                      level === 2 ? 'text-3xl' : 
+                      level === 3 ? 'text-2xl' : 
+                      level === 4 ? 'text-xl' : 
+                      level === 5 ? 'text-lg' :
+                      'text-base';
+                    const marginClass = 
+                      level === 1 ? 'mb-6 mt-12' :
+                      level === 2 ? 'mb-5 mt-10' :
+                      level === 3 ? 'mb-4 mt-8' :
+                      level === 4 ? 'mb-3 mt-6' :
+                      'mb-2 mt-4';
+                    
+                    result.push(`<h${level} class="font-bold text-text ${marginClass} ${sizeClass}">${processInline(text)}</h${level}>`);
+                    i++;
+                    continue;
+                  }
+                  
+                  // Check for lists (unordered)
+                  if (line.startsWith('- ') || line.startsWith('* ')) {
+                    const listItems: string[] = [];
+                    while (i < lines.length && (lines[i].trim().startsWith('- ') || lines[i].trim().startsWith('* '))) {
+                      const itemText = lines[i].trim().replace(/^[-*]\s+/, '');
+                      listItems.push(`<li class="mb-2">${processInline(itemText)}</li>`);
+                      i++;
                     }
+                    if (listItems.length > 0) {
+                      result.push(`<ul class="list-disc list-inside mb-6 space-y-2 ml-4">${listItems.join('')}</ul>`);
+                    }
+                    continue;
+                  }
+                  
+                  // Check for ordered lists
+                  if (line.match(/^\d+\.\s/)) {
+                    const listItems: string[] = [];
+                    while (i < lines.length && lines[i].trim().match(/^\d+\.\s/)) {
+                      const itemText = lines[i].trim().replace(/^\d+\.\s+/, '');
+                      listItems.push(`<li class="mb-2">${processInline(itemText)}</li>`);
+                      i++;
+                    }
+                    if (listItems.length > 0) {
+                      result.push(`<ol class="list-decimal list-inside mb-6 space-y-2 ml-4">${listItems.join('')}</ol>`);
+                    }
+                    continue;
+                  }
+                  
+                  // Check for horizontal rule
+                  if (line === '---' || line.match(/^-{3,}$/)) {
+                    result.push('<hr class="my-8 border-t-2 border-secondary" />');
+                    i++;
+                    continue;
+                  }
+                  
+                  // Check for tables
+                  if (line.startsWith('|')) {
+                    const tableLines: string[] = [];
+                    while (i < lines.length && lines[i].trim().startsWith('|')) {
+                      tableLines.push(lines[i].trim());
+                      i++;
+                    }
+                    if (tableLines.length > 1) {
+                      const headerRow = tableLines[0].split('|').map(cell => cell.trim()).filter(Boolean);
+                      const dataRows = tableLines.slice(2).map(row => 
+                        row.split('|').map(cell => cell.trim()).filter(Boolean)
+                      );
+                      
+                      let tableHtml = '<div class="overflow-x-auto my-6"><table class="min-w-full border-collapse border-2 border-secondary">';
+                      
+                      if (headerRow.length > 0) {
+                        tableHtml += '<thead><tr class="bg-gradient-to-r from-primary to-pink text-white">';
+                        headerRow.forEach(cell => {
+                          tableHtml += `<th class="p-3 text-left font-bold border border-white">${processInline(cell)}</th>`;
+                        });
+                        tableHtml += '</tr></thead>';
+                      }
+                      
+                      tableHtml += '<tbody>';
+                      dataRows.forEach((row, rowIndex) => {
+                        const rowClass = rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50';
+                        tableHtml += `<tr class="${rowClass}">`;
+                        row.forEach(cell => {
+                          tableHtml += `<td class="p-3 border border-gray-300">${processInline(cell)}</td>`;
+                        });
+                        tableHtml += '</tr>';
+                      });
+                      tableHtml += '</tbody></table></div>';
+                      result.push(tableHtml);
+                    }
+                    continue;
+                  }
+                  
+                  // Regular paragraph - collect consecutive non-empty lines
+                  const paragraphLines: string[] = [];
+                  while (i < lines.length && lines[i].trim() && 
+                         !lines[i].trim().match(/^#{1,6}\s+/) && 
+                         !lines[i].trim().startsWith('- ') && 
+                         !lines[i].trim().startsWith('* ') &&
+                         !lines[i].trim().match(/^\d+\.\s/) &&
+                         !lines[i].trim().startsWith('|') &&
+                         lines[i].trim() !== '---' &&
+                         !lines[i].trim().match(/^-{3,}$/)) {
+                    paragraphLines.push(lines[i].trim());
+                    i++;
+                  }
+                  if (paragraphLines.length > 0) {
+                    result.push(`<p class="mb-6">${processInline(paragraphLines.join(' '))}</p>`);
+                  }
+                }
+                
+                return result.join('');
 
                     // Horizontal rule
                     if (trimmed === '---' || trimmed.match(/^-{3,}$/)) {
