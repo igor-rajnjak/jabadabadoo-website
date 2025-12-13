@@ -113,7 +113,7 @@ export const PACKAGES_DATA_NEW: Package[] = [
       { text: "💰 Ukupna vrednost kartica: 2.800 RSD", tooltip: "Ukupna vrednost svih poklon kartica uključenih u paket.", isExclusive: true },
       { text: "🎁 Ekskluzivni premium poklon za slavljenika", tooltip: "Ekskluzivni premium poklon za slavljenika - veći i bolji od standardnog poklona.", isExclusive: true },
     ],
-    strategyNote: "💎 LUKSUZNO IZDANJE. Za još 12.500 dobijate ekskluzivni profesionalni show program koji će deca pamtiti! Idealno za posebne proslave.<br><br>✨ 34 usluge uključene<br>🔥 Samo 3 Ultra paketa mesečno",
+    strategyNote: "💎 LUKSUZNO IZDANJE. Show program + produženo trajanje<br>✨ 34 usluge<br>🔥 Samo 3 paketa mesečno",
   },
 ];
 
