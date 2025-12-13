@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from "next";
 import { BLOG_POSTS } from "@/lib/blogPosts";
 import { CONTACT, TRUST_SIGNALS } from "@/lib/constants";
@@ -9,9 +10,9 @@ import StickyCall from "@/components/StickyCall";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -21,7 +22,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-  const post = BLOG_POSTS.find((p) => p.slug === params.slug);
+  const { slug } = await params;
+  const post = BLOG_POSTS.find((p) => p.slug === slug);
 
   if (!post) {
     return {
@@ -48,10 +50,10 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       siteName: "Jabadabadoo Rođendaonica",
       images: [
         {
-          url: `${baseUrl}/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-og-photo.png`,
+          url: post.image ? `${baseUrl}${post.image}` : `${baseUrl}/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-og-photo.png`,
           width: 1200,
           height: 630,
-          alt: post.title,
+          alt: post.imageAlt || post.title,
         },
       ],
     },
@@ -59,13 +61,14 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
-      images: [`${baseUrl}/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-og-photo.png`],
+      images: [post.image ? `${baseUrl}${post.image}` : `${baseUrl}/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-og-photo.png`],
     },
   };
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = BLOG_POSTS.find((p) => p.slug === params.slug);
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const resolvedParams = await params;
+  const post = BLOG_POSTS.find((p) => p.slug === resolvedParams.slug);
 
   if (!post) {
     notFound();
@@ -80,7 +83,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     "@type": "Article",
     headline: post.title,
     description: post.excerpt,
-    image: `${baseUrl}/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-og-photo.png`,
+    image: post.image ? `${baseUrl}${post.image}` : `${baseUrl}/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-og-photo.png`,
     datePublished: post.date,
     dateModified: post.date,
     author: {
@@ -172,6 +175,18 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </Link>
 
           <header className="mb-12">
+            {post.image && (
+              <div className="mb-8 rounded-3xl overflow-hidden shadow-lg border-4 border-secondary">
+                <Image
+                  src={post.image}
+                  alt={post.imageAlt || post.title}
+                  width={1200}
+                  height={630}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
+              </div>
+            )}
             <div className="text-6xl mb-6">{post.emoji}</div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-text">{post.title}</h1>
             <div className="flex items-center gap-4 text-text/60 mb-8">

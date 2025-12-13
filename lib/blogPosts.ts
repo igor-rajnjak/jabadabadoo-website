@@ -7,6 +7,8 @@ export interface BlogPost {
   emoji: string;
   date: string;
   keywords: string[];
+  image?: string;
+  imageAlt?: string;
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -151,6 +153,8 @@ Organizacija rođendana zahteva planiranje i pažnju, ali sa pravim pristupom i 
     emoji: "🎨",
     date: "2025-01-14",
     keywords: ["teme rodjendana", "teme za rodjendan", "rodjendan teme", "popularne teme rodjendana"],
+    image: "/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-02.png",
+    imageAlt: "Najbolje teme rodjendana za decu u Novom Sadu - tematski rođendani sa dekoracijama, kostimima i aktivnostima u rodjendaonici Jabadabadoo",
     content: `# Najbolje Teme Rođendana za Decu - Vodič za Roditelje
 
 Izbor teme za rođendan može biti ključan za uspeh proslave. Evo najpopularnijih tema koje deca obožavaju, organizovane po uzrastu i interesovanjima.
@@ -302,6 +306,8 @@ Izbor teme za rođendan je važan, ali najvažnije je da vaše dete uživa. Bez 
     emoji: "💰",
     date: "2025-01-13",
     keywords: ["cena rodjendana", "koliko kosta rodjendan", "cenovnik rodjendana", "paketi rodjendana"],
+    image: "/images/rodjendaonica-torta-rodjendan-novi-sad-jabadabadoo.jpeg",
+    imageAlt: "Koliko košta rodjendan za decu u Novom Sadu - cenovnik paketa sa tortom, hranom i kompletnim programom u rodjendaonici Jabadabadoo",
     content: `# Koliko Košta Rođendan za Decu? Kompletan Vodič Cenovnika
 
 Planiranje budžeta za rođendan vašeg deteta je važan korak. Evo detaljnog pregleda cena i paketa za organizaciju rođendana u Jabadabadoo Rođendaonici.
@@ -524,6 +530,8 @@ Cena rođendana zavisi od paketa koji izaberete. All-Inclusive paket je najpopul
     emoji: "🎁",
     date: "2025-01-12",
     keywords: ["all-inclusive rodjendan", "sta ukljucuje all-inclusive", "all-inclusive paket", "kompletan rodjendan"],
+    image: "/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-03.png",
+    imageAlt: "Šta uključuje all-inclusive rodjendan u Novom Sadu - kompletan paket sa hranom, tortom, animatorima i svim aktivnostima u rodjendaonici Jabadabadoo",
     content: `# Šta Uključuje All-Inclusive Rođendan? Kompletan Vodič
 
 All-inclusive rođendan znači da sve što vam treba za proslavu je uključeno u cenu - od hrane do zabave. Evo detaljnog pregleda šta dobijate.
@@ -683,6 +691,8 @@ All-inclusive rođendan je najbolji izbor za roditelje koji žele kompletnu pros
     emoji: "📞",
     date: "2025-01-11",
     keywords: ["kako rezervisati rodjendan", "rezervacija rodjendana", "rodjendan novi sad", "rezervacija"],
+    image: "/images/prostor-za-roditelje-06-rodjendan-rodjendaonica-novi-sad-jabadabadoo-square.png",
+    imageAlt: "Kako rezervisati rodjendan u Novom Sadu - kontakt i rezervacija rođendana u rodjendaonici Jabadabadoo, Somborska 17",
     content: `# Kako Rezervisati Rođendan u Novom Sadu - Korak po Korak Vodič
 
 Rezervacija rođendana za vaše dete je jednostavna. Evo detaljnog vodiča koji će vam pomoći da rezervišete termin bez problema.
