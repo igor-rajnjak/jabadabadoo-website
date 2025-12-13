@@ -102,7 +102,7 @@ export default function RootLayout({
               alternateName: "Jabadabadoo Rodjendaonica",
               serviceType: "Rođendaonica",
               description: "Organizacija rođendana i rodjendana za decu u Novom Sadu. All-inclusive dečiji rođendani, tematski rođendani, profesionalni animatori.",
-              image: "https://rodjendaonica-novi-sad.com/logo.png",
+              image: "https://rodjendaonica-novi-sad.com/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-transparent.png",
               "@id": "https://rodjendaonica-novi-sad.com",
               url: "https://rodjendaonica-novi-sad.com",
               telephone: CONTACT.phone,

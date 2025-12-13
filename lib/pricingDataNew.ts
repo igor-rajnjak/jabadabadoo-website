@@ -49,7 +49,7 @@ export const PACKAGES_DATA_NEW: Package[] = [
       { text: "🎟️ Poklon kartica za slavljenika 2h (vrednost: 700 RSD)", tooltip: "Poklon vaučer za slavljenika - 2 sata besplatnog korišćenja igraonice u narednih 30 dana." },
       { text: "💃 Disko žurka uz balončiće", tooltip: "Disko atmosfera sa svetlima, muzikom, balončićima od sapunice (koje pravi mašina) i pravim balonima. Deca plešu i zabavljaju se uz omiljene pesme." },
     ],
-    strategyNote: "💡 Idealno za: Roditelje koji žele kvalitetnu osnovu bez dodatnih troškova.<br><br>✨ 13 usluga uključeno",
+    strategyNote: "💡 Idealno za osnovnu zabavu<br>✨ 13 usluga",
   },
   {
     id: "premium",
@@ -69,7 +69,7 @@ export const PACKAGES_DATA_NEW: Package[] = [
       { text: "🎟️ Poklon kartica 4h za slavljenika (vrednost: 1.400 RSD)", tooltip: "Duplo vreme u igraonici - 4 sata besplatnog korišćenja za slavljenika u narednih 30 dana.", isNew: true },
       { text: "➕ 30 minuta dodatne zabave", tooltip: "Proslava traje 2,5 sata umesto 2h - više vremena za igru i zabavu!", isNew: true },
     ],
-    strategyNote: "💡 Idealno za: Roditelje koji žele proširenu zabavu. Za 6.000 više dobijate grickalice, sampanjac, obe šminke/maskenbale, medalje i produženo trajanje.<br><br>✨ 20 usluga uključeno",
+    strategyNote: "💡 Proširena zabava<br>✨ 20 usluga",
   },
   {
     id: "all-inclusive",
@@ -91,8 +91,8 @@ export const PACKAGES_DATA_NEW: Package[] = [
       { text: "🎁 2x Poklon kartica 1h za poklanjanje drugima (vrednost: 700 RSD)", tooltip: "2 poklon kartice od 1h koje slavljenik može da pokloni drugima.", isNew: true },
       { text: "💰 Ukupna vrednost kartica: 2.100 RSD", tooltip: "Ukupna vrednost svih poklon kartica uključenih u paket.", isNew: true },
     ],
-    strategyNote: "🎯 NAJBOLJI IZBOR! Za samo 11.500 više od Premium dobijate KOMPLETNU HRANU - mini pizza, slatki sto i tortu! Plus premium dekoracije i pozivnice. Roditelji ne moraju ništa dodatno da kupuju.<br><br>✨ 28 usluga uključeno<br>🔥 Samo 7 mesta ovaj mesec",
-    limited: "⏰ Rezervišite 30+ dana unapred = 5% popusta",
+    strategyNote: "🎯 NAJBOLJI IZBOR! Kompletna hrana + premium dekoracije<br>✨ 28 usluga<br>🔥 Samo 7 mesta",
+    limited: "⏰ 5% popusta za rezervaciju 30+ dana unapred",
   },
   {
     id: "ultra",
@@ -103,7 +103,7 @@ export const PACKAGES_DATA_NEW: Package[] = [
     pricePerChild: "oko 1.533 din/dete (za 30 dece)",
     popular: false,
     badge: "ULTRA 💎",
-    limited: "🔥 Samo 3 Ultra paketa mesečno",
+    limited: "🔥 Samo 3 paketa mesečno",
     allIncluded: true,
     additionalFeatures: [
       { text: "🎭 Mađioničarska predstava ILI Maskota", tooltip: "Profesionalni show program: mađioničarska predstava (30-45min) sa interaktivnim trikovima ILI maskota omiljenog lika (fotografisanje, igre, interakcija).", isExclusive: true },

@@ -296,8 +296,40 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       return `<ol class="list-decimal list-inside mb-6 space-y-2 ml-4">${items.join('')}</ol>`;
                     }
 
-                    // Tables - skip for now
+                    // Tables
                     if (trimmed.startsWith('|')) {
+                      const lines = trimmed.split('\n').filter(line => line.trim().startsWith('|'));
+                      if (lines.length > 1) {
+                        const headerRow = lines[0].split('|').map(cell => cell.trim()).filter(Boolean);
+                        const separatorRow = lines[1]; // Skip separator row
+                        const dataRows = lines.slice(2).map(row => 
+                          row.split('|').map(cell => cell.trim()).filter(Boolean)
+                        );
+                        
+                        let tableHtml = '<div class="overflow-x-auto my-6"><table class="min-w-full border-collapse border-2 border-secondary">';
+                        
+                        // Header
+                        if (headerRow.length > 0) {
+                          tableHtml += '<thead><tr class="bg-gradient-to-r from-primary to-pink text-white">';
+                          headerRow.forEach(cell => {
+                            tableHtml += `<th class="p-3 text-left font-bold border border-white">${processInline(cell)}</th>`;
+                          });
+                          tableHtml += '</tr></thead>';
+                        }
+                        
+                        // Body
+                        tableHtml += '<tbody>';
+                        dataRows.forEach((row, rowIndex) => {
+                          const rowClass = rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50';
+                          tableHtml += `<tr class="${rowClass}">`;
+                          row.forEach(cell => {
+                            tableHtml += `<td class="p-3 border border-gray-300">${processInline(cell)}</td>`;
+                          });
+                          tableHtml += '</tr>';
+                        });
+                        tableHtml += '</tbody></table></div>';
+                        return tableHtml;
+                      }
                       return '';
                     }
 

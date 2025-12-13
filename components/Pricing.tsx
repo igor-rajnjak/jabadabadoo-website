@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { PACKAGES_DATA_NEW } from "@/lib/pricingDataNew";
+import { PACKAGES_DATA } from "@/lib/pricingData";
 import { ADDONS } from "@/lib/pricingData";
 import { CONTACT } from "@/lib/constants";
 import PricingComparison from "./PricingComparison";
@@ -43,7 +43,7 @@ export default function Pricing() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 md:gap-8 lg:gap-10 xl:gap-12 mb-16 md:mb-20">
-          {PACKAGES_DATA_NEW.map((pkg) => (
+          {PACKAGES_DATA.map((pkg) => (
             <div
               key={pkg.id}
               className={`bg-white p-5 md:p-6 lg:p-8 xl:p-10 2xl:p-8 rounded-3xl shadow-lg border-4 ${
