@@ -128,3 +128,42 @@ export const trackLogoClick = () => {
   }
 };
 
+// Track blog post click (from listing page)
+export const trackBlogPostClick = (postTitle: string, postSlug: string) => {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "blog_post_click", {
+      event_category: "Blog",
+      event_label: postTitle,
+      post_slug: postSlug,
+      location: "blog_listing",
+      value: 1,
+    });
+  }
+};
+
+// Track blog CTA click (from individual post)
+export const trackBlogCTAClick = (ctaText: string, postTitle: string) => {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "blog_cta_click", {
+      event_category: "Blog",
+      event_label: ctaText,
+      post_title: postTitle,
+      location: "blog_post",
+      value: 1,
+    });
+  }
+};
+
+// Track blog navigation (back to blog)
+export const trackBlogNavClick = (linkText: string, postTitle?: string) => {
+  if (typeof window !== "undefined" && window.gtag) {
+    window.gtag("event", "blog_nav_click", {
+      event_category: "Blog",
+      event_label: linkText,
+      post_title: postTitle || "N/A",
+      location: "blog_post",
+      value: 1,
+    });
+  }
+};
+

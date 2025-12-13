@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyCall from "@/components/StickyCall";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
+import BlogCTA from "@/components/BlogCTA";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -379,34 +380,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             }}
           />
 
-          <div className="mt-16 pt-8 border-t-4 border-secondary">
-            <Link
-              href="/blog"
-              className="inline-block bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-500 transition-all hover:-translate-y-1 shadow-lg mb-8"
-            >
-              ← Nazad na blog
-            </Link>
-            <div className="bg-white p-8 rounded-3xl border-4 border-secondary shadow-lg">
-              <h2 className="text-2xl font-bold mb-4 text-primary">Rezervišite Rođendan Danas!</h2>
-              <p className="text-text mb-6">
-                Spremni ste da napravite nezaboravan rođendan za vaše dete? Kontaktirajte nas i rezervišite termin!
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="tel:066286555"
-                  className="inline-block bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-500 transition-all text-center"
-                >
-                  📞 Pozovi 066286555
-                </a>
-                <Link
-                  href="/#kontakt"
-                  className="inline-block bg-secondary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-teal-500 transition-all text-center"
-                >
-                  📝 Rezerviši Online
-                </Link>
-              </div>
-            </div>
-          </div>
+          <BlogCTA postTitle={post.title} />
         </div>
       </article>
       <Footer />
