@@ -136,6 +136,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <div className="min-h-screen bg-bg">
+      <Header />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -204,38 +205,108 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </header>
 
           <div
-            className="blog-content text-lg leading-relaxed text-text/90"
+            className="blog-content text-lg leading-relaxed text-text/90 prose prose-lg max-w-none"
             dangerouslySetInnerHTML={{
-              __html: post.content
-                .split('\n\n')
-                .map((paragraph) => {
-                  if (paragraph.startsWith('#')) {
-                    const level = paragraph.match(/^#+/)?.[0].length || 1;
-                    const text = paragraph.replace(/^#+\s/, '');
-                    const sizeClass = level === 1 ? 'text-4xl' : level === 2 ? 'text-3xl' : level === 3 ? 'text-2xl' : 'text-xl';
-                    return `<h${level} class="font-bold text-text mb-4 mt-8 ${sizeClass}">${text}</h${level}>`;
-                  }
-                  if (paragraph.startsWith('- ')) {
-                    const items = paragraph.split('\n').filter(line => line.startsWith('- '));
-                    return `<ul class="list-disc list-inside mb-6 space-y-2 ml-4">${items.map(item => 
-                      `<li class="text-text/90">${item.replace(/^-\s/, '').replace(/\*\*(.+?)\*\*/g, '<strong class="text-primary font-bold">$1</strong>')}</li>`
-                    ).join('')}</ul>`;
-                  }
-                  if (paragraph.startsWith('|')) {
-                    return ''; // Skip tables
-                  }
-                  if (paragraph.trim() === '---') {
-                    return '<hr class="my-8 border-t-2 border-secondary" />';
-                  }
-                  return `<p class="mb-6">${paragraph
-                    .replace(/\*\*(.+?)\*\*/g, '<strong class="text-primary font-bold">$1</strong>')
-                    .replace(/\*(.+?)\*/g, '<em>$1</em>')
-                    .replace(/`(.+?)`/g, '<code class="bg-gray-100 px-2 py-1 rounded text-sm">$1</code>')
-                    .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" class="text-primary hover:underline font-bold">$1</a>')
-                    .replace(/📞\s(\d+)/g, '<a href="tel:$1" class="text-primary hover:underline font-bold">📞 $1</a>')
-                  }</p>`;
-                })
-                .join(''),
+              __html: (() => {
+                // Helper function to escape HTML
+                const escapeHtml = (text: string) => {
+                  const map: { [key: string]: string } = {
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#039;',
+                  };
+                  return text.replace(/[&<>"']/g, (m) => map[m]);
+                };
+
+                // Helper function to process inline formatting
+                const processInline = (text: string): string => {
+                  // First escape HTML to prevent XSS
+                  let processed = escapeHtml(text);
+                  
+                  // Process bold (**text**) - handle multiple bold sections
+                  // Use a more robust regex that handles edge cases
+                  processed = processed.replace(/\*\*([^*]+?)\*\*/g, '<strong class="font-bold text-primary">$1</strong>');
+                  
+                  // Process italic (*text*) - but only if not part of bold
+                  // Check for single asterisks that are not part of double asterisks
+                  processed = processed.replace(/(?<!\*)\*([^*\n]+?)\*(?!\*)/g, '<em class="italic">$1</em>');
+                  
+                  // Process inline code (`code`)
+                  processed = processed.replace(/`([^`]+?)`/g, '<code class="bg-gray-100 px-2 py-1 rounded text-sm font-mono">$1</code>');
+                  
+                  // Process links [text](url)
+                  processed = processed.replace(/\[([^\]]+?)\]\(([^)]+?)\)/g, '<a href="$2" class="text-primary hover:underline font-semibold">$1</a>');
+                  
+                  // Process phone numbers
+                  processed = processed.replace(/📞\s*(\d+)/g, '<a href="tel:$1" class="text-primary hover:underline font-semibold">📞 $1</a>');
+                  
+                  return processed;
+                };
+
+                // Split content into paragraphs
+                const paragraphs = post.content.split(/\n\s*\n/);
+                
+                return paragraphs
+                  .map((paragraph) => {
+                    const trimmed = paragraph.trim();
+                    if (!trimmed) return '';
+
+                    // Headings (# ## ###)
+                    if (trimmed.startsWith('#')) {
+                      const match = trimmed.match(/^(#{1,6})\s+(.+)$/);
+                      if (match) {
+                        const level = match[1].length;
+                        const text = match[2];
+                        const sizeClass = 
+                          level === 1 ? 'text-4xl' : 
+                          level === 2 ? 'text-3xl' : 
+                          level === 3 ? 'text-2xl' : 
+                          level === 4 ? 'text-xl' : 
+                          'text-lg';
+                        return `<h${level} class="font-bold text-text mb-4 mt-8 ${sizeClass}">${processInline(text)}</h${level}>`;
+                      }
+                    }
+
+                    // Horizontal rule
+                    if (trimmed === '---' || trimmed.match(/^-{3,}$/)) {
+                      return '<hr class="my-8 border-t-2 border-secondary" />';
+                    }
+
+                    // Lists (unordered)
+                    if (trimmed.startsWith('- ') || trimmed.startsWith('* ')) {
+                      const items = trimmed.split('\n')
+                        .filter(line => line.trim().startsWith('- ') || line.trim().startsWith('* '))
+                        .map(line => {
+                          const itemText = line.replace(/^[-*]\s+/, '');
+                          return `<li class="mb-2">${processInline(itemText)}</li>`;
+                        });
+                      return `<ul class="list-disc list-inside mb-6 space-y-2 ml-4">${items.join('')}</ul>`;
+                    }
+
+                    // Lists (ordered)
+                    if (trimmed.match(/^\d+\.\s/)) {
+                      const items = trimmed.split('\n')
+                        .filter(line => line.trim().match(/^\d+\.\s/))
+                        .map(line => {
+                          const itemText = line.replace(/^\d+\.\s+/, '');
+                          return `<li class="mb-2">${processInline(itemText)}</li>`;
+                        });
+                      return `<ol class="list-decimal list-inside mb-6 space-y-2 ml-4">${items.join('')}</ol>`;
+                    }
+
+                    // Tables - skip for now
+                    if (trimmed.startsWith('|')) {
+                      return '';
+                    }
+
+                    // Regular paragraphs
+                    return `<p class="mb-6">${processInline(trimmed)}</p>`;
+                  })
+                  .filter(Boolean)
+                  .join('');
+              })(),
             }}
           />
 
