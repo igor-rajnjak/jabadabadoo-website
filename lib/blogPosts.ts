@@ -839,6 +839,8 @@ Rezervacija rođendana je jednostavna - pozovite nas, izaberite paket, platite d
     emoji: "👶",
     date: "2025-01-10",
     keywords: ["rodjendan za decu 2-10 godina", "rodjendan po uzrastu", "program rodjendana", "aktivnosti za decu"],
+    image: "/images/rodjendaonica-igraonica-klimatizovano-animatori-za-decu-bebe-novi-sad-jabadabadoo-animatori.png",
+    imageAlt: "Rodjendani za decu 2-10 godina u Novom Sadu - program prilagođen uzrastu sa animatorima i aktivnostima u rodjendaonici Jabadabadoo",
     content: `# Rođendani za Decu 2-10 Godina - Program Prilagođen Uzrastu
 
 Svako dete je drugačije, a program rođendana mora biti prilagođen uzrastu. Evo kako organizujemo rođendane za decu od 2 do 10 godina.
