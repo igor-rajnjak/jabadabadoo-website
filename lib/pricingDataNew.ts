@@ -91,7 +91,7 @@ export const PACKAGES_DATA_NEW: Package[] = [
       { text: "🎁 2x Poklon kartica 1h za poklanjanje drugima (vrednost: 700 RSD)", tooltip: "2 poklon kartice od 1h koje slavljenik može da pokloni drugima.", isNew: true },
       { text: "💰 Ukupna vrednost kartica: 2.100 RSD", tooltip: "Ukupna vrednost svih poklon kartica uključenih u paket.", isNew: true },
     ],
-    strategyNote: "🎯 NAJBOLJI IZBOR! Kompletna hrana + premium dekoracije<br>✨ 28 usluga<br>🔥 Samo 7 mesta",
+    strategyNote: "🎯 NAJBOLJI IZBOR! Kompletna hrana + premium dekoracije<br>✨ 28 usluga uključeno",
     limited: "⏰ 5% popusta za rezervaciju 30+ dana unapred",
   },
   {
