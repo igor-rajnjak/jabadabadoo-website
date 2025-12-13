@@ -20,6 +20,8 @@ export const BLOG_POSTS: BlogPost[] = [
     emoji: "🎂",
     date: "2025-01-15",
     keywords: ["kako pripremiti rodjendan", "organizacija rodjendana", "rodjendan za decu", "saveti rodjendan"],
+    image: "/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-01.png",
+    imageAlt: "Kako pripremiti rodjendan za decu u Novom Sadu - organizacija rođendana sa animatorima, tematskim dekoracijama i kompletnim programom u rodjendaonici Jabadabadoo",
     content: `# Kako Pripremiti Savršen Rođendan za Vaše Dete
 
 Organizacija rođendana za decu može biti izazovna, ali sa pravim pristupom i planiranjem, možete napraviti nezaboravan dan za vaše dete. Evo kompletnog vodiča koji će vam pomoći da pripremite savršenu proslavu.
