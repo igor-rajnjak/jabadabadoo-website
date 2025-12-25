@@ -2,14 +2,18 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  const url = request.nextUrl.clone();
   const hostname = request.headers.get('host') || '';
-
-  // Redirect www to non-www (301 permanent redirect)
+  
+  // Only redirect if hostname starts with www. and we're not already on non-www
   if (hostname.startsWith('www.')) {
     const newHostname = hostname.replace('www.', '');
-    url.hostname = newHostname;
-    return NextResponse.redirect(url, { status: 301 });
+    const url = request.nextUrl.clone();
+    
+    // Build absolute URL with protocol
+    const protocol = request.nextUrl.protocol || 'https:';
+    const newUrl = `${protocol}//${newHostname}${request.nextUrl.pathname}${request.nextUrl.search}`;
+    
+    return NextResponse.redirect(newUrl, { status: 301 });
   }
 
   return NextResponse.next();
