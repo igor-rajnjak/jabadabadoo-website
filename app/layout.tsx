@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Jabadabadoo Rođendaonica" }],
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-transparent.png', sizes: 'any' },
       { url: '/icon.png', type: 'image/png', sizes: '192x192' },
     ],
     apple: '/apple-icon.png',
-    shortcut: '/favicon.ico',
+    shortcut: '/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-transparent.png',
   },
   manifest: '/manifest.json',
   openGraph: {
@@ -58,9 +58,10 @@ export default function RootLayout({
     <html lang="sr">
       <head>
         {/* Favicon for Google Search Results */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-transparent.png" sizes="any" />
         <link rel="icon" href="/icon.png" type="image/png" sizes="192x192" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
+        <link rel="shortcut icon" href="/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-transparent.png" />
         {/* Google tag (gtag.js) */}
         <script
           async
