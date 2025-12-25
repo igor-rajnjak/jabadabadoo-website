@@ -9,8 +9,12 @@ export const metadata: Metadata = {
   keywords: SEO.keywords,
   authors: [{ name: "Jabadabadoo Rođendaonica" }],
   icons: {
-    icon: '/icon.png',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png', sizes: '192x192' },
+    ],
     apple: '/apple-icon.png',
+    shortcut: '/favicon.ico',
   },
   manifest: '/manifest.json',
   openGraph: {
@@ -53,6 +57,10 @@ export default function RootLayout({
   return (
     <html lang="sr">
       <head>
+        {/* Favicon for Google Search Results */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.png" type="image/png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         {/* Google tag (gtag.js) */}
         <script
           async
