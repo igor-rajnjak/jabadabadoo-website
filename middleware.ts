@@ -2,18 +2,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  // Temporarily disabled to fix redirect loop
-  // TODO: Check if Vercel already handles www redirect at DNS level
-  // If not, re-enable this with proper URL construction
-  
-  // const hostname = request.headers.get('host') || '';
-  // if (hostname.startsWith('www.')) {
-  //   const newHostname = hostname.replace('www.', '');
-  //   const url = request.nextUrl.clone();
-  //   url.hostname = newHostname;
-  //   return NextResponse.redirect(url, { status: 301 });
-  // }
-
+  // No redirects - Vercel handles www redirect at DNS level
   return NextResponse.next();
 }
 
