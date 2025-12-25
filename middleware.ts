@@ -2,19 +2,17 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  const hostname = request.headers.get('host') || '';
+  // Temporarily disabled to fix redirect loop
+  // TODO: Check if Vercel already handles www redirect at DNS level
+  // If not, re-enable this with proper URL construction
   
-  // Only redirect if hostname starts with www. and we're not already on non-www
-  if (hostname.startsWith('www.')) {
-    const newHostname = hostname.replace('www.', '');
-    const url = request.nextUrl.clone();
-    
-    // Build absolute URL with protocol
-    const protocol = request.nextUrl.protocol || 'https:';
-    const newUrl = `${protocol}//${newHostname}${request.nextUrl.pathname}${request.nextUrl.search}`;
-    
-    return NextResponse.redirect(newUrl, { status: 301 });
-  }
+  // const hostname = request.headers.get('host') || '';
+  // if (hostname.startsWith('www.')) {
+  //   const newHostname = hostname.replace('www.', '');
+  //   const url = request.nextUrl.clone();
+  //   url.hostname = newHostname;
+  //   return NextResponse.redirect(url, { status: 301 });
+  // }
 
   return NextResponse.next();
 }
