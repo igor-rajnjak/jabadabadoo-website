@@ -62,10 +62,15 @@ export default function RootLayout({
         <link rel="icon" href="/icon.png" type="image/png" sizes="192x192" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
         <link rel="shortcut icon" href="/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-transparent.png" />
-        {/* Google tag (gtag.js) */}
+        {/* Google tag (gtag.js) - GA4 */}
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-N2557RR5NG"
+        />
+        {/* Google tag (gtag.js) - Google Ads Conversion */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17632661819"
         />
         <script
           dangerouslySetInnerHTML={{
@@ -80,9 +85,13 @@ export default function RootLayout({
                 isDebugMode = window.location.search.includes('debug=1') || window.location.hostname === 'localhost';
               }
               
+              // Google Analytics 4
               gtag('config', 'G-N2557RR5NG', {
                 debug_mode: isDebugMode
               });
+              
+              // Google Ads Conversion Tracking
+              gtag('config', 'AW-17632661819');
             `,
           }}
         />

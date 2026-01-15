@@ -1,8 +1,21 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Redirect removed - Vercel handles www redirect at DNS level
-  // If needed, configure in Vercel Dashboard > Settings > Domains
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.rodjendaonica-novi-sad.com',
+          },
+        ],
+        destination: 'https://rodjendaonica-novi-sad.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
