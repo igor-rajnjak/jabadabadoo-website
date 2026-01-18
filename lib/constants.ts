@@ -10,6 +10,7 @@ export const CONTACT = {
   workingHoursNote: "Ne radimo na praznike - pozovite za proveru dostupnosti",
   instagram: "https://www.instagram.com/jabadabadoo_rodjendaonica",
   facebook: "https://www.facebook.com/p/Jabadabadoo-Rođendaonica-100090415525723/",
+  youtube: "https://www.youtube.com/@RodjendaonicaJABADABADOO",
   googleMaps: "https://www.google.com/maps/search/Jabadabadoo+Igraonica+i+Rođendaonica+Novi+Sad",
 } as const;
 

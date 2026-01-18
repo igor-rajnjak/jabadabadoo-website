@@ -220,6 +220,7 @@ export default function RootLayout({
               sameAs: [
                 CONTACT.instagram,
                 CONTACT.facebook,
+                CONTACT.youtube,
                 CONTACT.whatsappUrl,
               ],
             }),
@@ -264,6 +265,7 @@ export default function RootLayout({
               sameAs: [
                 CONTACT.instagram,
                 CONTACT.facebook,
+                CONTACT.youtube,
                 CONTACT.whatsappUrl,
               ],
             }),
