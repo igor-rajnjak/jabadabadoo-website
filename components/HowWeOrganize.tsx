@@ -20,7 +20,7 @@ const ORGANIZATION_FEATURES = [
     icon: "🎂",
     title: "Torte i Dekoracije",
     description: "Torta po vašoj želji i temi rođendana, personalizovana sa imenom slavljenika. Tematske dekoracije koje stvaraju nezaboravnu atmosferu.",
-    image: "/images/rodjendaonica-torta-deokracije-rodjendan-novi-sad-jabadabadoo-square.png",
+    image: "/images/rodjendaonica-torta-dekoracije-rodjendan-novi-sad-jabadabadoo-square.png",
   },
   {
     icon: "🎁",

@@ -518,7 +518,7 @@ export default function RootLayout({
                   position: 3,
                   name: "🎨 Odaberite temu",
                   text: "Izaberite temu rođendana - superheroji, princeze, životinje, ili bilo koju drugu temu koju vaše dete voli. Naš tim priprema dekoracije, tortu i sve potrebno!",
-                  image: "https://rodjendaonica-novi-sad.com/images/rodjendaonica-torta-deokracije-rodjendan-novi-sad-jabadabadoo-square.png",
+                  image: "https://rodjendaonica-novi-sad.com/images/rodjendaonica-torta-dekoracije-rodjendan-novi-sad-jabadabadoo-square.png",
                 },
                 {
                   "@type": "HowToStep",

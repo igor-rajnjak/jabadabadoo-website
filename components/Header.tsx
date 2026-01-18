@@ -21,7 +21,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-gradient-to-r from-primary to-pink shadow-lg">
-      <nav className="container mx-auto px-6 md:px-8 py-2 md:py-3 flex justify-between items-center max-w-7xl">
+      <nav className="container mx-auto px-6 md:px-8 py-2 md:py-3 flex justify-between items-center max-w-7xl 2xl:max-w-[1600px]">
         <Link 
           href="/" 
           className="flex items-center gap-2 md:gap-3"
@@ -35,7 +35,7 @@ export default function Header() {
             className="hover:scale-105 transition-transform flex-shrink-0"
             priority
           />
-          <span className="text-white text-lg md:text-xl lg:text-2xl font-bold whitespace-nowrap">Jabadabadoo</span>
+          <span className="text-white text-lg md:text-xl lg:text-2xl font-bold whitespace-nowrap">Rođendaonica Jabadabadoo</span>
         </Link>
         
         {/* Desktop Navigation */}
