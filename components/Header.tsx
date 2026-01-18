@@ -20,8 +20,8 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-gradient-to-r from-primary to-pink shadow-lg">
-      <nav className="container mx-auto px-6 md:px-8 py-2 md:py-3 flex justify-between items-center max-w-7xl 2xl:max-w-[1600px]">
+    <header className="sticky top-0 z-50 bg-gradient-to-r from-primary to-pink shadow-lg px-6 md:px-8">
+      <nav className="container mx-auto py-2 md:py-3 flex justify-between items-center max-w-7xl 2xl:max-w-[1400px]">
         <Link 
           href="/" 
           className="flex items-center gap-2 md:gap-3"
@@ -35,7 +35,11 @@ export default function Header() {
             className="hover:scale-105 transition-transform flex-shrink-0"
             priority
           />
-          <span className="text-white text-lg md:text-xl lg:text-2xl font-bold whitespace-nowrap">Rođendaonica Jabadabadoo</span>
+          <span className="text-white text-lg md:text-xl lg:text-2xl font-bold whitespace-nowrap">
+            <span className="md:hidden">Rođendaonica Jabadabadoo</span>
+            <span className="hidden md:inline lg:hidden">Jabadabadoo</span>
+            <span className="hidden lg:inline">Rođendaonica Jabadabadoo</span>
+          </span>
         </Link>
         
         {/* Desktop Navigation */}
@@ -72,6 +76,9 @@ export default function Header() {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden bg-primary/95 pb-3">
+          <div className="px-4 py-2 border-b border-white/20">
+            <span className="text-white text-lg font-bold">Rođendaonica Jabadabadoo</span>
+          </div>
           {navLinks.map((link) => (
             <Link
               key={link.href}
