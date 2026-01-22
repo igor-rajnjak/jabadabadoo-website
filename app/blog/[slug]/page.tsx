@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import StickyCall from "@/components/StickyCall";
 import WhatsAppWidget from "@/components/WhatsAppWidget";
 import BlogCTA from "@/components/BlogCTA";
+import BlogPhoneTracking from "@/components/BlogPhoneTracking";
 
 interface BlogPostPageProps {
   params: Promise<{
@@ -240,8 +241,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   // Process links [text](url)
                   processed = processed.replace(/\[([^\]]+?)\]\(([^)]+?)\)/g, '<a href="$2" class="text-primary hover:underline font-semibold">$1</a>');
                   
-                  // Process phone numbers
-                  processed = processed.replace(/📞\s*(\d+)/g, '<a href="tel:$1" class="text-primary hover:underline font-semibold">📞 $1</a>');
+                  // Process phone numbers - add data attribute for tracking
+                  processed = processed.replace(/📞\s*(\d+)/g, '<a href="tel:$1" class="text-primary hover:underline font-semibold blog-phone-link" data-phone="$1">📞 $1</a>');
                   
                   return processed;
                 };
@@ -381,6 +382,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           />
 
           <BlogCTA postTitle={post.title} />
+          <BlogPhoneTracking />
         </div>
       </article>
       <Footer />

@@ -25,14 +25,14 @@ export default function BlogCTA({ postTitle }: BlogCTAProps) {
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <a
-            href="tel:066286555"
+            href={`tel:${CONTACT.phoneFormatted}`}
             onClick={() => {
               trackPhoneCall(CONTACT.phone, "Blog Post CTA");
               trackBlogCTAClick("Pozovi 066286555", postTitle);
             }}
             className="inline-block bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-red-500 transition-all text-center"
           >
-            📞 Pozovi 066286555
+            📞 Pozovi {CONTACT.phone}
           </a>
           <Link
             href="/#kontakt"

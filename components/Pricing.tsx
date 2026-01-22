@@ -238,7 +238,7 @@ export default function Pricing() {
           </p>
           <p className="text-red-700 mb-2">🔥 Vikendi se obično popune 3-4 nedelje ranije</p>
           <p className="text-red-700 font-bold text-lg">
-            📞 Pozovite nas odmah: <a href={`tel:${CONTACT.phoneFormatted}`} className="underline">{CONTACT.phone}</a>
+            📞 Pozovite nas odmah: <a href={`tel:${CONTACT.phoneFormatted}`} onClick={() => trackPhoneCall(CONTACT.phone, "Pricing Urgency")} className="underline">{CONTACT.phone}</a>
           </p>
         </div>
         
@@ -275,7 +275,7 @@ export default function Pricing() {
               <li><strong>Depozit za rezervaciju:</strong> 50% od ukupne cene paketa</li>
               <li><strong>Ostatak:</strong> Plaća se po završetku rođendana</li>
               <li><strong>Način plaćanja:</strong> Gotovina, kartica, bankovni transfer</li>
-              <li><strong>Rezervacija:</strong> Pozovite nas na <strong>{CONTACT.phone}</strong> za proveru dostupnosti i rezervaciju</li>
+              <li><strong>Rezervacija:</strong> Pozovite nas na <a href={`tel:${CONTACT.phoneFormatted}`} onClick={() => trackPhoneCall(CONTACT.phone, "Pricing Payment Section")} className="text-primary hover:underline font-bold">{CONTACT.phone}</a> za proveru dostupnosti i rezervaciju</li>
             </ul>
           </div>
         </div>

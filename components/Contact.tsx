@@ -127,7 +127,7 @@ export default function Contact() {
                 </p>
                 <p>🔥 Vikendi se obično popune 3-4 nedelje ranije</p>
                 <p className="font-bold text-lg mt-4">
-                  📞 Pozovite nas odmah: <a href={`tel:${CONTACT.phoneFormatted}`} className="underline">{CONTACT.phone}</a>
+                  📞 Pozovite nas odmah: <a href={`tel:${CONTACT.phoneFormatted}`} onClick={() => trackPhoneCall(CONTACT.phone, "Contact Urgency")} className="underline">{CONTACT.phone}</a>
                 </p>
               </div>
             </div>

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { PACKAGES, CONTACT } from "@/lib/constants";
-import { trackFormSubmission } from "@/lib/analytics";
+import { trackFormSubmission, trackPhoneCall } from "@/lib/analytics";
 import emailjs from "@emailjs/browser";
 
 export default function ReservationForm() {
@@ -219,13 +219,13 @@ Komentar: ${formData.comment || "Nema komentara"}
       {submitStatus === "success" && (
         <div className="bg-green-100 border-4 border-green-500 text-green-800 p-4 rounded-2xl">
           <p className="font-bold">Hvala! Kontaktiraćemo vas uskoro za potvrdu rezervacije.</p>
-          <p className="text-sm mt-2">Ili pozovite nas odmah: <a href={`tel:${CONTACT.phoneFormatted}`} className="underline font-bold">{CONTACT.phone}</a></p>
+          <p className="text-sm mt-2">Ili pozovite nas odmah: <a href={`tel:${CONTACT.phoneFormatted}`} onClick={() => trackPhoneCall(CONTACT.phone, "ReservationForm Success")} className="underline font-bold">{CONTACT.phone}</a></p>
         </div>
       )}
 
       {submitStatus === "error" && (
         <div className="bg-red-100 border-4 border-red-500 text-red-800 p-4 rounded-2xl">
-          <p className="font-bold">Greška pri slanju. Molimo pokušajte ponovo ili pozovite nas: <a href={`tel:${CONTACT.phoneFormatted}`} className="underline font-bold">{CONTACT.phone}</a></p>
+          <p className="font-bold">Greška pri slanju. Molimo pokušajte ponovo ili pozovite nas: <a href={`tel:${CONTACT.phoneFormatted}`} onClick={() => trackPhoneCall(CONTACT.phone, "ReservationForm Error")} className="underline font-bold">{CONTACT.phone}</a></p>
         </div>
       )}
 
