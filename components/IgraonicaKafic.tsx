@@ -20,7 +20,7 @@ export default function IgraonicaKafic() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="/igraonica"
+            href="/igraonica-i-kafic"
             onClick={() => trackCTAClick("Saznaj više - Igraonica", "IgraonicaKafic")}
             className="inline-block bg-secondary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-teal-500 transition-all hover:-translate-y-1 shadow-lg text-center"
           >

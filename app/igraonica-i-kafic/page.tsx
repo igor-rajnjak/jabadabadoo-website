@@ -14,12 +14,12 @@ export const metadata: Metadata = {
   description: "Igraonica i kafić za porodice u Novom Sadu. Dok deca igraju u sigurnom prostoru, roditelji mogu popiti kafu. Somborska 17 - blizu Bulevara Evrope, Minakve i Veternika.",
   keywords: "igraonica novi sad, kafić sa igraonicom novi sad, igraonica i kafić, dečija igraonica novi sad, kafić za porodice novi sad",
   alternates: {
-    canonical: `${baseUrl}/igraonica`,
+    canonical: `${baseUrl}/igraonica-i-kafic`,
   },
   openGraph: {
     title: "Igraonica Novi Sad | Kafić sa Igraonicom | Jabadabadoo",
     description: "Igraonica i kafić za porodice u Novom Sadu. Klimatizovan prostor, deca igraju - roditelji uživaju u kafi.",
-    url: `${baseUrl}/igraonica`,
+    url: `${baseUrl}/igraonica-i-kafic`,
     siteName: "Jabadabadoo Rođendaonica",
   },
 };
@@ -30,7 +30,7 @@ export default function IgraonicaPage() {
     "@type": "LocalBusiness",
     name: "Jabadabadoo Igraonica i Kafić",
     description: "Igraonica i kafić za porodice u Novom Sadu. Klimatizovan prostor gde deca igraju dok roditelji uživaju u kafi.",
-    url: `${baseUrl}/igraonica`,
+    url: `${baseUrl}/igraonica-i-kafic`,
     telephone: CONTACT.phoneFormatted,
     address: {
       "@type": "PostalAddress",

@@ -97,7 +97,7 @@ Jabadabadoo kombinuje **igraonicu, kafić i rodjendaonicu** na Somborska 17 u No
 - **Bulevar Evrope** - na produžetku, lako dostupno
 - **Blizu Minakve i Veternika**
 
-[Pogledajte našu igraonicu i kafić](/igraonica) ili [saznajte kako do nas](/lokacija).
+[Pogledajte našu igraonicu i kafić](/igraonica-i-kafic) ili [saznajte kako do nas](/lokacija).
 
 ---
 

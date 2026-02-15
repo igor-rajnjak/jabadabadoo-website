@@ -76,7 +76,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/igraonica" className="hover:text-accent transition-colors">
+                <Link href="/igraonica-i-kafic" className="hover:text-accent transition-colors">
                   Igraonica i kafić
                 </Link>
               </li>
