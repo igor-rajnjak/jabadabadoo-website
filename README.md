@@ -117,7 +117,7 @@ All content is managed in `lib/constants.ts`:
 ## 🎯 Key Features
 
 - ✅ Hero section with SEO-optimized content
-- ✅ Trust signals (4.6/5 rating, 134+ reviews)
+- ✅ Trust signals (4.6/5 rating, 145+ reviews)
 - ✅ 4 pricing packages with "Pozovi" buttons
 - ✅ Customer reviews section
 - ✅ FAQ accordion (10 questions)

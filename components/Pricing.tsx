@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { PACKAGES_DATA } from "@/lib/pricingData";
 import { ADDONS } from "@/lib/pricingData";
 import { CONTACT } from "@/lib/constants";
@@ -35,7 +36,11 @@ export default function Pricing() {
           <span className="text-2xl md:text-3xl align-middle">💰</span>
         </h2>
         <p className="text-center text-xl md:text-2xl mb-8 md:mb-10 text-text/80 max-w-3xl mx-auto">
-          Izaberite paket koji najbolje odgovara vašim potrebama
+          Izaberite paket koji najbolje odgovara vašim potrebama. Razmatrate više rodjendaonica?{" "}
+          <Link href="/najbolja-rodjendaonica" className="text-primary font-semibold hover:underline">
+            Uporedite cenovnike i opcije u Novom Sadu
+          </Link>
+          .
         </p>
         <div className="text-center mb-16 md:mb-20 bg-green-100 border-4 border-green-500 rounded-2xl p-8 md:p-10 max-w-3xl mx-auto">
           <h3 className="text-2xl font-bold mb-2 text-green-800">🏆 Preko 100 uspešnih rođendana | 3 godine iskustva</h3>

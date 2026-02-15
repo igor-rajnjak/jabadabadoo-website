@@ -6,6 +6,7 @@ export const CONTACT = {
   whatsappUrl: "https://wa.me/38166286555",
   email: "jabadabadoo.ns@gmail.com",
   address: "Somborska 17, 21000 Novi Sad, Srbija",
+  addressDescription: "Nalazimo se između Adice i Telepa, u blizini Minakve i Veternika, na produžetku Bulevara Evrope.",
   workingHours: "Svaki dan 10:00 - 21:00",
   workingHoursNote: "Ne radimo na praznike - pozovite za proveru dostupnosti",
   instagram: "https://www.instagram.com/jabadabadoo_rodjendaonica",
@@ -17,8 +18,8 @@ export const CONTACT = {
 // SEO Meta Tags
 export const SEO = {
   title: "Rođendaonica Jabadabadoo Novi Sad | Rodjendan za Decu | All-inclusive",
-  description: "Već 3. godinu (od 2022) organizujemo nezaboravne rođendane za decu u Novom Sadu - preko 100 zadovoljnih roditelja. All-inclusive rodjendani, tematski rođendani, profesionalni animatori. Rezervišite: 066286555",
-  keywords: "rođendaonica novi sad, rodjendaonica novi sad, rođendan za decu novi sad, rodjendan za decu novi sad, all-inclusive dečiji rođendani novi sad, all-inclusive deciji rodjendani novi sad, tematski rođendani za decu, tematski rodjendani za decu, organizacija rođendana novi sad, organizacija rodjendana novi sad, animatori rođendaonica novi sad, animatori rodjendaonica novi sad, rođendani za decu 2-10 godina, rodjendani za decu 2-10 godina, čuvaonica novi sad, cuvaonica novi sad",
+  description: "Igraonica i kafić za porodice u Novom Sadu. All-inclusive rodjendani, tematski rođendani, profesionalni animatori - preko 100 zadovoljnih roditelja. Rezervišite: 066286555",
+  keywords: "rođendaonica novi sad, rodjendaonica novi sad, rođendan za decu novi sad, rodjendan za decu novi sad, all-inclusive dečiji rođendani novi sad, all-inclusive deciji rodjendani novi sad, tematski rođendani za decu, tematski rodjendani za decu, organizacija rođendana novi sad, organizacija rodjendana novi sad, animatori rođendaonica novi sad, animatori rodjendaonica novi sad, rođendani za decu 2-10 godina, rodjendani za decu 2-10 godina, čuvaonica novi sad, cuvaonica novi sad, igraonica novi sad, rodjendaonica Bulevar Evrope, igraonica Minakva, igraonica Veternik",
 } as const;
 
 // Trust Signals
@@ -28,7 +29,7 @@ export const TRUST_SIGNALS = {
   foundingDateDisplay: "15. septembra 2022",
   satisfiedParents: "100+",
   rating: "4.6",
-  reviewCount: "134",
+  reviewCount: "145",
   ageRange: "2-10 godina",
 } as const;
 
@@ -151,6 +152,10 @@ export const FAQ = [
     answer: "Roditelji mogu biti prisutni, ali nisu obavezni. Imamo prostor za roditelje gde mogu da se opuste dok deca uživaju u proslavi.",
   },
   {
+    question: "Imate li kafić?",
+    answer: "Da! Imamo kafić za roditelje – dok deca igraju u igraonici, vi možete da popijete kafu, sok ili nešto slatko. Prostor je klimatizovan i udoban za porodice.",
+  },
+  {
     question: "Šta ako dete ima alergije?",
     answer: "Obavezno nas obavestite o svim alergijama (hrana, boje za crtanje, itd.) kako bismo preduzeli potrebne mere. Možemo prilagoditi meni i aktivnosti prema potrebama vašeg deteta.",
   },
@@ -169,6 +174,10 @@ export const FAQ = [
   {
     question: "Imate li dodatne usluge?",
     answer: "Da, pored osnovnih paketa, možemo organizovati dodatne aktivnosti, fotografisanje, video snimanje i druge usluge. Pozovite nas da razgovaramo o vašim željama.",
+  },
+  {
+    question: "Gde se nalazite?",
+    answer: "Naša adresa je Somborska 17, 21000 Novi Sad. Nalazimo se između Adice i Telepa, u blizini Minakve i Veternika, na produžetku Bulevara Evrope. Lako dostupni iz centra grada.",
   },
 ] as const;
 
@@ -192,7 +201,7 @@ export const GALLERY_IMAGES = [
   },
   {
     src: "/images/prostor-za-roditelje-06-rodjendan-rodjendaonica-novi-sad-jabadabadoo-square.png",
-    alt: "Prostor za roditelje u rodjendaonici Jabadabadoo Novi Sad - klimatizovan i udoban prostor za roditelje tokom dečijih rodjendana",
+    alt: "Kafić i prostor za roditelje u rodjendaonici Jabadabadoo Novi Sad - klimatizovana igraonica sa kafićem gde roditelji mogu popiti kafu dok deca igraju",
   },
   {
     src: "/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-02.png",

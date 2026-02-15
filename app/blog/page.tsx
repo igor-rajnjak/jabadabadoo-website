@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { BLOG_POSTS } from "@/lib/blogPosts";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -78,7 +79,11 @@ export default function BlogPage() {
             📝 Blog - Saveti za Rođendane
           </h1>
           <p className="text-center text-xl md:text-2xl mb-16 md:mb-20 text-text/80 max-w-3xl mx-auto">
-            Korisni vodiči i saveti za organizaciju nezaboravnih rođendana za decu
+            Korisni vodiči i saveti za organizaciju nezaboravnih rođendana za decu. Razmatrate različite opcije?{" "}
+            <Link href="/najbolja-rodjendaonica" className="text-primary font-semibold hover:underline">
+              Uporedite rodjendaonice u Novom Sadu
+            </Link>
+            .
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">

@@ -1,23 +1,41 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { CONTACT } from "@/lib/constants";
 import { trackPhoneCall, trackNavClick, trackLogoClick, trackWhatsAppClick } from "@/lib/analytics";
 
+const zastoMiItems = [
+  { href: "#zasto-mi", label: "Zašto naša rodjendaonica?" },
+  { href: "/najbolja-rodjendaonica", label: "Uporedi rodjendaonice" },
+];
+
+const navLinks = [
+  { href: "#galerija", label: "Galerija" },
+  { href: "#cenovnik", label: "Cenovnik" },
+  { href: "#recenzije", label: "Recenzije" },
+  { href: "#faq", label: "Pitanja" },
+  { href: "#kontakt", label: "Kontakt" },
+];
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [zastoMiOpen, setZastoMiOpen] = useState(false);
+  const pathname = usePathname();
+  const isHomepage = pathname === "/";
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const navLinks = [
-    { href: "#zasto-mi", label: "Zašto mi?" },
-    { href: "#galerija", label: "Galerija" },
-    { href: "#cenovnik", label: "Cenovnik" },
-    { href: "#recenzije", label: "Recenzije" },
-    { href: "/blog", label: "Blog" },
-    { href: "#faq", label: "Pitanja" },
-    { href: "#kontakt", label: "Kontakt" },
-  ];
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setZastoMiOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 bg-gradient-to-r from-primary to-pink shadow-lg px-6 md:px-8">
@@ -44,16 +62,101 @@ export default function Header() {
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-3 lg:gap-4 xl:gap-6 items-center flex-shrink-0">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => trackNavClick(link.label, link.href)}
-              className="text-white hover:text-accent transition-colors font-semibold text-sm lg:text-base whitespace-nowrap"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {isHomepage ? (
+            <>
+              <div
+                ref={dropdownRef}
+                className="relative"
+                onMouseEnter={() => setZastoMiOpen(true)}
+                onMouseLeave={() => setZastoMiOpen(false)}
+              >
+                <button
+                  onClick={() => setZastoMiOpen(!zastoMiOpen)}
+                  className="text-white hover:text-accent transition-colors font-semibold text-sm lg:text-base whitespace-nowrap flex items-center gap-1"
+                  aria-expanded={zastoMiOpen}
+                  aria-haspopup="true"
+                >
+                  Zašto mi?
+                  <svg className={`w-4 h-4 transition-transform ${zastoMiOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {zastoMiOpen && (
+                  <div className="absolute top-full left-0 mt-1 py-2 min-w-[220px] bg-white rounded-xl shadow-xl border-2 border-secondary z-50">
+                    {zastoMiItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => {
+                          trackNavClick(item.label, item.href);
+                          setZastoMiOpen(false);
+                        }}
+                        className="block px-4 py-2 text-text hover:bg-secondary/20 hover:text-primary font-semibold text-sm"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => trackNavClick(link.label, link.href)}
+                  className="text-white hover:text-accent transition-colors font-semibold text-sm lg:text-base whitespace-nowrap"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </>
+          ) : (
+            <>
+              <div
+                ref={dropdownRef}
+                className="relative"
+                onMouseEnter={() => setZastoMiOpen(true)}
+                onMouseLeave={() => setZastoMiOpen(false)}
+              >
+                <button
+                  onClick={() => setZastoMiOpen(!zastoMiOpen)}
+                  className="text-white hover:text-accent transition-colors font-semibold text-sm lg:text-base whitespace-nowrap flex items-center gap-1"
+                  aria-expanded={zastoMiOpen}
+                  aria-haspopup="true"
+                >
+                  Zašto mi?
+                  <svg className={`w-4 h-4 transition-transform ${zastoMiOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {zastoMiOpen && (
+                  <div className="absolute top-full left-0 mt-1 py-2 min-w-[220px] bg-white rounded-xl shadow-xl border-2 border-secondary z-50">
+                    <Link
+                      href="/#zasto-mi"
+                      onClick={() => { trackNavClick("Zašto naša rodjendaonica?", "/#zasto-mi"); setZastoMiOpen(false); }}
+                      className="block px-4 py-2 text-text hover:bg-secondary/20 hover:text-primary font-semibold text-sm"
+                    >
+                      Zašto naša rodjendaonica?
+                    </Link>
+                    <Link
+                      href="/najbolja-rodjendaonica"
+                      onClick={() => { trackNavClick("Uporedi rodjendaonice", "/najbolja-rodjendaonica"); setZastoMiOpen(false); }}
+                      className="block px-4 py-2 text-text hover:bg-secondary/20 hover:text-primary font-semibold text-sm"
+                    >
+                      Uporedi rodjendaonice
+                    </Link>
+                  </div>
+                )}
+              </div>
+              <Link
+                href="/"
+                onClick={() => trackNavClick("Početna", "/")}
+                className="text-white hover:text-accent transition-colors font-semibold text-sm lg:text-base whitespace-nowrap"
+              >
+                Početna
+              </Link>
+            </>
+          )}
           <a
             href={`tel:${CONTACT.phoneFormatted}`}
             onClick={() => trackPhoneCall(CONTACT.phone, "Header")}
@@ -79,19 +182,63 @@ export default function Header() {
           <div className="px-4 py-2 border-b border-white/20">
             <span className="text-white text-lg font-bold">Rođendaonica Jabadabadoo</span>
           </div>
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => {
-                trackNavClick(link.label, link.href);
-                setIsMenuOpen(false);
-              }}
-              className="block text-white text-base font-semibold py-2.5 px-4 hover:bg-primary/80 transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
+          {isHomepage ? (
+            <>
+              {zastoMiItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => {
+                    trackNavClick(item.label, item.href);
+                    setIsMenuOpen(false);
+                  }}
+                  className="block text-white text-base font-semibold py-2.5 px-4 hover:bg-primary/80 transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => {
+                    trackNavClick(link.label, link.href);
+                    setIsMenuOpen(false);
+                  }}
+                  className="block text-white text-base font-semibold py-2.5 px-4 hover:bg-primary/80 transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </>
+          ) : (
+            <>
+              <Link
+                href="/#zasto-mi"
+                onClick={() => { trackNavClick("Zašto naša rodjendaonica?", "/#zasto-mi"); setIsMenuOpen(false); }}
+                className="block text-white text-base font-semibold py-2.5 px-4 hover:bg-primary/80 transition-colors"
+              >
+                Zašto naša rodjendaonica?
+              </Link>
+              <Link
+                href="/najbolja-rodjendaonica"
+                onClick={() => { trackNavClick("Uporedi rodjendaonice", "/najbolja-rodjendaonica"); setIsMenuOpen(false); }}
+                className="block text-white text-base font-semibold py-2.5 px-4 hover:bg-primary/80 transition-colors"
+              >
+                Uporedi rodjendaonice
+              </Link>
+              <Link
+                href="/"
+                onClick={() => {
+                  trackNavClick("Početna", "/");
+                  setIsMenuOpen(false);
+                }}
+                className="block text-white text-base font-semibold py-2.5 px-4 hover:bg-primary/80 transition-colors"
+              >
+                Početna
+              </Link>
+            </>
+          )}
           <a
             href={`tel:${CONTACT.phoneFormatted}`}
             onClick={() => {

@@ -13,6 +13,294 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "igraonice-novi-sad-vodic",
+    title: "Igraonice u Novom Sadu - Vodič za Roditelje",
+    excerpt: "Tražite igraonicu za decu u Novom Sadu? Pregled šta tražiti, kako izabrati i šta nudi Jabadabadoo - igraonica, kafić i rodjendaonica u jednom prostoru.",
+    readTime: 5,
+    emoji: "🎮",
+    date: "2026-01-29",
+    keywords: ["igraonice novi sad", "igraonica novi sad", "dečija igraonica novi sad", "igraonica za decu", "kafić sa igraonicom novi sad"],
+    image: "/images/rodjendaonica-igraonica-klimatizovano-animatori-za-decu-bebe-novi-sad-jabadabadoo-animatori.png",
+    imageAlt: "Igraonice u Novom Sadu - Jabadabadoo igraonica i rodjendaonica, klimatizovan prostor za decu sa animatorima i kafićem za roditelje",
+    content: `# Igraonice u Novom Sadu - Vodič za Roditelje
+
+Tražite igraonicu za decu u Novom Sadu? Evo šta treba da znate kada birate prostor za igru i zabavu vašeg deteta - od lokacije do sadržaja.
+
+## Šta Tražiti u Igraonici za Decu?
+
+### Bezbednost i Čistoća
+- **Siguran prostor** - zaštićeni uglovi, odgovarajuća visina opreme
+- **Čistoća** - redovno čišćenje, higijena posebno važna za najmlađe
+- **Klimatizacija** - prijatna temperatura tokom cele godine
+- **Nadzor** - mogućnost da pratite decu dok se igraju
+
+### Sadržaj i Aktivnosti
+- **Poligon i igračke** - prilagođene uzrastu dece (2-10 godina)
+- **Prostor za roditelje** - da možete da se opustite dok deca igraju
+- **Kafić** - ako želite da popijete kafu ili sok tokom posete
+
+### Lokacija i Dostupnost
+- **Parking** - lako parkiranje u blizini
+- **Blizina** - iz centra ili vašeg naselja
+- **Radno vreme** - da odgovara vašem rasporedu
+
+---
+
+## Igraonica sa Kafićem - Zašto Je Popularna?
+
+Mnogi roditelji traže **igraonicu sa kafićem** - prostor gde deca mogu da se igraju dok vi uživate u kafi. Prednosti:
+
+- **Vi se opuštate** dok deca igraju u sigurnom okruženju
+- **Sve na jednom mestu** - ne morate birati između kafe i dečije zabave
+- **Idealno za porodice** - posebno sa više dece različitih uzrasta
+- **Klimatizovano** - prijatno leti i zimi
+
+---
+
+## Igraonice u Novom Sadu - Različite Opcije
+
+Novi Sad nudi više igraonica i rodjendaonica. Razmatrate više opcija? [Uporedite rodjendaonice u Novom Sadu](/najbolja-rodjendaonica). Pri izboru razmotrite:
+
+### Tip Prostora
+- **Samo igraonica** - fokus na igru, obično sa vremenskim kartama
+- **Igraonica i kafić** - prostor za decu + kafić za roditelje
+- **Rodjendaonica** - specijalizovana za rođendane, često sa igraonicom
+
+### Lokacija
+- **Centar** - lako dostupno, često ograničen parking
+- **Naselja** - Adice, Telep, Bulevar Evrope - parking obično lakši
+- **Blizu Minakve, Veternika** - za stanovníke tih delova grada
+
+### Usluge
+- **Čuvaonica** - neke igraonice nude i čuvanje dece
+- **Rodjendani** - all-inclusive paketi sa animatorima
+- **Kafić** - kafa, sokovi, slatkiši za roditelje
+
+---
+
+## Jabadabadoo - Igraonica, Kafić i Rodjendaonica
+
+Jabadabadoo kombinuje **igraonicu, kafić i rodjendaonicu** na Somborska 17 u Novom Sadu. Šta nudi:
+
+### Za Svakodnevne Posete
+- **Igraonica** - klimatizovan prostor za decu 2-10 godina
+- **Kafić** - dok deca igraju, vi možete popiti kafu ili sok
+- **Radno vreme** - svaki dan 10-21h
+
+### Za Rođendane
+- **All-inclusive paketi** - animatori, hrana, dekoracije
+- **Tematski rođendani** - od superheroja do princeza
+- **Profesionalna organizacija** - vi se samo opustite
+
+### Lokacija
+- **Somborska 17** - između Adice i Telepa
+- **Bulevar Evrope** - na produžetku, lako dostupno
+- **Blizu Minakve i Veternika**
+
+[Pogledajte našu igraonicu i kafić](/igraonica) ili [saznajte kako do nas](/lokacija).
+
+---
+
+## Kako Izabrati Igraonicu za Vaše Dete?
+
+1. **Proverite uzrast** - da li prostor prihvata uzrast vašeg deteta
+2. **Posetite** - dođite da vidite prostor pre nego što rezervišete rođendan
+3. **Proverite recenzije** - šta kažu drugi roditelji
+4. **Razmotrite lokaciju** - koliko vam odgovara
+5. **Pitajte o kafiću** - ako želite da popijete kafu dok deca igraju
+
+---
+
+## Zaključak
+
+Kada tražite **igraonice u Novom Sadu**, važno je da prostor bude bezbedan, čist i da odgovara vašim potrebama. Ako želite igraonicu sa kafićem gde možete da se opustite dok deca igraju, Jabadabadoo nudi upravo to - plus organizaciju rođendana ako vam zatreba.
+
+**Posetite nas na Somborska 17 ili [pozovite za rezervaciju](tel:066286555)!** 📞 066286555`,
+  },
+  {
+    slug: "kako-organizovati-deciji-rodjendan",
+    title: "Kako Organizovati Dečiji Rođendan - 10 Koraka do Uspeha",
+    excerpt: "Organizacija dečijeg rođendana može biti jednostavna. Evo korak-po-korak vodiča - od planiranja do dana proslave. Saveti za roditelje u Novom Sadu.",
+    readTime: 6,
+    emoji: "📋",
+    date: "2026-01-28",
+    keywords: ["kako organizovati rodjendan", "organizacija rodjendana za decu", "planiranje rodjendana", "dečiji rođendan novi sad"],
+    image: "/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-deciji-rodjendan-02.png",
+    imageAlt: "Kako organizovati dečiji rođendan u Novom Sadu - organizacija rođendana sa animatorima i tematskim dekoracijama u rodjendaonici Jabadabadoo",
+    content: `# Kako Organizovati Dečiji Rođendan - 10 Koraka do Uspeha
+
+Organizacija rođendana za decu izgleda kao veliki posao, ali sa jasnim planom može biti jednostavna. Evo korak-po-korak vodiča koji će vam pomoći da organizujete nezaboravan dan.
+
+## Korak 1: Odlučite o Datumu i Vremenu (4-6 nedelja unapred)
+
+- **Rezervišite što ranije** - posebno za vikende
+- Imajte 2-3 alternativna datuma spremna
+- Proverite dostupnost važnih gostiju (bake, deke, prijatelji)
+- **Vikendi se popune brzo** - rođendaonice u Novom Sadu rezervišite 3-4 nedelje unapred
+
+## Korak 2: Odredite Budžet
+
+- Postavite jasnu granicu - koliko možete da potrošite
+- **All-inclusive paketi** često ispadnu jeftiniji - sve uključeno, nema skrivenih troškova
+- Uračunajte: prostor, hranu, tortu, dekoracije, animatore, poklone za goste
+- [Pogledajte cenovnik](/#cenovnik) - različiti paketi za različite budžete
+
+## Korak 3: Izaberite Lokaciju ili Rođendaonicu
+
+Razmatrate više rodjendaonica? [Uporedite opcije u Novom Sadu](/najbolja-rodjendaonica) da lakše odlučite.
+
+### Opcije
+- **Rođendaonica** - sve uključeno, profesionalci vode program (najlakše)
+- **Kod kuće** - više posla, ali intimnije
+- **Van prostora** - restoran, piknik (zavisi od sezone)
+
+### Šta Tražiti u Rođendaonici
+- Kapacitet (broj dece i roditelja)
+- Šta je uključeno u cenu
+- Da li ima profesionalne animatore
+- Klimatizacija, parking, pristupačnost
+
+## Korak 4: Pitajte Dete - Šta Želi?
+
+- **Tema rođendana** - superheroji, princeze, životinje, sport...
+- Omiljena hrana, torta
+- Ko su bitni gosti
+- Posebne želje (npr. maskota, mađioničar)
+
+Deca vole kada ih pitate - učestvuju u planiranju!
+
+## Korak 5: Napravite Listu Gostiju
+
+- **Optimalno 10-20 dece** - dovoljno za zabavu, ne previše za kontrolu
+- Pozovite 2-3 nedelje unapred
+- Tražite potvrdu dolaska
+- Uključite kontakt za roditelje (alergije, posebne potrebe)
+
+## Korak 6: Rezervišite i Platite Depozit
+
+- **Pozovite rođendaonicu** - proverite dostupnost
+- Izaberite paket (Standard, Premium, All-Inclusive, Ultra)
+- Platite depozit (obično 50%) - rezerviše termin
+- Dobijte potvrdu - datum, vreme, šta je uključeno
+
+[Kako rezervisati rođendan - detaljan vodič](/blog/kako-rezervisati-rodjendan-novi-sad)
+
+## Korak 7: Pošaljite Pozivnice (2 nedelje unapred)
+
+- **Štampane ili elektronske** - obe opcije su dobre
+- Uključite: datum, vreme, adresu, temu, kontakt
+- Tražite potvrdu do kraja prve nedelje
+- Dodajte "Molimo obavestite o alergijama"
+
+## Korak 8: Finalizujte Detalje (1 nedelja pre)
+
+- **Potvrdite broj gostiju** - za hranu i tortu
+- **Proverite alergije** - obavezno sa rodjendaonicom
+- **Finalizujte temu** - dekoracije, torta
+- **Plaćanje ostatka** - obično 7 dana pre rođendana
+
+## Korak 9: Pripremite Se za Dan D
+
+- Proverite da li imate sve (pokloni za goste, rezervne opcije)
+- Odmorite se - bitno je da i vi uživate
+- Planirajte dolazak **15 min ranije**
+- Neka neko pomaže sa fotkanjem ili organizacijom
+
+## Korak 10: Dan Rođendana - Uživajte!
+
+- Prepustite se profesionalcima (ako ste u rođendaonici)
+- Budite prisutni za vaše dete
+- Ne brinite o detaljima - uživajte u proslavi
+- Fotografišite uspomene
+
+---
+
+## Savet: All-Inclusive Olakšava Organizaciju
+
+Organizacija rođendana kod kuće zahteva: prostor, hranu, tortu, dekoracije, igre, čuvanje dece... **All-inclusive u rođendaonici** uključuje sve to - vi samo dođete i uživate.
+
+**Prednosti all-inclusive:**
+- Sve uključeno u cenu - bez iznenađenja
+- Profesionalni animatori vode program
+- Ne morate da brinete o čišćenju
+- Više vremena za vaše dete
+
+---
+
+## Zaključak
+
+Organizacija dečijeg rođendana ima svoju formulu: planiranje unapred, jasna komunikacija i - ako je moguće - pomoć profesionalaca. Sa ovih 10 koraka, vaš rodjendan može biti nezaboravan bez stresa.
+
+**Spremni da organizujete? Jabadabadoo nudi all-inclusive pakete u Novom Sadu. [Pozovite nas](tel:066286555) da proverite dostupnost!** 📞 066286555`,
+  },
+  {
+    slug: "igraonica-i-kafic-za-porodice-novi-sad",
+    title: "Igraonica i Kafić za Porodice u Novom Sadu - Jabadabadoo",
+    excerpt: "Tražite kafić sa igraonicom u Novom Sadu? Jabadabadoo nudi prostor gde deca igraju dok roditelji uživaju u kafi. Idealno za porodice - igraonica, kafić i rodjendaonica u jednom.",
+    readTime: 4,
+    emoji: "☕",
+    date: "2026-01-27",
+    keywords: ["kafić sa igraonicom novi sad", "igraonica novi sad", "igraonica i kafić", "kafić za porodice novi sad", "dečija igraonica novi sad"],
+    image: "/images/prostor-za-roditelje-06-rodjendan-rodjendaonica-novi-sad-jabadabadoo-square.png",
+    imageAlt: "Kafić i igraonica za porodice u Novom Sadu - Jabadabadoo rodjendaonica, prostor gde roditelji popiju kafu dok deca igraju",
+    content: `# Igraonica i Kafić za Porodice u Novom Sadu - Jabadabadoo
+
+Tražite mesto gde možete popiti kafu dok se deca igraju? Jabadabadoo je rodjendaonica, igraonica i kafić u jednom - idealan prostor za porodice u Novom Sadu.
+
+## Kafić sa Igraonicom - Šta To Znači?
+
+Mnogi roditelji traže **kafić sa igraonicom** - prostor gde deca mogu da se igraju u sigurnom okruženju dok roditelji opuštaju uz kafu ili sok. Jabadabadoo nudi upravo to: klimatizovan prostor sa igraonicom za decu i kafićem za roditelje.
+
+### Zašto Je To Popularno?
+
+- **Roditelji se opuste** - dok deca igraju, vi možete popiti kafu
+- **Deca su sigurna** - igraonica je bezbedna i prilagođena deci 2-10 godina
+- **Sve na jednom mestu** - ne morate birati između kafe i dečije zabave
+- **Klimatizovano** - prijatno tokom cele godine
+
+## Gde Se Nalazimo?
+
+Jabadabadoo je smešten na **Somborska 17, Novi Sad**, između Adice i Telepa, na produžetku Bulevara Evrope. Blizu nas su Minakva i Veternik - lako dostupni iz centra grada.
+
+**Adresa:** Somborska 17, 21000 Novi Sad
+
+[Kako do nas](/lokacija) - detaljan vodič sa mapom i savetima za dolazak.
+
+## Šta Nudimo
+
+### Igraonica
+- **Prostran i bezbedan prostor** za decu od 2 do 10 godina
+- Klimatizovano tokom cele godine
+- Poligon, igračke i aktivnosti
+- Profesionalni animatori tokom rođendana
+
+### Kafić za Roditelje
+- **Kafa, sok, slatkiši** - dok deca igraju
+- Udoban prostor za roditelje
+- Mogućnost da pratite decu dok uživate
+
+### Rodjendaonica
+- **All-inclusive rođendani** - organizacija od A do Š
+- Tematski rođendani sa animatorima
+- Torte, dekoracije, pinjate - sve uključeno
+
+## Za Koga Je Idealno?
+
+Razmatrate i druge rodjendaonice? [Uporedite opcije u Novom Sadu](/najbolja-rodjendaonica).
+
+- **Porodice sa decom** - posetite nas bilo kada (radno vreme 10-21h)
+- **Roditelji koji planiraju rođendan** - rezervišite all-inclusive paket
+- **Oni koji traže kafić sa igraonicom** - dođite i uverite se
+
+## Rezervacija i Poseta
+
+Možete nas posetiti svakodnevno od 10 do 21 čas. Za rođendane, rezervacija je obavezna - [pozovite nas](tel:066286555) za proveru dostupnosti.
+
+**Kontakt:** 📞 066286555
+
+**Rezervišite rođendan ili dođite da nas posetite - čekamo vas!**`,
+  },
+  {
     slug: "kako-pripremiti-rodjendan-za-dete",
     title: "Kako Pripremiti Savršen Rođendan za Vaše Dete",
     excerpt: "Kompletan vodič kako organizovati nezaboravan rođendan - od izbora teme do poslednjeg detalja. Saveti za roditelje koji žele da naprave poseban dan za svoje dete.",
@@ -35,7 +323,7 @@ Organizacija rođendana za decu može biti izazovna, ali sa pravim pristupom i p
 
 ### Određivanje Budžeta
 - Postavite realan budžet koji uključuje sve troškove
-- Razmotrite pakete koje nudi rođendaonica - all-inclusive paketi mogu biti isplativiji
+- Razmotrite pakete koje nudi rođendaonica - all-inclusive paketi mogu biti isplativiji. Razmatrate više opcija? [Uporedite rodjendaonice u Novom Sadu](/najbolja-rodjendaonica)
 - Ne zaboravite na dodatne troškove (pokloni za goste, dekoracije)
 
 ## 2. Izbor Teme Rođendana
@@ -159,7 +447,7 @@ Organizacija rođendana zahteva planiranje i pažnju, ali sa pravim pristupom i 
     imageAlt: "Najbolje teme rodjendana za decu u Novom Sadu - tematski rođendani sa dekoracijama, kostimima i aktivnostima u rodjendaonici Jabadabadoo",
     content: `# Najbolje Teme Rođendana za Decu - Vodič za Roditelje
 
-Izbor teme za rođendan može biti ključan za uspeh proslave. Evo najpopularnijih tema koje deca obožavaju, organizovane po uzrastu i interesovanjima.
+Izbor teme za rođendan može biti ključan za uspeh proslave. Tražite rodjendaonicu koja nudi tematske proslave? [Uporedite rodjendaonice u Novom Sadu](/najbolja-rodjendaonica). Evo najpopularnijih tema koje deca obožavaju, organizovane po uzrastu i interesovanjima.
 
 ## Teme za Najmlađe (2-4 godine)
 
@@ -312,7 +600,7 @@ Izbor teme za rođendan je važan, ali najvažnije je da vaše dete uživa. Bez 
     imageAlt: "Koliko košta rodjendan za decu u Novom Sadu - cenovnik paketa sa tortom, hranom i kompletnim programom u rodjendaonici Jabadabadoo",
     content: `# Koliko Košta Rođendan za Decu? Kompletan Vodič Cenovnika
 
-Planiranje budžeta za rođendan vašeg deteta je važan korak. Evo detaljnog pregleda cena i paketa za organizaciju rođendana u Jabadabadoo Rođendaonici.
+Planiranje budžeta za rođendan vašeg deteta je važan korak. Razmatrate više rodjendaonica? [Uporedite opcije i cenovnike u Novom Sadu](/najbolja-rodjendaonica). Evo detaljnog pregleda cena i paketa za organizaciju rođendana u Jabadabadoo Rođendaonici.
 
 ## Pregled Paketa i Cena
 
@@ -536,7 +824,7 @@ Cena rođendana zavisi od paketa koji izaberete. All-Inclusive paket je najpopul
     imageAlt: "Šta uključuje all-inclusive rodjendan u Novom Sadu - kompletan paket sa hranom, tortom, animatorima i svim aktivnostima u rodjendaonici Jabadabadoo",
     content: `# Šta Uključuje All-Inclusive Rođendan? Kompletan Vodič
 
-All-inclusive rođendan znači da sve što vam treba za proslavu je uključeno u cenu - od hrane do zabave. Evo detaljnog pregleda šta dobijate.
+All-inclusive rođendan znači da sve što vam treba za proslavu je uključeno u cenu – od hrane do zabave. Razmatrate all-inclusive pakete više rodjendaonica? [Uporedite opcije u Novom Sadu](/najbolja-rodjendaonica). Evo detaljnog pregleda šta dobijate.
 
 ## Šta Je All-Inclusive Rođendan?
 
@@ -731,6 +1019,7 @@ Rezervacija rođendana za vaše dete je jednostavna. Evo detaljnog vodiča koji 
 - **Razmotrite trajanje** - koliko vremena vaše dete može da se fokusira
 - **Razmotrite hranu** - da li želite kompletnu hranu uključenu
 - **Pitajte dete** - šta ono želi
+- **Razmatrate više rodjendaonica?** [Uporedite pakete i cene u Novom Sadu](/najbolja-rodjendaonica)
 
 ## Korak 3: Potvrda i Depozit
 
@@ -843,7 +1132,7 @@ Rezervacija rođendana je jednostavna - pozovite nas, izaberite paket, platite d
     imageAlt: "Rodjendani za decu 2-10 godina u Novom Sadu - program prilagođen uzrastu sa animatorima i aktivnostima u rodjendaonici Jabadabadoo",
     content: `# Rođendani za Decu 2-10 Godina - Program Prilagođen Uzrastu
 
-Svako dete je drugačije, a program rođendana mora biti prilagođen uzrastu. Evo kako organizujemo rođendane za decu od 2 do 10 godina.
+Svako dete je drugačije, a program rođendana mora biti prilagođen uzrastu. Razmatrate više rodjendaonica? [Uporedite programe i pakete u Novom Sadu](/najbolja-rodjendaonica). Evo kako organizujemo rođendane za decu od 2 do 10 godina.
 
 ## Program po Uzrastu
 

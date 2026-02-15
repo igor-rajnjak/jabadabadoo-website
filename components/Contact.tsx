@@ -71,6 +71,7 @@ export default function Contact() {
               <div className="bg-white p-8 md:p-10 rounded-3xl border-4 border-secondary shadow-lg">
                 <p className="font-bold text-lg md:text-xl mb-3">📍 Adresa</p>
                 <p className="text-text text-lg">{CONTACT.address}</p>
+                <p className="text-text/80 text-base mt-2">{CONTACT.addressDescription}</p>
               </div>
               
               <div className="bg-white p-8 md:p-10 rounded-3xl border-4 border-secondary shadow-lg">

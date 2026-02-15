@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import WhyUs from "@/components/WhyUs";
 import Gallery from "@/components/Gallery";
+import IgraonicaKafic from "@/components/IgraonicaKafic";
 import HowWeOrganize from "@/components/HowWeOrganize";
 import Pricing from "@/components/Pricing";
 import Reviews from "@/components/Reviews";
@@ -17,6 +18,7 @@ export default function Home() {
       <Header />
       <Hero />
       <WhyUs />
+      <IgraonicaKafic />
       <Gallery />
       <HowWeOrganize />
       <Pricing />

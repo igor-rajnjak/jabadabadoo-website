@@ -154,6 +154,21 @@ export const trackBlogCTAClick = (ctaText: string, postTitle: string) => {
   }
 };
 
+// Track comparison page click (from index listing) – aligned with nav_click/link_click
+export const trackComparisonClick = (competitorName: string, competitorSlug: string) => {
+  if (typeof window !== "undefined" && window.gtag) {
+    const linkUrl = `/najbolja-rodjendaonica/${competitorSlug}`;
+    window.gtag("event", "comparison_page_click", {
+      event_category: "Engagement",
+      event_label: competitorName,
+      link_url: linkUrl,
+      competitor_slug: competitorSlug,
+      location: "najbolja_rodjendaonica_index",
+      value: 1,
+    });
+  }
+};
+
 // Track blog navigation (back to blog)
 export const trackBlogNavClick = (linkText: string, postTitle?: string) => {
   if (typeof window !== "undefined" && window.gtag) {

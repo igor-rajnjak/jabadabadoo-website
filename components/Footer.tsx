@@ -60,11 +60,42 @@ export default function Footer() {
                   ✉️ {CONTACT.email}
                 </a>
               </li>
-              <li>{CONTACT.address}</li>
+              <li>
+                {CONTACT.address}
+                <span className="block text-white/70 text-base mt-1">{CONTACT.addressDescription}</span>
+              </li>
             </ul>
           </div>
           
           <div>
+            <h4 className="font-bold text-lg md:text-xl mb-6">Stranice</h4>
+            <ul className="space-y-2 text-white/80 text-lg mb-6">
+              <li>
+                <Link href="/" className="hover:text-accent transition-colors">
+                  Početna
+                </Link>
+              </li>
+              <li>
+                <Link href="/igraonica" className="hover:text-accent transition-colors">
+                  Igraonica i kafić
+                </Link>
+              </li>
+              <li>
+                <Link href="/lokacija" className="hover:text-accent transition-colors">
+                  Lokacija
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:text-accent transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/najbolja-rodjendaonica" className="hover:text-accent transition-colors">
+                  Uporedite rodjendaonice
+                </Link>
+              </li>
+            </ul>
             <h4 className="font-bold text-lg md:text-xl mb-6">Pratite nas</h4>
             <div className="flex gap-6">
               <a
