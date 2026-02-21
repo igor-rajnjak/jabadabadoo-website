@@ -17,7 +17,7 @@ export default function PricingComparison() {
         </button>
       </div>
       <p className="text-center text-text/70 mb-6 italic">
-        💬 Preko 100 zadovoljnih porodica u poslednje 3 godine preporučuje naše pakete!
+        💬 Preko 100 zadovoljnih porodica u poslednjih 5 godina preporučuje naše pakete!
       </p>
       
       {isOpen && (

@@ -43,7 +43,7 @@ export default function Pricing() {
           .
         </p>
         <div className="text-center mb-16 md:mb-20 bg-green-100 border-4 border-green-500 rounded-2xl p-8 md:p-10 max-w-3xl mx-auto">
-          <h3 className="text-2xl font-bold mb-2 text-green-800">🏆 Preko 100 uspešnih rođendana | 3 godine iskustva</h3>
+          <h3 className="text-2xl font-bold mb-2 text-green-800">🏆 Preko 100 uspešnih rođendana | 5 godina iskustva</h3>
           <p className="text-green-700">📞 Besplatna konsultacija - pozovite nas za savet koji paket je najbolji za vaše dete!</p>
         </div>
         

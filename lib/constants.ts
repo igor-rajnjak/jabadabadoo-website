@@ -24,7 +24,7 @@ export const SEO = {
 
 // Trust Signals
 export const TRUST_SIGNALS = {
-  years: "3",
+  years: "5",
   foundingDate: "2022-09-15",
   foundingDateDisplay: "15. septembra 2022",
   satisfiedParents: "100+",
