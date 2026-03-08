@@ -118,7 +118,6 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               name: "Jabadabadoo Rođendaonica",
               alternateName: "Jabadabadoo Rodjendaonica",
-              serviceType: "Rođendaonica",
               description: "Organizacija rođendana i rodjendana za decu u Novom Sadu. Somborska 17 – između Adice i Telepa, blizu Minakve, Veternika i Bulevara Evrope. All-inclusive dečiji rođendani, tematski rođendani, profesionalni animatori.",
               image: "https://rodjendaonica-novi-sad.com/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-transparent.png",
               "@id": "https://rodjendaonica-novi-sad.com",
