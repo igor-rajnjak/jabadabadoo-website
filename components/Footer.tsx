@@ -140,6 +140,11 @@ export default function Footer() {
         
         <div className="border-t border-white/20 pt-10 md:pt-12 text-center text-white/60 text-lg">
           <p>&copy; {new Date().getFullYear()} Jabadabadoo Rođendaonica. Sva prava zadržana.</p>
+          <p className="mt-2 text-white/50 text-sm">
+            <Link href="/privatnost" className="hover:text-white/70 transition-colors">Privatnost</Link>
+            <span className="mx-2">·</span>
+            <Link href="/pravila" className="hover:text-white/70 transition-colors">Pravila</Link>
+          </p>
         </div>
       </div>
     </footer>

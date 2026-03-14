@@ -28,6 +28,7 @@ export default function IgraonicaPage() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": baseUrl,
     name: "Jabadabadoo Igraonica i Kafić",
     description: "Igraonica i kafić za porodice u Novom Sadu. Klimatizovan prostor gde deca igraju dok roditelji uživaju u kafi.",
     url: `${baseUrl}/igraonica-i-kafic`,
@@ -43,11 +44,24 @@ export default function IgraonicaPage() {
     image: `${baseUrl}/images/rodjendaonica-igraonica-klimatizovano-animatori-za-decu-bebe-novi-sad-jabadabadoo-animatori.png`,
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Početna", item: baseUrl },
+      { "@type": "ListItem", position: 2, name: "Igraonica i kafić", item: `${baseUrl}/igraonica-i-kafic` },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-bg">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Header />
       <main className="py-24 md:py-32 px-6 md:px-8">

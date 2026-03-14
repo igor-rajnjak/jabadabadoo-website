@@ -62,6 +62,7 @@ export default function RootLayout({
         <link rel="icon" href="/icon.png" type="image/png" sizes="192x192" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
         <link rel="shortcut icon" href="/images/jabadabadoo-rodjendaonica-za-decu-novi-sad-logo-transparent.png" />
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs" />
         {/* Google tag (gtag.js) - GA4 */}
         <script
           async
@@ -220,6 +221,7 @@ export default function RootLayout({
                 CONTACT.instagram,
                 CONTACT.facebook,
                 CONTACT.youtube,
+                CONTACT.googleMaps,
                 CONTACT.whatsappUrl,
               ],
             }),
@@ -265,6 +267,7 @@ export default function RootLayout({
                 CONTACT.instagram,
                 CONTACT.facebook,
                 CONTACT.youtube,
+                CONTACT.googleMaps,
                 CONTACT.whatsappUrl,
               ],
             }),
@@ -278,6 +281,7 @@ export default function RootLayout({
               "@type": "WebSite",
               name: "Jabadabadoo Rođendaonica",
               url: "https://rodjendaonica-novi-sad.com",
+              inLanguage: "sr-RS",
               potentialAction: {
                 "@type": "SearchAction",
                 target: {
@@ -285,6 +289,22 @@ export default function RootLayout({
                   urlTemplate: "https://rodjendaonica-novi-sad.com/?q={search_term_string}",
                 },
                 "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "@id": "https://rodjendaonica-novi-sad.com/#webpage",
+              url: "https://rodjendaonica-novi-sad.com",
+              name: "Jabadabadoo Rođendaonica - Početna",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["#faq"],
               },
             }),
           }}

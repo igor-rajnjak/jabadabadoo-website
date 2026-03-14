@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { CONTACT } from "@/lib/constants";
 import ReservationForm from "./ReservationForm";
 import { trackPhoneCall, trackWhatsAppClick } from "@/lib/analytics";
@@ -111,6 +112,10 @@ export default function Contact() {
             <h3 className="text-2xl md:text-3xl font-bold mb-8 md:mb-10 text-primary">Rezervacija Rodjendana u Novom Sadu</h3>
             <div className="bg-white p-8 md:p-10 rounded-3xl border-4 border-secondary shadow-lg mb-8 overflow-hidden">
               <ReservationForm />
+              <p className="mt-6 text-sm text-text/60 text-center">
+                Slanjem forme slažete se sa našom{" "}
+                <Link href="/privatnost" className="text-primary hover:underline">Politikom privatnosti</Link>.
+              </p>
             </div>
             
             {/* Urgency Banner - Full Details */}

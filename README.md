@@ -50,12 +50,17 @@ website/
 - **Desktop:** 768px+ (4 columns for features/pricing)
 - **Tablet:** Uses desktop layout (skipped separate view)
 
-## 🔍 SEO Features
+## 🔍 SEO & AEO (AI pretraga)
 
 - ✅ Meta tags (title, description, OG tags)
-- ✅ Structured data (Schema.org - LocalBusiness)
-- ✅ Sitemap.xml
-- ✅ Robots.txt
+- ✅ Structured data (Schema.org – LocalBusiness, FAQ, Service, HowTo, …)
+- ✅ Sitemap.xml · Robots.txt (uklj. AI crawleri)
+- ✅ **llms.txt** (`public/llms.txt`) – za AI čitače
+- 📄 **Master mapa AEO:** `../docs/30_AEO_MASTER_MAP.md`
+- 📄 **Off-site checklist (GBP, citacije):** `../docs/31_OFF_SITE_AEO_CHECKLIST.md`
+- 📄 **NAP copy/paste:** `../docs/32_NAP_COPY_PASTE.md`
+- 📄 **Blog naslovi (AEO):** `../docs/33_BLOG_IDEAS_AEO.md`
+- 📄 **Tehnički audit:** `../docs/24_AI_SEARCH_OPTIMIZATION_AUDIT.md`
 - ✅ Alt tags for all images
 - ✅ Semantic HTML
 - ✅ Optimized URLs

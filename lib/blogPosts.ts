@@ -6,6 +6,8 @@ export interface BlogPost {
   readTime: number;
   emoji: string;
   date: string;
+  /** Ako se članak menja, postavite datum poslednje izmene; inače se koristi date */
+  dateModified?: string;
   keywords: string[];
   image?: string;
   imageAlt?: string;

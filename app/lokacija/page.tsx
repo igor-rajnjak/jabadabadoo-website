@@ -27,6 +27,7 @@ export default function LokacijaPage() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": baseUrl,
     name: "Jabadabadoo Rođendaonica",
     address: {
       "@type": "PostalAddress",
@@ -45,11 +46,24 @@ export default function LokacijaPage() {
     openingHours: "Mo-Su 10:00-21:00",
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Početna", item: baseUrl },
+      { "@type": "ListItem", position: 2, name: "Lokacija", item: `${baseUrl}/lokacija` },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-bg">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Header />
       <main className="py-24 md:py-32 px-6 md:px-8">

@@ -13,6 +13,8 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: "Claude-SearchBot", allow: "/" },
       { userAgent: "Google-Extended", allow: "/" },
       { userAgent: "Applebot-Extended", allow: "/" },
+      { userAgent: "Meta-ExternalAgent", allow: "/" },
+      { userAgent: "Meta-WebIndexer", allow: "/" },
       { userAgent: "*", allow: "/" },
     ],
     sitemap: "https://rodjendaonica-novi-sad.com/sitemap.xml",
