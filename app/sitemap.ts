@@ -2,6 +2,8 @@ import { MetadataRoute } from "next";
 import { BLOG_POSTS } from "@/lib/blogPosts";
 import { VS_COMPETITORS } from "@/lib/vsCompetitors";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://rodjendaonica-novi-sad.com";
   
