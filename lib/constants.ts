@@ -87,6 +87,11 @@ export const FEATURES = [
     title: "Kompletna Organizacija",
     description: "Sve uključeno - animatori, torte, dekoracije, pinjata",
   },
+  {
+    icon: "📸🎬",
+    title: "Fotografije i Video u Paketu",
+    description: "U svakom paketu – od osnovnog seta fotki do premium fotografija i snimka. Na kraju proslave sve podelimo sa vama.",
+  },
 ] as const;
 
 // Reviews
@@ -172,8 +177,12 @@ export const FAQ = [
     answer: "Da, možete promeniti paket nakon rezervacije. Kontaktirajte nas da razgovaramo o detaljima i prilagodimo rezervaciju vašim potrebama.",
   },
   {
+    question: "Da li dobijam fotografije i video?",
+    answer: "Da – u svakom paketu je uključeno: Standard = osnovni set fotografija; Premium = premium set fotografija; All-Inclusive = premium fotografije + snimak proslave; Ultra = premium fotografije + premium video. Na kraju proslave sve podelimo sa vama, bez dodatne naplate.",
+  },
+  {
     question: "Imate li dodatne usluge?",
-    answer: "Da, pored osnovnih paketa, možemo organizovati dodatne aktivnosti, fotografisanje, video snimanje i druge usluge. Pozovite nas da razgovaramo o vašim željama.",
+    answer: "Fotografije i video po paketu su već uključeni u cenu (vidi pitanje „Da li dobijam fotografije i video?“). Pored toga, možemo organizovati dodatne aktivnosti – npr. profesionalni fotograf sa produženom sesijom, balon artist – po dogovoru. Pozovite nas za ponudu.",
   },
   {
     question: "Gde se nalazite?",

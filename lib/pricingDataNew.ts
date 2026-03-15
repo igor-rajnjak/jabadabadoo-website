@@ -48,8 +48,9 @@ export const PACKAGES_DATA_NEW: Package[] = [
       { text: "🥤 Neograničeni sokovi", tooltip: "Raznovrsni sokovi dostupni tokom cele proslave za svu decu. Bez ograničenja količine." },
       { text: "🎟️ Poklon kartica za slavljenika 2h (vrednost: 700 RSD)", tooltip: "Poklon vaučer za slavljenika - 2 sata besplatnog korišćenja igraonice u narednih 30 dana." },
       { text: "💃 Disko žurka uz balončiće", tooltip: "Disko atmosfera sa svetlima, muzikom, balončićima od sapunice (koje pravi mašina) i pravim balonima. Deca plešu i zabavljaju se uz omiljene pesme." },
+      { text: "📸 Osnovni set fotografija", tooltip: "Na kraju proslave dobijate osnovni set fotografija sa rođendana – sve uključeno u cenu, bez dodatne naplate." },
     ],
-    strategyNote: "💡 Idealno za osnovnu zabavu<br>✨ 13 usluga",
+    strategyNote: "💡 Idealno za osnovnu zabavu<br>✨ 14 usluga",
   },
   {
     id: "premium",
@@ -68,8 +69,9 @@ export const PACKAGES_DATA_NEW: Package[] = [
       { text: "🎁 Unikatan poklon za slavljenika", tooltip: "Unikatan poklon koji nas čini autentičnim a slavljeniku ostavlja nezaboravne uspomene.", isNew: true },
       { text: "🎟️ Poklon kartica 4h za slavljenika (vrednost: 1.400 RSD)", tooltip: "Duplo vreme u igraonici - 4 sata besplatnog korišćenja za slavljenika u narednih 30 dana.", isNew: true },
       { text: "➕ 30 minuta dodatne zabave", tooltip: "Proslava traje 2,5 sata umesto 2h - više vremena za igru i zabavu!", isNew: true },
+      { text: "📸 Premium set fotografija", tooltip: "Premium set fotografija sa proslave – više i kvalitetnije uređenih fotografija u odnosu na Standard paket. Sve uključeno u cenu.", isNew: true },
     ],
-    strategyNote: "💡 Proširena zabava<br>✨ 20 usluga",
+    strategyNote: "💡 Proširena zabava<br>✨ 21 usluga",
   },
   {
     id: "all-inclusive",
@@ -90,8 +92,9 @@ export const PACKAGES_DATA_NEW: Package[] = [
       { text: "🎟️ Poklon kartica 4h za slavljenika (vrednost: 1.400 RSD)", tooltip: "Duplo vreme u igraonici - 4 sata besplatnog korišćenja za slavljenika u narednih 30 dana.", isNew: true },
       { text: "🎁 2x Poklon kartica 1h za poklanjanje drugima (vrednost: 700 RSD)", tooltip: "2 poklon kartice od 1h koje slavljenik može da pokloni drugima.", isNew: true },
       { text: "💰 Ukupna vrednost kartica: 2.100 RSD", tooltip: "Ukupna vrednost svih poklon kartica uključenih u paket.", isNew: true },
+      { text: "📸🎬 Premium fotografije + snimak proslave", tooltip: "Premium set fotografija plus video snimak proslave – sve na jednom mestu, uključeno u cenu. Na kraju proslave podelimo sve sa vama.", isNew: true },
     ],
-    strategyNote: "🎯 NAJBOLJI IZBOR! Kompletna hrana + premium<br>✨ 28 usluga uključeno",
+    strategyNote: "🎯 NAJBOLJI IZBOR! Kompletna hrana + premium<br>✨ 29 usluga uključeno",
     limited: "⏰ 5% popusta za rezervaciju 30+ dana unapred",
   },
   {
@@ -112,8 +115,9 @@ export const PACKAGES_DATA_NEW: Package[] = [
       { text: "🎁 4x Poklon kartica 1h za slavljenika (može da podeli drugima, vrednost: 1.400 RSD)", tooltip: "4 poklon kartice od 1h za slavljenika koje može da podeli drugima.", isExclusive: true },
       { text: "💰 Ukupna vrednost kartica: 2.800 RSD", tooltip: "Ukupna vrednost svih poklon kartica uključenih u paket.", isExclusive: true },
       { text: "🎁 Ekskluzivni premium poklon za slavljenika", tooltip: "Ekskluzivni premium poklon za slavljenika - veći i bolji od standardnog poklona.", isExclusive: true },
+      { text: "📸🎬 Premium fotografije + premium video", tooltip: "Premium set fotografija i premium video proslave – najviši nivo uspomena: više fotki, uređen snimak. Sve uključeno u cenu.", isExclusive: true },
     ],
-    strategyNote: "💎 LUKSUZNO IZDANJE. Show program + produženo trajanje<br>✨ 34 usluge<br>🔥 Samo 3 paketa mesečno",
+    strategyNote: "💎 LUKSUZNO IZDANJE. Show program + produženo trajanje<br>✨ 35 usluga<br>🔥 Samo 3 paketa mesečno",
   },
 ];
 

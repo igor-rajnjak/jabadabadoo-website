@@ -559,7 +559,7 @@ export default function RootLayout({
                   "@type": "HowToStep",
                   position: 6,
                   name: "🏆 Nagrade i uspomene",
-                  text: "Deca dobijaju diplome, medalje, poklon kartice i nezaboravne uspomene. Roditelji dobijaju fotografije i video materijal sa proslave!",
+                  text: "Deca dobijaju diplome, medalje, poklon kartice i nezaboravne uspomene. U svakom paketu su uključene fotografije sa proslave (Standard: osnovni set; Premium: premium set; All-Inclusive: premium fotke + snimak; Ultra: premium fotke + premium video). Na kraju proslave sve podelimo sa vama.",
                   image: "https://rodjendaonica-novi-sad.com/images/rodjendaonica-igraonica-cuvaonica-pinjata-animatori-igre-bezbedno-rodjendan-novi-sad-zabava-square.png",
                 },
               ],
