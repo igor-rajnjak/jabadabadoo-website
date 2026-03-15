@@ -65,13 +65,8 @@ export const PACKAGES = [
   },
 ] as const;
 
-// Features (Why Us)
+// Features (Why Us) – 4 kartice (trust "100+" je u podnaslovu sekcije, bold)
 export const FEATURES = [
-  {
-    icon: "⭐",
-    title: `${TRUST_SIGNALS.satisfiedParents} Zadovoljnih Roditelja`,
-    description: "Preko 100 porodica nam je verovalo za nezaboravne rođendane",
-  },
   {
     icon: "🎭",
     title: "Profesionalni Animatori",
@@ -90,7 +85,7 @@ export const FEATURES = [
   {
     icon: "📸🎬",
     title: "Fotografije i Video u Paketu",
-    description: "U svakom paketu – od osnovnog seta fotki do premium fotografija i snimka. Na kraju proslave sve podelimo sa vama.",
+    description: "Fotke i video uključeni u cenu – od osnovnog seta do premium. Na kraju proslave sve podelimo sa vama.",
   },
 ] as const;
 

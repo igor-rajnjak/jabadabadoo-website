@@ -90,7 +90,7 @@ export default function Pricing() {
               
               <div className="mb-4 md:mb-6 flex-grow">
                 <h4 className="font-bold text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-xl mb-3 md:mb-4 text-center text-text">✨ Uključeno u cenu:</h4>
-                <ul className="space-y-1.5 md:space-y-2 text-xs md:text-sm lg:text-sm xl:text-sm">
+                <ul className={`text-xs md:text-sm lg:text-sm xl:text-sm ${pkg.id === "standard" || pkg.id === "ultra" ? "space-y-2.5 md:space-y-3" : "space-y-1.5 md:space-y-2"}`}>
                   {pkg.id === "standard" && pkg.standardFeatures?.map((feature, idx) => {
                     const emojiMatch = feature.text.match(/^([^\s]+)\s/);
                     const emoji = emojiMatch ? emojiMatch[1] : "✨";
