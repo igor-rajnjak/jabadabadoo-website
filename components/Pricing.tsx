@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { PACKAGES_DATA } from "@/lib/pricingData";
-import { ADDONS } from "@/lib/pricingData";
+import { PACKAGES_DATA, ADDONS, type PackageFeature } from "@/lib/pricingData";
 import { CONTACT } from "@/lib/constants";
 import PricingComparison from "./PricingComparison";
 import { trackPackageClick, trackPhoneCall, trackCTAClick } from "@/lib/analytics";
@@ -160,14 +159,14 @@ export default function Pricing() {
                               );
                             })()}
                             {otherFeatures.map((feature, idx) => {
-                              // Extract emoji from text if it exists
-                              const emojiMatch = feature.text.match(/^([^\s]+)\s/);
-                              const emoji = emojiMatch ? emojiMatch[1] : "✨";
+                              // Extract emoji from text if it exists (skip if noEmoji)
+                              const emojiMatch = feature.noEmoji ? null : feature.text.match(/^([^\s]+)\s/);
+                              const emoji = emojiMatch ? emojiMatch[1] : feature.noEmoji ? "·" : "✨";
                               const textWithoutEmoji = emojiMatch ? feature.text.replace(/^[^\s]+\s/, "") : feature.text;
                               
                               return (
                               <li key={idx} className={`flex items-start gap-2 ${feature.isNew && pkg.id === "all-inclusive" ? "bg-yellow-50 p-2 rounded" : feature.isNew ? "bg-blue-50 p-2 rounded" : feature.isExclusive ? "" : ""}`}>
-                                <span className="text-2xl mt-0">{emoji}</span>
+                                <span className={`mt-0 ${feature.noEmoji ? "text-text/60 text-sm w-4" : "text-2xl"}`}>{emoji}</span>
                                 <span className={`flex-1 font-semibold ${feature.isExclusive ? "text-red-600" : "text-text/80"}`}>{textWithoutEmoji}</span>
                                 {feature.tooltip && (
                                   <button

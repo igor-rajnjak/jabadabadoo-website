@@ -789,7 +789,7 @@ Tematski paket sa igračkama i slatkišima (minimum 10 dece)
 - Plaćanje: gotovina, kartica ili bankovni transfer
 
 ### Popust
-- **5% popusta** - ako rezervišete 30+ dana unapred (samo za All-Inclusive)
+- Za aktuelne ponude i popuste pozovite nas.
 
 ---
 
@@ -1069,9 +1069,7 @@ Rezervacija rođendana za vaše dete je jednostavna. Evo detaljnog vodiča koji 
 - **Načini plaćanja:** Gotovina, kartica, bankovni transfer
 
 ### 💡 Popust
-- **5% popusta** - ako rezervišete 30+ dana unapred
-- **Samo za All-Inclusive paket**
-- **Automatski primenjen** - u ceni
+- Za aktuelne ponude i popuste pozovite nas na 066 286 555.
 
 ## Korak 6: Dan Rođendana
 

@@ -5,6 +5,7 @@ export interface PackageFeature {
   tooltip?: string;
   isNew?: boolean;
   isExclusive?: boolean;
+  noEmoji?: boolean;
 }
 
 export interface Package {
@@ -92,10 +93,10 @@ export const PACKAGES_DATA_NEW: Package[] = [
       { text: "🎟️ Poklon kartica 4h za slavljenika (vrednost: 1.400 RSD)", tooltip: "Duplo vreme u igraonici - 4 sata besplatnog korišćenja za slavljenika u narednih 30 dana.", isNew: true },
       { text: "🎁 2x Poklon kartica 1h za poklanjanje drugima (vrednost: 700 RSD)", tooltip: "2 poklon kartice od 1h koje slavljenik može da pokloni drugima.", isNew: true },
       { text: "💰 Ukupna vrednost kartica: 2.100 RSD", tooltip: "Ukupna vrednost svih poklon kartica uključenih u paket.", isNew: true },
-      { text: "📸🎬 Premium fotografije + snimak proslave", tooltip: "Premium set fotografija plus video snimak proslave – sve na jednom mestu, uključeno u cenu. Na kraju proslave podelimo sve sa vama.", isNew: true },
+      { text: "📸 Premium fotografije", tooltip: "Premium set fotografija sa proslave – uključeno u cenu. Na kraju proslave podelimo sve sa vama.", isNew: true },
+      { text: "🎬 Snimak proslave", tooltip: "Video snimak proslave – sve na jednom mestu, uključeno u cenu.", isNew: true },
     ],
-    strategyNote: "🎯 NAJBOLJI IZBOR! Kompletna hrana + premium<br>✨ 29 usluga uključeno",
-    limited: "⏰ 5% popusta za rezervaciju 30+ dana unapred",
+    strategyNote: "🎯 NAJBOLJI IZBOR! Kompletna hrana + premium<br>✨ 30 usluga uključeno",
   },
   {
     id: "ultra",
@@ -106,7 +107,6 @@ export const PACKAGES_DATA_NEW: Package[] = [
     pricePerChild: "oko 1.533 din/dete (za 30 dece)",
     popular: false,
     badge: "ULTRA 💎",
-    limited: "🔥 Samo 3 paketa mesečno",
     allIncluded: true,
     additionalFeatures: [
       { text: "🎭 Mađioničarska predstava ILI Maskota", tooltip: "Profesionalni show program: mađioničarska predstava (30-45min) sa interaktivnim trikovima ILI maskota omiljenog lika (fotografisanje, igre, interakcija).", isExclusive: true },
@@ -115,9 +115,10 @@ export const PACKAGES_DATA_NEW: Package[] = [
       { text: "🎁 4x Poklon kartica 1h za slavljenika (može da podeli drugima, vrednost: 1.400 RSD)", tooltip: "4 poklon kartice od 1h za slavljenika koje može da podeli drugima.", isExclusive: true },
       { text: "💰 Ukupna vrednost kartica: 2.800 RSD", tooltip: "Ukupna vrednost svih poklon kartica uključenih u paket.", isExclusive: true },
       { text: "🎁 Ekskluzivni premium poklon za slavljenika", tooltip: "Ekskluzivni premium poklon za slavljenika - veći i bolji od standardnog poklona.", isExclusive: true },
-      { text: "📸🎬 Premium fotografije + premium video", tooltip: "Premium set fotografija i premium video proslave – najviši nivo uspomena: više fotki, uređen snimak. Sve uključeno u cenu.", isExclusive: true },
+      { text: "📸 Premium fotografije", tooltip: "Premium set fotografija – najviši nivo. Uključeno u cenu.", isExclusive: true },
+      { text: "🎬 Premium video", tooltip: "Premium video proslave – uređen snimak. Sve uključeno u cenu.", isExclusive: true },
     ],
-    strategyNote: "💎 LUKSUZNO IZDANJE. Show program + produženo trajanje<br>✨ 35 usluga<br>🔥 Samo 3 paketa mesečno",
+    strategyNote: "💎 LUKSUZNO IZDANJE. Show program + produženo trajanje<br>✨ 36 usluga<br>🔥 Samo 3 paketa mesečno",
   },
 ];
 
