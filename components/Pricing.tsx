@@ -97,8 +97,8 @@ export default function Pricing() {
                     const textWithoutEmoji = emojiMatch ? feature.text.replace(/^[^\s]+\s/, "") : feature.text;
                     
                     return (
-                    <li key={idx} className="flex items-start gap-2">
-                      <span className="text-2xl mt-0">{emoji}</span>
+                    <li key={idx} className="flex items-center gap-2">
+                      <span className="text-2xl leading-none flex-shrink-0">{emoji}</span>
                       <span className="text-text/80 flex-1">{textWithoutEmoji}</span>
                       {feature.tooltip && (
                         <button
@@ -140,8 +140,8 @@ export default function Pricing() {
                               const textWithoutEmoji = emojiMatch ? durationFeature.text.replace(/^[^\s]+\s/, "") : durationFeature.text;
                               
                               return (
-                              <li className={`flex items-start gap-2 mb-3 ${durationFeature.isNew && pkg.id === "all-inclusive" ? "bg-yellow-50 p-2 rounded" : durationFeature.isNew ? "bg-blue-50 p-2 rounded" : durationFeature.isExclusive ? "" : ""}`}>
-                                <span className="text-2xl mt-0">{emoji}</span>
+                              <li className={`flex items-center gap-2 mb-3 ${durationFeature.isNew && pkg.id === "all-inclusive" ? "bg-yellow-50 p-2 rounded" : durationFeature.isNew ? "bg-blue-50 p-2 rounded" : durationFeature.isExclusive ? "" : ""}`}>
+                                <span className="text-2xl leading-none flex-shrink-0">{emoji}</span>
                                 <span className={`flex-1 font-semibold ${durationFeature.isExclusive ? "text-red-600" : "text-text/80"}`}>
                                   {textWithoutEmoji} <span className="text-text/60 font-normal">({totalDuration})</span>
                                 </span>
@@ -165,8 +165,8 @@ export default function Pricing() {
                               const textWithoutEmoji = emojiMatch ? feature.text.replace(/^[^\s]+\s/, "") : feature.text;
                               
                               return (
-                              <li key={idx} className={`flex items-start gap-2 ${feature.isNew && pkg.id === "all-inclusive" ? "bg-yellow-50 p-2 rounded" : feature.isNew ? "bg-blue-50 p-2 rounded" : feature.isExclusive ? "" : ""}`}>
-                                <span className={`mt-0 ${feature.noEmoji ? "text-text/60 text-sm w-4" : "text-2xl"}`}>{emoji}</span>
+                              <li key={idx} className={`flex items-center gap-2 ${feature.isNew && pkg.id === "all-inclusive" ? "bg-yellow-50 p-2 rounded" : feature.isNew ? "bg-blue-50 p-2 rounded" : feature.isExclusive ? "" : ""}`}>
+                                <span className={`flex-shrink-0 ${feature.noEmoji ? "text-text/60 text-sm w-4 leading-none" : "text-2xl leading-none"}`}>{emoji}</span>
                                 <span className={`flex-1 font-semibold ${feature.isExclusive ? "text-red-600" : "text-text/80"}`}>{textWithoutEmoji}</span>
                                 {feature.tooltip && (
                                   <button
