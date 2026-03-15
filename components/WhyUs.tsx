@@ -23,7 +23,7 @@ export default function WhyUs() {
           Već {FEATURES[0].title.split(" ")[0]} porodica nam je verovalo za nezaboravne rođendane
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-16 md:mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 md:gap-10 mb-16 md:mb-20">
           {FEATURES.map((feature, index) => (
             <div
               key={index}
