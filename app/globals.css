@@ -10,7 +10,8 @@
   }
   
   body {
-    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', cursive, sans-serif;
+    /* Bez cursive – na nekim telefonima cursive = rukopisni font; fallback na čitljiv sistem font */
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: #2d3748;
     background: #fff9f5;
   }

@@ -66,6 +66,17 @@ export default function Hero() {
               </a>
             </div>
             
+            {/* Mobilni: link ka cenovniku (desktop ima Cenovnik u headeru) */}
+            <p className="md:hidden text-center mb-4">
+              <a
+                href="#cenovnik"
+                onClick={() => trackCTAClick("Cenovnik", "Hero Mobile")}
+                className="text-white/95 hover:text-white underline underline-offset-2 font-semibold"
+              >
+                Prvo pogledajte cenovnik i pakete →
+              </a>
+            </p>
+            
             {/* Short Urgency Message Below Buttons */}
             <p className="text-sm md:text-base text-white/90 text-center xl:text-left flex items-center justify-center xl:justify-start gap-2">
               <span>⏰</span>

@@ -19,7 +19,7 @@ const config: Config = {
         bg: "#fff9f5",
       },
       fontFamily: {
-        playful: ['Comic Sans MS', 'Chalkboard SE', 'Comic Neue', 'cursive', 'sans-serif'],
+        playful: ['Comic Sans MS', 'Chalkboard SE', 'Comic Neue', 'system-ui', 'sans-serif'],
       },
       backdropBlur: {
         xs: '2px',
