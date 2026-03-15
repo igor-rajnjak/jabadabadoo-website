@@ -73,7 +73,7 @@ export default function Hero() {
                 onClick={() => trackCTAClick("Cenovnik", "Hero Mobile")}
                 className="text-white/95 hover:text-white underline underline-offset-2 font-semibold"
               >
-                Prvo pogledajte cenovnik i pakete →
+                Pogledajte cenovnik i pakete →
               </a>
             </p>
             
